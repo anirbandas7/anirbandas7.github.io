@@ -1,6 +1,9 @@
 ---
 layout: archive
 title: "Publications"
+title: "Journals"
+permalink: /publications/
+title: "Conferences"
 permalink: /publications/
 author_profile: true
 ---
