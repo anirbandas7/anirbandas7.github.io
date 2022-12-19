@@ -1,7 +1,7 @@
 ---
 title: "Leveraging ambient sensing for the estimation of curiosity-driven human crowd"
 collection: publications
-permalink: /publication/paper1
+permalink: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9773844
 excerpt: 'Identification and characterization of human crowd formulation have been a topic of immense interest in recent times due to its applicability in a wide range of smart-city applications covering infrastructure automation to targeted advertising. The core idea is to extract the dynamics and associated behavioural patterns of mass gatherings within an environment through a continuous remote monitoring of the crowd. In general, the existing approaches heavily rely on computer vision and image processing based algorithmic tools and techniques to address this problem or mandate the crowd entities to carry a smartphone with them. However, considering the ubiquitous design goals of futuristic smart applications, camera and smartphone driven active sensing is not suitable to honour users’ right to privacy by requiring an active user participation. In this work, we introduce a novel approach towards measuring the spatiotemporal significance of an object in terms of the curious crowd it has attracted over the others. The proposed approach utilizes a set of passive sensors and Wireless signal properties for the necessary estimation. We validate the idea using a room-scale testbed with rigorous experimentation in a real-world scenario. The low cost solution has minimal invasive footprints towards privacy and is capable to reach beyond 90% of accuracy for this measurement.'
 date: 2022-04-25
 venue: '2022 IEEE International Systems Conference (SysCon), 2022,'
