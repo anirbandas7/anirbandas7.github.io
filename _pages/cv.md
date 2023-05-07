@@ -11,21 +11,30 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Computer Science and Engineering, 2022
+  * Supervisor: Dr. Suchetana Chakraborty
+* M.Tech. in Information Technology, 2013
+* B.E. in Computer Science and Engineering, 2010
+
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Dec, 2022 - April, 2023: Post Doctoral Fellow
+  * IIT Kharagpur
+  * Supervisor: **
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Feb, 2022 - Nov, 2023: Project Scientist -Research
+  * IIT Kharagpur
+  * Supervisor: **
+
+* May, 2017 - Jul, 2017: Guest Faculty
+  * Barak Valley Engineering College, Karimganj, Assam
+
+* Oct, 2013 - Jan, 2017: Lecturer
+  * School of Computing, Jimma University, Jimma, Ethiopia
+
+* Jun, 2012 - Jul, 2013: Project Trainee
+  * ISI Kolkata
   
 Skills
 ======
