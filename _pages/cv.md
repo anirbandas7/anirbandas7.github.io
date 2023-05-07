@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * Ph.D in Computer Science and Engineering, 2022
-  * Supervisor: Dr. Suchetana Chakraborty
+  * Supervisor: [Dr. Suchetana Chakraborty](https://sites.google.com/site/suchetana0116)
 * M.Tech. in Information Technology, 2013
 * B.E. in Computer Science and Engineering, 2010
 
