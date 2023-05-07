@@ -9,6 +9,9 @@ redirect_from:
 
 {% include base_path %}
 
+Current Position
+======
+
 Education
 ======
 * Ph.D in Computer Science and Engineering, 2022
@@ -17,7 +20,7 @@ Education
 * B.E. in Computer Science and Engineering, 2010
 
 
-Work experience
+Research experience
 ======
 * Dec, 2022 - April, 2023: Post Doctoral Fellow
   * IIT Kharagpur
@@ -26,6 +29,9 @@ Work experience
 * Feb, 2022 - Nov, 2023: Project Scientist -Research
   * IIT Kharagpur
 
+
+Teaching experience
+======
 * May, 2017 - Jul, 2017: Guest Faculty
   * Barak Valley Engineering College, Karimganj, Assam
 
