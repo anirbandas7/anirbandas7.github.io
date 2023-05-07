@@ -11,6 +11,7 @@ redirect_from:
 
 Current Position
 ======
+* Assistant Professor, [NIIT University](https://niituniversity.in)
 
 Education
 ======
@@ -29,27 +30,23 @@ Research experience
 * Feb, 2022 - Nov, 2023: Project Scientist -Research
   * IIT Kharagpur
 
+* Jun, 2012 - Jul, 2013: Project Trainee
+  * ISI Kolkata
+  * Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
+
 
 Teaching experience
 ======
 * May, 2017 - Jul, 2017: Guest Faculty
-  * Barak Valley Engineering College, Karimganj, Assam
+  * [Barak Valley Engineering College](https://bvec.ac.in), Karimganj, Assam
 
 * Oct, 2013 - Jan, 2017: Lecturer
-  * School of Computing, Jimma University, Jimma, Ethiopia
+  * School of Computing, [Jimma University](https://ju.edu.et), Jimma, Ethiopia
 
-* Jun, 2012 - Jul, 2013: Project Trainee
-  * ISI Kolkata
-  * Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+
 
 Publications
 ======
@@ -71,4 +68,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* 
