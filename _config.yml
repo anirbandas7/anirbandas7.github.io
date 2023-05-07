@@ -87,6 +87,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=KEbxZesAAAAJ&hl=en"
+  linkedin         : https://www.linkedin.com/in/anirban-das-a504707a/
   email            :  "anirbanfuture@gmail.com; anirband@iitkgp.ac.in"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -102,7 +103,6 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : https://www.linkedin.com/in/anirban-das-a504707a/
   orcid            : "https://orcid.org/0000-0002-4205-1530"
   pinterest        :
   soundcloud       :
