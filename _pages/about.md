@@ -11,6 +11,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
+Welcome to my page.
+
 About Me
 ======
 I am currently an Assistant Professor at [NIIT University](https://niituniversity.in), Neemrana, Rajasthan. I have completed my Ph.D. in Computer Science and Engineering from the [Indian Institute of Information Technology Guwahati](https://www.iiitg.ac.in), India. Post Ph.D., I have worked as a Post Doctoral Fellow in the Dept. of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur](http://www.iitkgp.ac.in). 
