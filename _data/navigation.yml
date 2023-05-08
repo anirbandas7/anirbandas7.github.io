@@ -3,13 +3,13 @@ main:
   - title: "Publications"
     url: /publications/
 
-  #- title: "Talks"
-  # url: /talks/    
-
   - title: "Teaching"
-    url: /teaching/    
+    url: /teaching/ 
+
+  - title: "Workshops and events"
+    url: /talks/    
     
-  - title: "Portfolio"
+  - title: "Responsibilities and achievements"
     url: /portfolio/
         
   - title: "Projects"
@@ -17,6 +17,9 @@ main:
 
   - title: "Guide"
     url: /markdown/
+  
+  - title: "Work Demos"
+    url: /demo/
 
   - title: "CV"
     url: /cv/
