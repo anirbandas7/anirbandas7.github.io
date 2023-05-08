@@ -6,20 +6,17 @@ main:
   - title: "Teaching"
     url: /teaching/ 
 
-  - title: "Workshops and events"
-    url: /talks/    
-    
-  - title: "Responsibilities and achievements"
+  - title: "Portfolio"
     url: /portfolio/
         
   - title: "Projects"
     url: /year-archive/
 
+  - title: "Talks and Demos"
+    url: /talks/    
+
   - title: "Guide"
     url: /markdown/
-  
-  - title: "Work Demos"
-    url: /demo/
 
   - title: "CV"
     url: /cv/
