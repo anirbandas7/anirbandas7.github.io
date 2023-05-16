@@ -23,20 +23,22 @@ Education
 
 Research experience
 ======
-* Dec, 2022 - April, 2023: Post Doctoral Fellow
-  * IIT Kharagpur
+* Dec, 2022 - April, 2023: Post Doctoral Fellow, IIT Kharagpur
+  * [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur
   * Supervisor: [Dr. Sandip Chakraborty](http://cse.iitkgp.ac.in/~sandipc/)
 
 * Feb, 2022 - Nov, 2023: Project Scientist -Research
-  * IIT Kharagpur
+  * [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur
 
-* Jun, 2012 - Jul, 2013: Project Trainee
-  * ISI Kolkata
+* Jun, 2012 - Jul, 2013: Project Trainee, ISI Kolkata
   * Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
 
 
 Teaching experience
 ======
+* May, 2023 - Present: Assistant Professor
+  * [NIIT University](https://niituniversity.in), Rajasthan, India
+  
 * May, 2017 - Jul, 2017: Guest Faculty
   * [Barak Valley Engineering College](https://bvec.ac.in), Karimganj, Assam
 
