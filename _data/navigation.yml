@@ -1,12 +1,15 @@
 # main links links
 main:
+  - title: "What's  New!"
+    url: /markdown/
+
   - title: "Publications"
     url: /publications/
 
   - title: "Teaching"
     url: /teaching/ 
 
-  - title: "Portfolio"
+  - title: "Activities"
     url: /portfolio/
         
   - title: "Projects"
@@ -14,9 +17,6 @@ main:
 
   - title: "Talks and Demos"
     url: /talks/    
-
-  - title: "Guide"
-    url: /markdown/
 
   - title: "CV"
     url: /cv/

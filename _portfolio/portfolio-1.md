@@ -1,6 +1,6 @@
 ---
-title: "Will be updated soon"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Activity 1"
+excerpt: "Content will be updated soon<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
