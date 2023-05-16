@@ -17,3 +17,6 @@ I am currently an Assistant Professor at [NIIT University](https://niituniversit
 My research interest primarily involves Sensing, Human-Computer Interaction and the Internet of Things. My earlier research works addressed in-network data fusion, machine inference on low-power devices, sentiment analysis on textual data, and detecting communities in social networks. Apart from that I have 3+ years of teaching experience at both abroad and within the country. 
 
 Feel free to connect with me through my email and social media pages. Thank you!
+
+Latest Activities and Quick Links
+======
