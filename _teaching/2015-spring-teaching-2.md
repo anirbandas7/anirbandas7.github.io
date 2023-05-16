@@ -1,7 +1,7 @@
 ---
 title: "Lecturer "
 collection: teaching
-type: "Undergraduate course"
+type: "Undergraduate and Post Graduate courses"
 permalink: /teaching/2014-spring-teaching-1
 venue: "Jimma University, Jimma, Ethiopia"
 date: 2017-01-01
