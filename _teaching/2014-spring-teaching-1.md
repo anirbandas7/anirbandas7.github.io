@@ -1,20 +1,26 @@
 ---
-title: "Teaching experience 1"
+title: "Guest/Part-time faculty "
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+venue: "Barak Valley Engineering College, Karimganj, Assam"
+date: 2017-07-01
+location: "Karimganj, India"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+I was a part of Barak Valley Engineering College, Karimganj, Assam for approx. 2 months in 2017
 
-Heading 1
+Duration
 ======
+20-MAY-17 to 24-JULY-17 
 
-Heading 2
+Responsibilities
 ======
+Teaching
 
-Heading 3
+Subjects Taken
+======
+NA
+
+Remarks
 ======
