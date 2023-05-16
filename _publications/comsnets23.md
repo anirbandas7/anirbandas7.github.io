@@ -1,7 +1,7 @@
 ---
 title: "some paper"
 collection: publications
-permalink: https://ieeexplore.ieee.org/abstract/document/10041297
+permalink: 
 excerpt: 'abc'
 date: 2023-01-13
 venue: '2023 15th International Conference on COMmunication Systems & NETworkS (COMSNETS)'
