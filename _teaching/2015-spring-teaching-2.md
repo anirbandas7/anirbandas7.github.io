@@ -2,7 +2,7 @@
 title: "Lecturer "
 collection: teaching
 type: "Undergraduate and Post Graduate courses"
-permalink: /teaching/2014-spring-teaching-1
+permalink: /teaching/2015-spring-teaching-2
 venue: "Jimma University, Jimma, Ethiopia"
 date: 2017-01-01
 location: "Jimma, Ethiopia"
