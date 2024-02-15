@@ -19,4 +19,11 @@ My research interest primarily involves Sensing, Human-Computer Interaction and 
 Feel free to connect with me through my email and social media pages. Thank you!
 
 Latest Activities and Quick Links
+___
+Happy to be a part of CODEC 2.0.
+CODEC is a collaborative project which brings together 5 subjects.  An acronym for - ‘Computer Networks and Data Communication, Operating Systems, Database Management, ET and Cybersecurity', CODEC seeks to provide students an understanding of the inter-dependence of subjects in cutting-edge technology. This project is launched under the guidance of the faculties - Prof. Vijay Mandke, Dr. Kumar Nitesh, Dr. Anand Kumar Mishra, Dr. Anirban Das, Prof. Meera Datta, Prof. Surendar Singh, Prof. Manish Hurkat and Prof. Dheeraj Tripathi for 2nd Year BTech students. NUtons work on projects carried forward from the previous semester which involved integrating Object-Oriented Programming with the hardware prototypes of their workshop practice projects.
+
+[Further information](https://sites.google.com/st.niituniversity.in/etic-portal/announcements?authuser=0#h.wrk53hdde005)
+
+
 ======
