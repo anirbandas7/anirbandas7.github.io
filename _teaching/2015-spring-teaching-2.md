@@ -8,7 +8,7 @@ date: 2017-01-01
 location: "Jimma, Ethiopia"
 ---
 
-I was a part of Jimma University for approx. 3 Years and 3 months till 2017
+I was a part of Jimma University for approx. 3 years and 3 months till 2017
 
 Duration
 ======
@@ -24,7 +24,7 @@ Operating Systems
 Computer Architecture and Organization  
 Network Simulation and Modelling  
 Data Communication and Networking  
-Network Security Principles and practices  
+Network Security Principles and Practices  
 Information Security and Cyber Laws  
 Health informatics  
 
