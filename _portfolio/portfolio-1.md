@@ -1,6 +1,6 @@
 ---
 title: "Activity 1"
-excerpt: "The ambient sensing testbed at IIIT Guwahati<br/><img src='/images/500x300.png'><br/><img src='/images/500x300.png'>"
+excerpt: "The ambient sensing testbed at IIIT Guwahati<br/><img src='/images/mapp.jpg'><br/><img src='/images/figure223.jpg'><br/><img src='/images/2021-09-28.jpg'>"
 collection: portfolio
 ---
 
