@@ -1,6 +1,6 @@
 ---
 title: "Low-cost testbed setup"
-excerpt: "An ambient sensing testbed at IIIT Guwahati<br/>Deployment map<br/><img src='/images/mapp.jpg' width='500' height='600'><br/>Deployment at various locations<br/><img src='/images/figure223.jpg' width='500' height='600'><br/>A node<br/><img src='/images/2021-09-28.jpg' width='250' height='150'>"
+excerpt: "During 2018-2020 we have developed and deployed a building-scale testbed at IIIT Guwahati<br/><br/>Deployment map<br/><img src='/images/mapp.jpg' width='500' height='600'><br/>Deployment at various locations<br/><img src='/images/figure223.jpg' width='500' height='600'><br/>A node<br/><img src='/images/2021-09-28.jpg' width='250' height='150'>"
 collection: portfolio
 ---
 
