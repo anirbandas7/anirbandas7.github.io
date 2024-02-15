@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate and Post Graduate courses"
 permalink: /teaching/NIIT
 venue: "NIIT University, Neemrana, Rajasthan"
-date: 2023-05-02
+date: 2024-02-15
 location: "Neemrana, Rajasthan"
 ---
 
