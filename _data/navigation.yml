@@ -1,6 +1,6 @@
 # main links links
 main:
-  - title: "What's  New!"
+  - title: "Unconventional"
     url: /markdown/
 
   - title: "Publications"
@@ -12,7 +12,7 @@ main:
   - title: "Activities"
     url: /portfolio/
         
-  - title: "Projects"
+  - title: "Research Projects"
     url: /year-archive/
 
   - title: "Talks and Demos"
