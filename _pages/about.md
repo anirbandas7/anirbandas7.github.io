@@ -23,6 +23,7 @@ Latest Activities and Quick Links
 
 
 [Exciting New Chapter!](upes.ac.in)
+
 I’m thrilled to announce that I’ve embarked on a new journey at UPES (University of Petroleum and Energy Studies)! 🎓✨ After an incredible learning experience at NIIT University, I’m eager to explore fresh opportunities, challenges, and growth at this esteemed institution.
 
 UPES is renowned for its innovation-driven approach, dynamic learning environment, and focus on nurturing talent to make a real-world impact. 🚀💡 I can't wait to dive into the vibrant community, academic excellence, and countless opportunities it offers.
