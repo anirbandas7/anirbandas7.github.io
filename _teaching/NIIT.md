@@ -8,11 +8,11 @@ date: 2024-02-15
 location: "Neemrana, Rajasthan"
 ---
 
-I am currently a part of NIIT University, Neemrana, Rajasthan since 2023
+I was a part of NIIT University, Neemrana, Rajasthan, for 3 academic semesters.
 
 Duration
 ======
-02-MAY-23 to Till date 
+02-MAY-23 to 17-DEC-24
 
 Responsibilities
 ======
@@ -20,12 +20,13 @@ Teaching and Research
 
 Subjects Taken
 ======
-Computer Architecture and Organization  
-Data Communication and Networking  
-Digital Logic Circuit
-Internet of Things
+**Fall 2023**  <!Odd semester>
+- Computer Architecture and Organization  
+- Data Communication and Networking
 
+**Spring 2023** <!Even Semester>  
+- Digital Logic Circuit  
+- Internet of Things
 
 Remarks
 ======
-
