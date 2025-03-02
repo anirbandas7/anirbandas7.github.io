@@ -21,9 +21,9 @@ Here's a teaser of the paper if you missed the presentation: [MARS Paper Teaser]
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="../images/1715837792254.jpeg" alt="Presentation" width="45%">
-  <img src="../images/1715837792254.jpeg" alt="Live Demo" width="45%">
-  <img src="../images/1715837792254.jpeg" alt="Networking" width="45%">
-  <img src="../images/1715837792254.jpeg" alt="Discussion" width="45%">
+  <img src="../images/1715837792311.jpeg" alt="Live Demo" width="45%">
+  <img src="../images/1715837792509.jpeg" alt="Networking" width="45%">
+  <img src="../images/1715837792576.jpeg" alt="Discussion" width="45%">
 </div>
 
 *Moments from IPSN 2024, including the presentation, demo setup, networking, and engaging discussions.*
