@@ -20,7 +20,7 @@ Here's a teaser of the paper if you missed the presentation: [MARS Paper Teaser]
 ### Conference Highlights
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="../images/1715837792254.jpeg" alt="Presentation" width="45%">
+  <img src="../images/1715837792254.jpeg" alt="Presentation" height="45%" width="45%">
   <img src="../images/1715837792311.jpeg" alt="Live Demo" width="45%">
   <img src="../images/1715837792509.jpeg" alt="Networking" width="45%">
   <img src="../images/1715837792576.jpeg" alt="Discussion" width="45%">
