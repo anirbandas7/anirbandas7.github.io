@@ -9,7 +9,7 @@ redirect_from:
 
 ## 2024: 
 
-**IPSN Conference Visit
+**IPSN Conference Visit**
 
 Attended the **CPS-IoT Week** in Hong Kong and had the exciting opportunity to present our paper **MARS** at the **ACM/IEEE IPSN 2024** conference. Along with the paper presentation, we also showcased a **live demo**, engaging with researchers, academics, and industry professionals from around the world.
 
@@ -20,10 +20,10 @@ Here's a teaser of the paper if you missed the presentation: [MARS Paper Teaser]
 ### Conference Highlights
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="./images/presentation.jpg" alt="Presentation" style="object-fit: cover; height: 45%; width: 45%;">
-  <img src="./images/demo.jpg" alt="Live Demo" width="45%">
-  <img src="./images/networking.jpg" alt="Networking" width="45%">
-  <img src="./images/discussion.jpg" alt="Discussion" width="45%">
+  <img src="./images/1715837792254.jpeg" alt="Presentation" style="object-fit: cover; height: 45%; width: 45%;">
+  <img src="./images/1715837792311.jpeg" alt="Live Demo" width="45%">
+  <img src="./images/1715837792509.jpeg" alt="Networking" width="45%">
+  <img src="./images/1715837792576.jpeg" alt="Discussion" width="45%">
 </div>
 
 *Moments from IPSN 2024, including the presentation, demo setup, networking, and engaging discussions.*
