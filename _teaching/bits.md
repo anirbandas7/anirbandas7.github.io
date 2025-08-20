@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate and Post Graduate courses"
 permalink: /teaching/bits
 venue: "BITS Pilani in Goa Campus"
-date: 2024-08-04
+date: 2025-08-04
 location: "Sacoale, Goa"
 ---
 
