@@ -39,6 +39,7 @@ Thank you for visiting!
 Latest Activities and Quick Links
 ======
 [Update](https://www.bits-pilani.ac.in/goa/)
+
 I am glad to share that I have joined BITS Pilani, Goa Campus, as an Assistant Professor in the Department of Computer Science and Information Systems.
 
 I hope to make meaningful contributions to the academic environment here and to grow alongside colleagues and students in this journey.
