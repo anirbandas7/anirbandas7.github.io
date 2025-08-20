@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About Me"
-excerpt: "I am currently an Assistant Professor. I have completed his Ph.D. in Computer Science and Engineering from the Indian Institute of Information Technology Guwahati, India. Post Ph.D., I have worked as a Post Doctoral Fellow at the Ubiquitous Networked Systems Lab (UbiNet) at the Indian Institute of Technology Kharagpur. 
+excerpt: "I am currently an Assistant Professor. I have completed my Ph.D. in Computer Science and Engineering from the Indian Institute of Information Technology, Guwahati, India. Post Ph.D., I have worked as a Post-Doctoral Fellow at the Ubiquitous Networked Systems Lab (UbiNet) at the Indian Institute of Technology Kharagpur. 
 
 My research interest primarily involves Sensing, Human-Computer Interaction, Acoustic sensing and the Internet of Things. My earlier research works addressed in-network data fusion, machine inference on low-power devices, sentiment analysis on textual data, and detecting communities in social networks. Apart from that I have 5+ years of teaching experience at both abroad and within the country. 
 
@@ -12,14 +12,39 @@ redirect_from:
   - /about.html
 ---
 
-I am currently an Assistant Professor. I have completed my Ph.D. in Computer Science and Engineering from the [Indian Institute of Information Technology Guwahati](https://www.iiitg.ac.in), India. Post Ph.D., I have worked as a Post Doctoral Fellow in the Dept. of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur](http://www.iitkgp.ac.in). 
+## About Me  
 
-My research interest primarily involves Sensing, Human-Computer Interaction, Acoustic sensing and the Internet of Things. My earlier research works addressed in-network data fusion, machine inference on low-power devices, sentiment analysis on textual data, and detecting communities in social networks. Apart from that I have 5+ years of teaching experience at both abroad and within the country.
+I am currently serving as an **Assistant Professor** at [BITS Pilani, Goa Campus](https://www.bits-pilani.ac.in/goa/). I hold a **Ph.D. in Computer Science and Engineering** from the [Indian Institute of Information Technology Guwahati (IIITG)](https://www.iiitg.ac.in), India. Following my doctoral studies, I pursued postdoctoral research as a **Post-Doctoral Fellow** in the Department of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur (IIT Kharagpur)](http://www.iitkgp.ac.in).  
 
-Feel free to connect with me through my email and social media pages. Thank you!
+My research interests primarily lie in:  
+- **Sensing Technologies**  
+- **Human-Computer Interaction (HCI)**  
+- **Acoustic Sensing**  
+- **Internet of Things (IoT)**  
+
+In addition, my earlier research contributions have spanned:  
+- In-network data fusion for resource-constrained environments  
+- Machine inference on low-power and embedded devices  
+- Sentiment analysis on large-scale textual data  
+- Community detection in social networks  
+
+I bring with me **5+ years of teaching experience**, both within India and internationally, which has further enriched my academic and research perspectives.  
+
+I am always open to discussions, collaborations, and research opportunities.  
+Feel free to connect with me via **email** or through my **social media pages**.  
+
+Thank you for visiting!  
+
 
 Latest Activities and Quick Links
 ======
+[Update](https://www.bits-pilani.ac.in/goa/)
+I am glad to share that I have joined BITS Pilani, Goa Campus, as an Assistant Professor in the Department of Computer Science and Information Systems.
+
+I hope to make meaningful contributions to the academic environment here and to grow alongside colleagues and students in this journey.
+____[Further information](https://www.bits-pilani.ac.in/goa/)
+
+
 
 
 [Exciting New Chapter!](upes.ac.in)
@@ -46,8 +71,8 @@ CODEC is a collaborative project which brings together 5 subjects.  An acronym f
 
 [SMART: Streamlining Meta-expertise through Advanced AI and Rapid Technology](https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMT7ioXKX3iD_WDh2VdwihHCP-xKWJXg7Qo_SsddaPdQWksg/closedform)
 
-Launched the first round of SMART. In today's fast-paced digital era, the demand for software applications has surged, leading to a growing need for rapid application development. Low-code and no-code (LCNC) have emerged as powerful tools that allow individuals to create software applications with minimal coding effort. The advantages of LCNC platforms include drag-and-drop visual interfaces, progressive deployment of web applications across various form factors and experiences, API-based integration with external and enterprise applications and data, and business process modeler and automation workflow designer using AI-based approaches. These platforms help convert business ideas to minimal viable products without spending significant effort on coding. These platforms also aid in testing the potential of business ideas, thus, reducing massive costs and risks associated with software product development. 
+Launched the first round of SMART. In today's fast-paced digital era, the demand for software applications has surged, leading to a growing need for rapid application development. Low-code and no-code (LCNC) have emerged as powerful tools that allow individuals to create software applications with minimal coding effort. The advantages of LCNC platforms include drag-and-drop visual interfaces, progressive deployment of web applications across various form factors and experiences, API-based integration with external and enterprise applications and data, and business process modeler and automation workflow designer using AI-based approaches. These platforms help convert business ideas into minimal viable products without spending significant effort on coding. These platforms also aid in testing the potential of business ideas, thus reducing massive costs and risks associated with software product development. 
 
-Recognizing the significance of these platforms in modern software development, NIIT University planned a contest for developing AI-based Applications with LCNC Challenge.  Low-code technologies make engaging with code simple for developers and non-developers. Developers with some programming skills can speed up automation initiatives. Non-developers can also design forms, data-collection applications, business procedures, and custom user interfaces for customers using little code.
+Recognizing the significance of these platforms in modern software development, NIIT University planned a contest for developing AI-based Applications with the LCNC Challenge.  Low-code technologies make engaging with code simple for developers and non-developers. Developers with some programming skills can speed up automation initiatives. Non-developers can also design forms, data-collection applications, business procedures, and custom user interfaces for customers using little code.
 
   ____[More details](https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMT7ioXKX3iD_WDh2VdwihHCP-xKWJXg7Qo_SsddaPdQWksg/closedform)
