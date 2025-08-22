@@ -23,7 +23,7 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       {% if author.location %}
-        <li><a href="https://maps.app.goo.gl/7QwJ9ypGmJPC5F8e7"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</a></li>
+        <li><a href="https://maps.app.goo.gl/oQwENvwNTBUT2L4b7"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</a></li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Institute Page" }}</a></li>
