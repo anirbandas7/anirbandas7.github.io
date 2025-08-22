@@ -17,9 +17,9 @@
   <div class="author__content">
     <h3 class="author__name">
   {{ author.name }},<br>
-  <span style="color:#F4A300;">{{ author.employer | slice: 0, 3 }}</span>
-  <span style="color:#4DB8E9;">{{ author.employer | slice: 3, 3 }}</span>
-  <span style="color:#E03131;">{{ author.employer | slice: 6, 99 }}</span>
+  <span style="color:#F4A300;">{{ author.employer | slice: 0, 4 }}</span>
+  <span style="color:#4DB8E9;">{{ author.employer | slice: 5, 11 }}</span>
+  <span style="color:#E03131;">{{ author.employer | slice: 12, 99 }}</span>
 </h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
