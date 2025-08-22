@@ -3,7 +3,7 @@ permalink: /
 title: "About Me"
 excerpt: "I am currently an Assistant Professor. I have completed my Ph.D. in Computer Science and Engineering from the Indian Institute of Information Technology, Guwahati, India. Post Ph.D., I have worked as a Post-Doctoral Fellow at the Ubiquitous Networked Systems Lab (UbiNet) at the Indian Institute of Technology Kharagpur. 
 
-My research interest primarily involves Sensing, Human-Computer Interaction, Acoustic sensing and the Internet of Things. My earlier research works addressed in-network data fusion, machine inference on low-power devices, sentiment analysis on textual data, and detecting communities in social networks. Apart from that I have 5+ years of teaching experience at both abroad and within the country. 
+My research interest primarily involves Sensing, Human-Computer Interaction, Acoustic sensing, and the Internet of Things. My earlier research works addressed in-network data fusion, machine inference on low-power devices, sentiment analysis on textual data, and detecting communities in social networks. Apart from that, I have 5+ years of teaching experience both abroad and within the country. 
 
 Feel free to connect with me through my email and social media pages. Thank you"
 author_profile: true
@@ -16,11 +16,11 @@ redirect_from:
 
 I am currently serving as an **Assistant Professor** at [BITS Pilani, Goa Campus](https://www.bits-pilani.ac.in/goa/). I hold a **Ph.D. in Computer Science and Engineering** from the [Indian Institute of Information Technology Guwahati (IIITG)](https://www.iiitg.ac.in), India. Following my doctoral studies, I pursued postdoctoral research as a **Post-Doctoral Fellow** in the Department of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur (IIT Kharagpur)](http://www.iitkgp.ac.in).  
 
-My research interests primarily lie in:  
-- **Sensing Technologies**  
-- **Human-Computer Interaction (HCI)**  
+My research interests primarily lie in:   
+- **Human-Computer Interaction (HCI)**
+- **Internet of Things (IoT)**
 - **Acoustic Sensing**  
-- **Internet of Things (IoT)**  
+- **Sensing Techniques**   
 
 In addition, my earlier research contributions have spanned:  
 - In-network data fusion for resource-constrained environments  
@@ -36,13 +36,15 @@ Feel free to connect with me via **email** or through my **social media pages**.
 Thank you for visiting!  
 
 
-Latest Activities and Quick Links
+
+Latest Activities and Quick Links:
 ======
 [Update](https://www.bits-pilani.ac.in/goa/)
 
 I am glad to share that I have joined BITS Pilani, Goa Campus, as an Assistant Professor in the Department of Computer Science and Information Systems.
 
 I hope to make meaningful contributions to the academic environment here and to grow alongside colleagues and students in this journey.
+
 ____[Further information](https://www.bits-pilani.ac.in/goa/)
 
 
