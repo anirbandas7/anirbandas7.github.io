@@ -12,7 +12,7 @@ title_separator          : "-"
 name                     : &name "Anirban"
 description              : &description "nome"
 url                      : anirbandas7.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+baseurl                  : " " # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
@@ -28,7 +28,7 @@ comments:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
     appid                :
-    num_posts            : 7
+    num_posts            : 3
     colorscheme          : "dark"
 staticman:
   allowedFields          : ['name', 'email', 'url', 'message']
