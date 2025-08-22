@@ -11,8 +11,8 @@ title                    : "Anirban"
 title_separator          : "-"
 name                     : &name "Anirban"
 description              : &description "nome"
-url                      : https://anirbandas7.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+url                      : https://www.bits-pilani.ac.in/goa/anirban-das/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "https://www.bits-pilani.ac.in/goa/anirban-das/" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
@@ -87,7 +87,7 @@ author:
   employer         : "BITS Pilani"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=KEbxZesAAAAJ&h"
-  email            :  "anirbanfuture@gmail.com; anirban.das@ddn.upes.ac.in "
+  email            :  "anirbanfuture@gmail.com; anirband@goa.bits-pilani.ac.in "
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : "https://www.bits-pilani.ac.in/goa/anirban-das/"
   bitbucket        :
