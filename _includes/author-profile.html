@@ -17,10 +17,17 @@
   <div class="author__content">
     <h3 class="author__name">
   {{ author.name }},<br>
-      <span style="color:#F4A300;">{{ author.employer | slice: 0, 4 }}</span>
-      <span style="color:#4DB8E9;">{{ author.employer | slice: 5, 5 }}</span>
-      <span style="color:#E03131;">{{ author.employer | slice: 12, 99 }}</span>
-  </h3>
+  <span style="color:#F4A300; border-bottom: 3px solid #F4A300;">
+    {{ author.employer | slice: 0, 4 }}
+  </span>
+  <span style="color:#4DB8E9; border-bottom: 3px solid #4DB8E9;">
+    {{ author.employer | slice: 5, 5 }}
+  </span>
+  <span style="color:#E03131; border-bottom: 3px solid #E03131;">
+    {{ author.employer | slice: 12, 99 }}
+  </span>
+</h3>
+
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
