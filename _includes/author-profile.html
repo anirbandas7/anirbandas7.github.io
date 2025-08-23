@@ -17,13 +17,13 @@
   <div class="author__content">
     <h3 class="author__name">
   {{ author.name }},<br>
-  <span style="color:#F4A300; border-bottom: 3px solid #F4A300;">
-    {{ author.employer | slice: 0, 4 }}
+  <span style="color:#F4A300; border-bottom: 3px solid #F4A300; display:inline-block;">
+    {{ author.employer | slice: 0, 5 }}
   </span>
-  <span style="color:#4DB8E9; border-bottom: 3px solid #4DB8E9;">
-    {{ author.employer | slice: 5, 5 }}
+  <span style="color:#4DB8E9; border-bottom: 3px solid #4DB8E9; display:inline-block;">
+    {{ author.employer | slice: 5, 6 }}
   </span>
-  <span style="color:#E03131; border-bottom: 3px solid #E03131;">
+  <span style="color:#E03131; border-bottom: 3px solid #E03131; display:inline-block; padding-right:20px;">
     {{ author.employer | slice: 11, 99 }}
   </span>
 </h3>
