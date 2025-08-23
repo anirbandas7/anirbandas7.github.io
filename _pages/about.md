@@ -33,6 +33,7 @@ Feel free to connect with me via **email** or through my **social media pages**.
 
 Thank you for visiting!  
 
+<hr class="thick-hr">
 ----------------------------------------------------------------------------------
 
 Latest Activities and Quick Links:
@@ -58,8 +59,6 @@ The project will explore how **radio frequency/mmWave signals**, combined with *
 
 📩 **To Apply,**  
 If you are interested, please send me your **CV** at: [anirband@goa.bits-pilani.ac.in](mailto:anirband@goa.bits-pilani.ac.in) with the subject line **“Interest: Multimodal Sensing & mmWave Project”**.
-
-
 
 
 ## 📢 Announcement: Research Opportunity in Image Processing
