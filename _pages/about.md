@@ -112,19 +112,5 @@ Here’s to new beginnings, lifelong learning, and making the most of this excit
 
 
 
-[Happy to be a part of CODEC 2.0.](https://sites.google.com/st.niituniversity.in/etic-portal/announcements?authuser=0#h.wrk53hdde005)
-
-CODEC is a collaborative project which brings together 5 subjects.  An acronym for - ‘Computer Networks and Data Communication, Operating Systems, Database Management, ET and Cybersecurity', CODEC seeks to provide students an understanding of the inter-dependence of subjects in cutting-edge technology. This project is launched under the guidance of the faculties - Prof. Vijay Mandke, Dr. Kumar Nitesh, Dr. Anand Kumar Mishra, Dr. Anirban Das, Prof. Meera Datta, Prof. Surendar Singh, Prof. Manish Hurkat and Prof. Dheeraj Tripathi for 2nd Year BTech students. NUtons work on projects carried forward from the previous semester which involved integrating Object-Oriented Programming with the hardware prototypes of their workshop practice projects.
-
-  ____[Further information](https://sites.google.com/st.niituniversity.in/etic-portal/announcements?authuser=0#h.wrk53hdde005)
 
 
-
-
-[SMART: Streamlining Meta-expertise through Advanced AI and Rapid Technology](https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMT7ioXKX3iD_WDh2VdwihHCP-xKWJXg7Qo_SsddaPdQWksg/closedform)
-
-Launched the first round of SMART. In today's fast-paced digital era, the demand for software applications has surged, leading to a growing need for rapid application development. Low-code and no-code (LCNC) have emerged as powerful tools that allow individuals to create software applications with minimal coding effort. The advantages of LCNC platforms include drag-and-drop visual interfaces, progressive deployment of web applications across various form factors and experiences, API-based integration with external and enterprise applications and data, and business process modeler and automation workflow designer using AI-based approaches. These platforms help convert business ideas into minimal viable products without spending significant effort on coding. These platforms also aid in testing the potential of business ideas, thus reducing massive costs and risks associated with software product development. 
-
-Recognizing the significance of these platforms in modern software development, NIIT University planned a contest for developing AI-based Applications with the LCNC Challenge.  Low-code technologies make engaging with code simple for developers and non-developers. Developers with some programming skills can speed up automation initiatives. Non-developers can also design forms, data-collection applications, business procedures, and custom user interfaces for customers using little code.
-
-  ____[More details](https://docs.google.com/forms/u/0/d/e/1FAIpQLSdMT7ioXKX3iD_WDh2VdwihHCP-xKWJXg7Qo_SsddaPdQWksg/closedform)
