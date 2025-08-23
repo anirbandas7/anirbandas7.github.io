@@ -33,7 +33,7 @@ Feel free to connect with me via **email** or through my **social media pages**.
 
 Thank you for visiting!  
 
-
+----------------------------------------------------------------------------------
 
 Latest Activities and Quick Links:
 ======
