@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "About Me"
-excerpt: "I am currently an Assistant Professor. I have completed my Ph.D. in Computer Science and Engineering from the Indian Institute of Information Technology, Guwahati, India. Post Ph.D., I have worked as a Post-Doctoral Fellow at the Ubiquitous Networked Systems Lab (UbiNet) at the Indian Institute of Technology Kharagpur. 
+excerpt: "I am currently an Assistant Professor. I have completed my Ph.D. in Computer Science and Engineering from the Indian Institute of Information Technology Guwahati, India. Post Ph.D., I have worked as a Post-Doctoral Fellow at the Ubiquitous Networked Systems Lab (UbiNet) at the Indian Institute of Technology Kharagpur. 
 
 My research interest primarily involves Sensing, Human-Computer Interaction, Acoustic sensing, and the Internet of Things. My earlier research works addressed in-network data fusion, machine inference on low-power devices, sentiment analysis on textual data, and detecting communities in social networks. Apart from that, I have 5+ years of teaching experience both abroad and within the country. 
 
@@ -12,7 +12,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently serving as an **Assistant Professor** at [BITS Pilani, Goa Campus](https://www.bits-pilani.ac.in/goa/). I hold a **Ph.D. in Computer Science and Engineering** from the [Indian Institute of Information Technology Guwahati (IIITG)](https://www.iiitg.ac.in), India. Following my doctoral studies, I pursued postdoctoral research as a **Post-Doctoral Fellow** in the Department of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur (IIT Kharagpur)](http://www.iitkgp.ac.in).  
+I am currently serving as an **Assistant Professor** at [BITS Pilani, Goa Campus](https://www.bits-pilani.ac.in/goa/). I hold a **Ph.D. in Computer Science and Engineering** from the [Indian Institute of Information Technology Guwahati](https://www.iiitg.ac.in), India. Following my doctoral studies, I pursued postdoctoral research as a **Post-Doctoral Fellow** in the Department of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur](http://www.iitkgp.ac.in).  
 
 My research interests primarily lie in:   
 - **Human-Computer Interaction (HCI)**
