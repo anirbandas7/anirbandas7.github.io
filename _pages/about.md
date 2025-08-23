@@ -39,6 +39,31 @@ Thank you for visiting!
 
 Latest Activities and Quick Links:
 ======
+## 📢 Announcement: Research Opportunity in Multimodal Sensing with mmWave
+
+I am looking for motivated students to contribute to a **research project on multimodal sensing and mmWave technologies**.  
+The project will explore how **radio frequency/mmWave signals**, combined with **vision and other ambient modalities**, can be leveraged for advanced sensing applications such as human activity recognition, environmental understanding, and intelligent systems.  
+
+### Requirements
+- Curiosity and enthusiasm for **building and experimenting with hardware systems**  
+- Basic background in signal processing, computer vision, or machine learning  
+- Interest in working with **multimodal data** (e.g., combining vision, RF/mmWave, and ambient sensing)  
+- Familiarity with deep learning frameworks (e.g., PyTorch, TensorFlow) is a plus but not mandatory  
+
+### What You Will Gain
+- Hands-on experience with **real sensing hardware and multimodal datasets**  
+- Opportunities to design, prototype, and test sensing systems in real-world environments  
+- Exposure to cutting-edge **Deep learning-based models for multimodal fusion**  
+- Pathways to publications and interdisciplinary collaborations  
+
+---
+
+📩 **To Apply,**  
+If you are interested, please send me your **CV** at: [anirband@goa.bits-pilani.ac.in](mailto:anirband@goa.bits-pilani.ac.in) with the subject line **“Interest: Multimodal Sensing & mmWave Project”**.
+
+
+
+
 ## 📢 Announcement: Research Opportunity in Image Processing
 
 I am looking for motivated students to join a **core research project in image processing**.  
