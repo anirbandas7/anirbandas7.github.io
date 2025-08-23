@@ -12,8 +12,6 @@ redirect_from:
   - /about.html
 ---
 
-## About Me  
-
 I am currently serving as an **Assistant Professor** at [BITS Pilani, Goa Campus](https://www.bits-pilani.ac.in/goa/). I hold a **Ph.D. in Computer Science and Engineering** from the [Indian Institute of Information Technology Guwahati (IIITG)](https://www.iiitg.ac.in), India. Following my doctoral studies, I pursued postdoctoral research as a **Post-Doctoral Fellow** in the Department of Computer Science and Engineering at the [Indian Institute of Technology Kharagpur (IIT Kharagpur)](http://www.iitkgp.ac.in).  
 
 My research interests primarily lie in:   
