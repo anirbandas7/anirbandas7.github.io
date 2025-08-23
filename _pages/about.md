@@ -39,6 +39,30 @@ Thank you for visiting!
 
 Latest Activities and Quick Links:
 ======
+## 📢 Announcement: Research Opportunity in Image Processing
+
+I am looking for motivated students to join a **core research project in image processing**.  
+The project will focus on modern approaches to visual understanding, with a particular emphasis on **transformers and related deep learning models**.  
+
+### Requirements
+- Strong background in computer vision and machine learning fundamentals  
+- Familiarity with deep learning frameworks (e.g., PyTorch, TensorFlow)  
+- Interest or prior experience in **transformer-based architectures** is highly desirable  
+
+### What You Will Gain
+- Hands-on experience in cutting-edge research in image processing  
+- Opportunity to work with real-world datasets and advanced models  
+- Potential for publications and collaborations  
+
+---
+
+📩 **To Apply,**  
+If you are interested, please send me your **CV** at: [anirband@goa.bits-pilani.ac.in](mailto:anirband@goa.bits-pilani.ac.in) with the subject line **“Interest: Image Processing Project”**.
+
+
+
+
+
 [Update](https://www.bits-pilani.ac.in/goa/)
 
 I am glad to share that I have joined BITS Pilani, Goa Campus, as an Assistant Professor in the Department of Computer Science and Information Systems.
