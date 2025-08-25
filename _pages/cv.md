@@ -11,7 +11,7 @@ redirect_from:
 
 Current Position
 ======
-* Assistant Professor, [NIIT University](https://niituniversity.in)
+* Assistant Professor, [BITS Pilani](https://www.bits-pilani.ac.in/goa/anirban-das/)
 
 Education
 ======
@@ -23,12 +23,9 @@ Education
 
 Research experience
 ======
-* Dec, 2022 - April, 2023: Post Doctoral Fellow, IIT Kharagpur
+* Feb, 2022 - April, 2023: Post Doctoral Work, IIT Kharagpur
   * [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur
   * Supervisor: [Dr. Sandip Chakraborty](http://cse.iitkgp.ac.in/~sandipc/)
-
-* Feb, 2022 - Nov, 2023: Project Scientist -Research
-  * [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur
 
 * Jun, 2012 - Jul, 2013: Project Trainee, ISI Kolkata
   * Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
@@ -36,7 +33,13 @@ Research experience
 
 Teaching experience
 ======
-* May, 2023 - Present: Assistant Professor
+* Aug, 2025 - Till Date: Assistant Professor
+  * [BITS, Pilani](https://www.bits-pilani.ac.in/goa/), Goa, India
+
+* Dec, 2024 - Jul, 2025: Assistant Professor
+  * [UPES, Dehradun](https://www.upes.ac.in/), Dehradun, India
+
+* May, 2023 - Dec, 2024: Assistant Professor
   * [NIIT University](https://niituniversity.in), Rajasthan, India
   
 * May, 2017 - Jul, 2017: Guest Faculty
