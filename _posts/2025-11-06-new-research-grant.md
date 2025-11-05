@@ -1,6 +1,6 @@
 ---
 title: "AI-based On-road Context Assessment"
-date: 2012-08-14
+date: 2025-10-30
 permalink: /posts/2012/08/ai-onroad-context/
 tags:
   - funded project
