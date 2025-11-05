@@ -1,7 +1,7 @@
 ---
 title: "AI-based On-road Context Assessment"
-date: 2025-11-06
-permalink: /posts/2025/11/new-research-grant/
+date: 2025-10-30
+permalink: /posts/2025/10/ai-onroad-context/
 tags:
   - funded project
   - computer vision
@@ -16,6 +16,7 @@ header:
   caption: "Representational illustration related to the project."
 excerpt: "An NFSG-supported project at BITS Pilani (₹20,00,000) focusing on computer vision-based assessment of on-road contexts in Indian conditions."
 ---
+
 Project Overview
 
 {: .align-center}
