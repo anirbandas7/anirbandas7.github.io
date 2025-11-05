@@ -24,7 +24,9 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config"> 
+  MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); 
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -34,5 +36,59 @@
   });
 </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<!-- 🌓 Dark mode support -->
+<script>
+  // Apply saved theme on load
+  (function() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+    }
+  })();
+</script>
+
+<style>
+  /* Dark mode styling */
+  .dark-mode body,
+  .dark-mode .page,
+  .dark-mode .page__content {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+  }
+
+  .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+    color: #ffffff !important;
+  }
+
+  .dark-mode a {
+    color: #80cbc4 !important;
+  }
+
+  .dark-mode .site-header,
+  .dark-mode .footer,
+  .dark-mode .masthead {
+    background-color: #1e1e1e !important;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    z-index: 1000;
+  }
+
+  .dark-mode .theme-toggle {
+    background: #ddd;
+    color: #222;
+  }
+</style>
 
 <!-- end custom head snippets -->
