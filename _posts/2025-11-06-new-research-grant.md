@@ -12,7 +12,7 @@ layout: single
 author_profile: true
 grant_amount: 2000000/-
 header:
-  overlay_image: /assets/images/image.png
+  overlay_image: /images/context.png
   caption: "Representational illustration related to the project."
 excerpt: "An NFSG-supported project at BITS Pilani (₹20,00,000) focusing on computer vision-based assessment of on-road contexts in Indian conditions."
 ---
