@@ -1,7 +1,7 @@
 ---
 title: "AI-based On-road Context Assessment"
-date: 2025-10-30
-permalink: /posts/2025/10/ai-onroad-context/
+date: 2025-11-06
+permalink: /posts/2025/11/new-research-grant/
 tags:
   - funded project
   - computer vision
