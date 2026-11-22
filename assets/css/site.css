@@ -532,3 +532,16 @@ h2 { font-weight: 600; }
   .hero__inner { grid-template-columns: 1fr; }
   .stats__list li:last-child { grid-column: 1 / -1; border-bottom: 0; }
 }
+
+/* Publications + co-author network side by side */
+.page__body--wide.prose { max-width: none; }
+.pubs-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(17rem, 1fr); gap: clamp(1.5rem, 3.5vw, 3rem); align-items: start; }
+.pubs-layout__side { margin-top: 0; }
+.prose .pubs-layout__title, .pubs-layout__title { margin-top: 0; font-family: var(--serif); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin: 0 0 0.75rem; max-width: none; }
+.pubs-layout .section__more { text-align: left; }
+.netmap--side { grid-template-columns: 1fr; gap: 0.85rem; }
+.netmap--side .netmap__panel { max-height: 22rem; padding: 1rem 1.1rem; font-size: 0.9rem; }
+.netmap--side .netmap__node text { font-size: 11px; }
+.netmap--side .netmap__node--me text { font-size: 13px; }
+.netmap--side .netmap__listwrap { font-size: 0.9rem; }
+@media (max-width: 60rem) { .pubs-layout { grid-template-columns: 1fr; } .pubs-layout__side { max-width: 34rem; } }
