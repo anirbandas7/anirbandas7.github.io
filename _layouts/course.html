@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% assign pos = site.teaching | where: "key", page.position | first %}
+<article class="wrap page">
+  <header class="page__head">
+    <p class="page__kicker"><a href="{{ '/teaching/' | relative_url }}">Teaching</a>{% if pos %} / <a href="{{ pos.url | relative_url }}">{{ pos.venue }}</a>{% endif %}</p>
+    <h1 class="page__title">{{ page.title }}</h1>
+    <p class="page__lede">{{ page.term }}{% if pos %}, {{ pos.venue }}{% endif %}</p>
+  </header>
+  {% if content != "" %}<div class="prose page__body">{{ content }}</div>{% endif %}
+  {% include slides-list.html doc=page %}
+</article>

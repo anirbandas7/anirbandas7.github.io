@@ -19,15 +19,10 @@ layout: default
     {{ content }}
   </div>
   {% if page.collection == "teaching" %}
-  {% if page.terms %}
   <section class="slides" aria-label="Courses taught">
     <h2>Courses taught</h2>
-    <dl class="terms">
-      {% for term in page.terms %}<dt>{{ term.term }}</dt><dd>{{ term.courses | join: "; " }}</dd>{% endfor %}
-    </dl>
+    {% include course-terms.html position=page.key %}
   </section>
-  {% endif %}
-  {% include slides-list.html doc=page %}
   <p class="page__back"><a href="{{ '/teaching/' | relative_url }}">All teaching</a></p>
   {% endif %}
   {% if page.tags.size > 0 %}
