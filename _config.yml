@@ -199,6 +199,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  courses:
+    output: true
+    permalink: /teaching/:path/
 
 
 # Defaults
@@ -248,6 +251,12 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _courses (one page per course offering, with slides)
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: course
   # _talks
   - scope:
       path: ""
