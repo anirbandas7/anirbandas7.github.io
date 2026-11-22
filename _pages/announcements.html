@@ -1,0 +1,15 @@
+---
+layout: single
+title: "Announcements"
+permalink: /announcements/
+lede: "Openings for students, events and other notices. Current ones also appear on the home page."
+---
+<h2 class="ann-group">Current</h2>
+<ul class="announce__list announce__list--page">
+  {% for n in site.data.announcements %}{% unless n.archived %}{% include notice.html n=n %}{% endunless %}{% endfor %}
+</ul>
+
+<h2 class="ann-group">Earlier</h2>
+<ul class="announce__list announce__list--page">
+  {% for n in site.data.announcements %}{% if n.archived %}{% include notice.html n=n %}{% endif %}{% endfor %}
+</ul>
