@@ -1,0 +1,26 @@
+{% assign p = include.pub %}
+{% assign author_line = p.authors | join: ", " | replace: "Anirban Das", '<strong class="me">Anirban Das</strong>'  %}
+{% if p.doi %}{% assign main_link = "https://doi.org/" | append: p.doi %}{% elsif p.url %}{% assign main_link = p.url %}{% elsif p.arxiv %}{% assign main_link = "https://arxiv.org/abs/" | append: p.arxiv %}{% else %}{% assign main_link = nil %}{% endif %}
+<li class="pub" data-type="{{ p.type }}" id="{{ p.id }}">
+  <span class="pub__badge pub__badge--{{ p.type }}">{{ p.venue_short }}</span>
+  <div class="pub__body">
+    <p class="pub__title">{% if main_link %}<a href="{{ main_link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+    <p class="pub__authors">{{ author_line }}</p>
+    <p class="pub__venue"><em>{{ p.venue }}</em>{% if p.volume %}, vol. {{ p.volume }}{% endif %}{% if p.pages %}, pp. {{ p.pages }}{% endif %}, {{ p.year }}.</p>
+    {% unless include.compact %}
+    <p class="pub__links">
+      {% if p.doi %}<a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}
+      {% if p.url %}<a href="{{ p.url }}">Publisher</a>{% endif %}
+      {% if p.arxiv %}<a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv</a>{% endif %}
+      {% if p.pdf %}<a href="{{ p.pdf | relative_url }}">PDF</a>{% endif %}
+      {% if p.code %}<a href="{{ p.code }}">Code</a>{% endif %}
+    </p>
+    {% if p.abstract %}
+    <details class="pub__abstract">
+      <summary>Abstract</summary>
+      <p>{{ p.abstract }}</p>
+    </details>
+    {% endif %}
+    {% endunless %}
+  </div>
+</li>

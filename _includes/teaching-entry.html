@@ -1,0 +1,13 @@
+{% assign t = include.entry %}
+<li class="tl__item">
+  <p class="tl__when">{{ t.period }}</p>
+  <div class="tl__what">
+    <h3 class="tl__title">{{ t.title }}<span class="tl__org">{{ t.venue }}, {{ t.location }}</span></h3>
+    {% if t.role %}<p class="tl__role">{{ t.role }}</p>{% endif %}
+    {% if t.terms %}
+    <dl class="terms">
+      {% for term in t.terms %}<dt>{{ term.term }}</dt><dd>{{ term.courses | join: "; " }}</dd>{% endfor %}
+    </dl>
+    {% endif %}
+  </div>
+</li>

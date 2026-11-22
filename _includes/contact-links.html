@@ -1,0 +1,9 @@
+{% assign a = site.author %}
+<ul class="links{% if include.class %} {{ include.class }}{% endif %}">
+  {% if a.email %}<li><a href="mailto:{{ a.email }}">{% include icon.html name="mail" %}<span>{{ a.email }}</span></a></li>{% endif %}
+  {% if a.googlescholar %}<li><a href="{{ a.googlescholar }}">{% include icon.html name="scholar" %}<span>Google Scholar</span></a></li>{% endif %}
+  {% if a.orcid %}<li><a href="{{ a.orcid }}">{% include icon.html name="orcid" %}<span>ORCID</span></a></li>{% endif %}
+  {% if a.github %}<li><a href="https://github.com/{{ a.github }}">{% include icon.html name="github" %}<span>GitHub</span></a></li>{% endif %}
+  {% if a.linkedin %}<li><a href="https://www.linkedin.com/in/{{ a.linkedin }}">{% include icon.html name="linkedin" %}<span>LinkedIn</span></a></li>{% endif %}
+  {% if a.twitter %}<li><a href="https://x.com/{{ a.twitter }}">{% include icon.html name="x" %}<span>X / Twitter</span></a></li>{% endif %}
+</ul>
