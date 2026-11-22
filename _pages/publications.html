@@ -1,0 +1,30 @@
+---
+layout: single
+title: "Publications"
+permalink: /publications/
+lede: "Journal articles, conference papers, demos, preprints and patents. The full list is also on Google Scholar and ORCID."
+---
+{% assign pubs = site.data.publications %}
+<p class="page-links">
+  <a href="{{ site.author.googlescholar }}">Google Scholar</a>
+  <a href="{{ site.author.orcid }}">ORCID</a>
+</p>
+
+<div class="filter" role="group" aria-label="Filter publications by type" hidden>
+  <button type="button" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" data-filter="journal" aria-pressed="false">Journals</button>
+  <button type="button" data-filter="conference" aria-pressed="false">Conferences</button>
+  <button type="button" data-filter="demo" aria-pressed="false">Demos</button>
+  <button type="button" data-filter="preprint" aria-pressed="false">Preprints</button>
+  <button type="button" data-filter="patent" aria-pressed="false">Patents</button>
+</div>
+
+{% assign years = pubs | map: "year" | uniq | sort | reverse %}
+{% for y in years %}
+<section class="year-group">
+  <h2 class="year-group__year">{{ y }}</h2>
+  <ol class="pubs">
+    {% for p in pubs %}{% if p.year == y %}{% include pub.html pub=p %}{% endif %}{% endfor %}
+  </ol>
+</section>
+{% endfor %}

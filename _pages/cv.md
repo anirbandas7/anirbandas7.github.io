@@ -1,76 +1,52 @@
 ---
-layout: archive
-title: "CV"
+layout: single
+title: "Curriculum vitae"
 permalink: /cv/
-author_profile: true
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+## Current position
 
-Current Position
-======
-* Assistant Professor, [BITS Pilani](https://www.bits-pilani.ac.in/goa/anirban-das/)
+Assistant Professor, Department of Computer Science & Information Systems, [BITS Pilani, K K Birla Goa Campus](https://www.bits-pilani.ac.in/goa/anirban-das/), since August 2025.
 
-Education
-======
-* Ph.D in Computer Science and Engineering, 2022
-  * Supervisor: [Dr. Suchetana Chakraborty](https://sites.google.com/site/suchetana0116)
-* M.Tech. in Information Technology, 2013
-* B.E. in Computer Science and Engineering, 2010
+## Education
 
+- **Ph.D. in Computer Science and Engineering**, Indian Institute of Information Technology Guwahati, 2022. Supervisor: [Dr. Suchetana Chakraborty](https://sites.google.com/site/suchetana0116)
+- **M.Tech. in Information Technology**, 2013
+- **B.E. in Computer Science and Engineering**, 2010
 
-Research experience
-======
-* Feb, 2022 - April, 2023: Post Doctoral Work, IIT Kharagpur
-  * [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur
-  * Supervisor: [Dr. Sandip Chakraborty](http://cse.iitkgp.ac.in/~sandipc/)
+## Research experience
 
-* Jun, 2012 - Jul, 2013: Project Trainee, ISI Kolkata
-  * Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
+- **Post-Doctoral Fellow**, [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur, Feb 2022 – Apr 2023. Supervisor: [Dr. Sandip Chakraborty](http://cse.iitkgp.ac.in/~sandipc/)
+- **Project Trainee**, Indian Statistical Institute, Kolkata, Jun 2012 – Jul 2013. Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
 
+## Teaching experience
 
-Teaching experience
-======
-* Aug, 2025 - Till Date: Assistant Professor
-  * [BITS, Pilani](https://www.bits-pilani.ac.in/goa/), Goa, India
+{% assign entries = site.teaching | sort: "date" | reverse %}
+<ol class="tl tl--compact">
+  {% for t in entries %}{% include teaching-entry.html entry=t %}{% endfor %}
+</ol>
 
-* Dec, 2024 - Jul, 2025: Assistant Professor
-  * [UPES, Dehradun](https://www.upes.ac.in/), Dehradun, India
+## Grants
 
-* May, 2023 - Dec, 2024: Assistant Professor
-  * [NIIT University](https://niituniversity.in), Rajasthan, India
-  
-* May, 2017 - Jul, 2017: Guest Faculty
-  * [Barak Valley Engineering College](https://bvec.ac.in), Karimganj, Assam
+- [AI-based On-road Context Assessment](/posts/2025/10/ai-onroad-context/), BITS Pilani New Faculty Seed Grant, ₹20,00,000, 2025
 
-* Oct, 2013 - Jan, 2017: Lecturer
-  * School of Computing, [Jimma University](https://ju.edu.et), Jimma, Ethiopia
+## Service
 
-  
-Skills
-======
+- Web Chair, [IEEE PerCom 2027](https://percom.org/organizing-committee/), Goa, India
 
+## Publications
 
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Projects
-======
-* 
+{% assign groups = "journal:Journal articles,conference:Conference papers,demo:Demos,preprint:Preprints,patent:Patents" | split: "," %}
+{% for g in groups %}{% assign kv = g | split: ":" %}
+<h3 class="cv-sub">{{ kv[1] }}</h3>
+<ol class="pubs pubs--compact">
+  {% for p in site.data.publications %}{% if p.type == kv[0] %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
+</ol>
+{% endfor %}
+
+## Talks and demos
+
+{% for t in site.talks %}- {{ t.title }}, {{ t.venue }}, {{ t.location }}, {{ t.date | date: "%B %Y" }}
+{% endfor %}

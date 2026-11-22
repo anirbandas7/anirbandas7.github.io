@@ -1,14 +1,28 @@
 ---
-layout: archive
+layout: single
 title: "Activities"
 permalink: /portfolio/
-author_profile: true
+lede: "Infrastructure, service and other work beyond papers."
 ---
+<section class="block">
+  <h2>Service</h2>
+  <ul class="plain-list">
+    <li><strong>Web Chair</strong>, <a href="https://percom.org/organizing-committee/">IEEE PerCom 2027</a>, Goa, India (8–12 March 2027)</li>
+  </ul>
+</section>
 
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<section class="block">
+  <h2>Systems and testbeds</h2>
+  <ul class="cards">
+    {% for item in site.portfolio %}
+    <li class="cards__item">
+      {% if item.thumb %}<img src="{{ item.thumb | relative_url }}" alt="" loading="lazy">{% endif %}
+      <div>
+        <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+        <p class="cards__meta">{{ item.period }}, {{ item.place }}</p>
+        <p>{{ item.excerpt | strip_html }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

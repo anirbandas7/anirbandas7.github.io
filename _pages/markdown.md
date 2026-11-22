@@ -1,36 +1,23 @@
 ---
 permalink: /markdown/
 title: "Unconventional"
-author_profile: true
-redirect_from: 
+lede: "Conference trips, demos and other things that don't fit in a publication list."
+redirect_from:
   - /md/
   - /markdown.html
 ---
 
-## 2024: 
+## 2024: IPSN in Hong Kong
 
-**IPSN Conference Visit**
+I attended **CPS-IoT Week** in Hong Kong, where I presented our paper **MARS** at **ACM/IEEE IPSN 2024** and showcased it in a **live demo**, talking with researchers, academics and industry professionals from around the world. The feedback and conversations gave us new directions for future research.
 
-Attended the **CPS-IoT Week** in Hong Kong and had the exciting opportunity to present our paper **MARS** at the **ACM/IEEE IPSN 2024** conference. Along with the paper presentation, we also showcased a **live demo**, engaging with researchers, academics, and industry professionals from around the world.
+If you missed the presentation, here is a [teaser of the paper](https://lnkd.in/dBr6r7RR).
 
-It was an incredible experience discussing our work with fellow attendees. The insightful feedback and thought-provoking conversations enriched our understanding and provided new directions for future research.
-
-Here's a teaser of the paper if you missed the presentation: [MARS Paper Teaser](https://lnkd.in/dBr6r7RR)
-
-### Conference Highlights
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="../images/1715837792254.jpeg" alt="Presentation" style="object-fit: cover; height: 45%; width: 45%;">
-  <img src="../images/1715837792311.jpeg" alt="Live Demo" width="45%">
-  <img src="../images/1715837792509.jpeg" alt="Networking" width="45%">
-  <img src="../images/1715837792576.jpeg" alt="Discussion" width="45%">
+<div class="gallery">
+  <img src="/images/ipsn24-311.jpg" alt="Presenting the MARS paper at IPSN 2024" loading="lazy">
+  <img src="/images/ipsn24-509.jpg" alt="MARS live demo setup at IPSN 2024" loading="lazy">
+  <img src="/images/ipsn24-576.jpg" alt="Discussions at the IPSN 2024 demo session" loading="lazy">
+  <img src="/images/ipsn24-254.jpg" alt="At CPS-IoT Week 2024 in Hong Kong" loading="lazy">
 </div>
 
-*Moments from IPSN 2024, including the presentation, demo setup, networking, and engaging discussions.*
-
-If you're around at future conferences, feel free to say hi! Always happy to discuss our work and explore exciting collaborations.
-
----
-
-
-## 2025:
+If you're at a future conference, feel free to say hi. I'm always happy to discuss our work and explore collaborations.

@@ -1,12 +1,10 @@
 ---
-layout: archive
-title: "Teaching Experience:"
+layout: single
+title: "Teaching"
 permalink: /teaching/
-author_profile: true
+lede: "Over six years of teaching undergraduate and postgraduate courses in India and Ethiopia."
 ---
-
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+{% assign entries = site.teaching | sort: "date" | reverse %}
+<ol class="tl">
+  {% for t in entries %}{% include teaching-entry.html entry=t %}{% endfor %}
+</ol>
