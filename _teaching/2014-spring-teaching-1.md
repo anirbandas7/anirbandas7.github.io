@@ -1,26 +1,11 @@
 ---
-title: "Guest/Part-time faculty "
+title: "Guest Faculty"
 collection: teaching
-type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "Barak Valley Engineering College, Karimganj, Assam"
-date: 2017-07-01
-location: "Karimganj, India"
+venue: "Barak Valley Engineering College"
+location: "Karimganj, Assam"
+date: 2017-05-20
+period: "May 2017 – Jul 2017"
+role: "Teaching"
 ---
-
-I was a part of Barak Valley Engineering College, Karimganj, Assam for approx. 2 months in 2017
-
-Duration
-======
-20-MAY-17 to 24-JULY-17 
-
-Responsibilities
-======
-Teaching
-
-Subjects Taken
-======
-NA
-
-Remarks
-======
+Guest faculty at Barak Valley Engineering College, Karimganj, from 20 May to 24 July 2017.

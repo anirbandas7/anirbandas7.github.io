@@ -1,32 +1,16 @@
 ---
-title: "Assistant Professor "
+title: "Assistant Professor"
 collection: teaching
-type: "Undergraduate and Post Graduate courses"
 permalink: /teaching/NIIT
-venue: "NIIT University, Neemrana, Rajasthan"
-date: 2024-02-15
+venue: "NIIT University"
 location: "Neemrana, Rajasthan"
+date: 2023-05-02
+period: "May 2023 – Dec 2024"
+role: "Teaching and research"
+terms:
+  - term: "Spring 2024"
+    courses: ["Digital Logic Circuit", "Internet of Things"]
+  - term: "Fall 2023"
+    courses: ["Computer Architecture and Organization", "Data Communication and Networking"]
 ---
-
-I was a part of NIIT University, Neemrana, Rajasthan, for 3 academic semesters.
-
-Duration
-======
-02-MAY-23 to 17-DEC-24
-
-Responsibilities
-======
-Teaching and Research
-
-Subjects Taken
-======
-**Fall 2023**  <!Odd semester>
-- Computer Architecture and Organization  
-- Data Communication and Networking
-
-**Spring 2023** <!Even Semester>  
-- Digital Logic Circuit  
-- Internet of Things
-
-Remarks
-======
+Three academic semesters at NIIT University, Neemrana, from 2 May 2023 to 17 December 2024.

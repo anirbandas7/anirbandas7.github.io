@@ -1,32 +1,14 @@
 ---
-title: "Lecturer "
+title: "Lecturer"
 collection: teaching
-type: "Undergraduate and Post Graduate courses"
 permalink: /teaching/2015-spring-teaching-2
-venue: "Jimma University, Jimma, Ethiopia"
-date: 2017-01-01
+venue: "School of Computing, Jimma University"
 location: "Jimma, Ethiopia"
+date: 2013-10-16
+period: "Oct 2013 – Jan 2017"
+role: "Teaching and research, undergraduate and postgraduate courses"
+terms:
+  - term: "2013–2017"
+    courses: ["Operating Systems", "Computer Architecture and Organization", "Network Simulation and Modelling", "Data Communication and Networking", "Network Security Principles and Practices", "Information Security and Cyber Laws", "Health Informatics"]
 ---
-
-I was a part of Jimma University for approx. 3 years and 3 months till 2017
-
-Duration
-======
-16-OCT-13 to 17-JAN-17 
-
-Responsibilities
-======
-Teaching and Research
-
-Subjects Taken
-======
-Operating Systems
-Computer Architecture and Organization  
-Network Simulation and Modelling  
-Data Communication and Networking  
-Network Security Principles and Practices  
-Information Security and Cyber Laws  
-Health informatics  
-
-Remarks
-======
+Lecturer in the School of Computing, Jimma University, from 16 October 2013 to 17 January 2017.

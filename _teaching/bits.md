@@ -1,31 +1,16 @@
 ---
-title: "Assistant Professor "
+title: "Assistant Professor"
 collection: teaching
-type: "Undergraduate and Post Graduate courses"
 permalink: /teaching/bits
-venue: "BITS Pilani in Goa Campus"
+venue: "BITS Pilani, K K Birla Goa Campus"
+location: "Goa"
 date: 2025-08-04
-location: "Sacoale, Goa"
+period: "Aug 2025 – present"
+role: "Teaching and research"
+terms:
+  - term: "Fall 2026"
+    courses: ["CS F213 Object Oriented Programming"]
+  - term: "Fall 2025"
+    courses: ["Programming in C"]
 ---
-
-I have been a part of BITS Pilani, Goa, since August 2025.
-
-Duration
-======
-04-AUG-25 to Till date
-
-Responsibilities
-======
-Teaching and Research
-
-Subjects Taken
-======
-**Fall 2025**  <!Odd semester>
-- Programming in C
-
-**Spring 2023** <!Even Semester>  
-- 
-
-Remarks
-======
-
+Teaching and research in the Department of Computer Science & Information Systems since 4 August 2025.
