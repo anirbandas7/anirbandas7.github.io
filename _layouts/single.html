@@ -15,7 +15,7 @@ layout: default
     {% if page.header.caption %}<figcaption>{{ page.header.caption }}</figcaption>{% endif %}
   </figure>
   {% endif %}
-  <div class="prose page__body">
+  <div class="prose page__body{% if page.body_class %} page__body--{{ page.body_class }}{% endif %}">
     {{ content }}
   </div>
   {% if page.collection == "teaching" %}

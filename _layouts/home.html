@@ -77,17 +77,17 @@ layout: default
 <section class="section" aria-labelledby="sel-h">
   <div class="wrap">
     {% include section-head.html id="sel-h" label="Research" title="Selected publications" %}
-    <ol class="pubs pubs--compact pubs--narrow">
-      {% for p in pubs %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
-    </ol>
-    <p class="section__more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
-  </div>
-</section>
-
-<section class="section section--tint" aria-labelledby="net-h">
-  <div class="wrap">
-    {% include section-head.html id="net-h" label="Collaborations" title="Co-author network" %}
-    <p class="section__lede">Built automatically from the publication list. Circle size shows how many papers we share; select a name to see them.</p>
-    {% include coauthor-map.html %}
+    <div class="pubs-layout">
+      <div class="pubs-layout__main">
+        <ol class="pubs pubs--compact">
+          {% for p in pubs %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
+        </ol>
+        <p class="section__more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+      </div>
+      <aside class="pubs-layout__side" aria-labelledby="net-h">
+        <h3 id="net-h" class="pubs-layout__title">Co-author network</h3>
+        {% include coauthor-map.html side=true %}
+      </aside>
+    </div>
   </div>
 </section>
