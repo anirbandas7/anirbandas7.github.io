@@ -1,0 +1,13 @@
+# News shown on the home page, newest first. "text" accepts Markdown.
+- date: "2026"
+  text: "Serving as **Web Chair** for [IEEE PerCom 2027](https://percom.org/), held in Goa, India, 8–12 March 2027."
+- date: "2026"
+  text: "Indian patent *A System for In-Vehicle Passive Monitoring of Driver Behaviors* (with Argha Sen and Sandip Chakraborty) has been **granted**."
+- date: "Jan 2026"
+  text: "*BeatWave: Contactless Drum Generation from Ambient Wireless Sensing* (with Srachet Rai) published at COMSNETS 2026, Bengaluru."
+- date: "Oct 2025"
+  text: "Received the BITS Pilani New Faculty Seed Grant (₹20 lakh) for [AI-based On-road Context Assessment](/posts/2025/10/ai-onroad-context/)."
+- date: "Aug 2025"
+  text: "Joined the Department of Computer Science & Information Systems, BITS Pilani K K Birla Goa Campus, as Assistant Professor."
+- date: "May 2024"
+  text: "Presented MARS, with a live demo, at ACM/IEEE IPSN 2024 (CPS-IoT Week, Hong Kong)."

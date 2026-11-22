@@ -1,0 +1,28 @@
+# Announcements shown in a band near the top of the home page, in this order.
+# kind: Opening | Event | Notice   (Opening = BITS blue, Event/Notice = BITS gold)
+# new: true adds a red "New" marker. Remove an entry to take it down.
+- kind: Opening
+  new: true
+  title: "Students wanted: multimodal sensing with mmWave"
+  summary: "Combine RF/mmWave radar, vision and ambient sensing for activity recognition and environment understanding, with hands-on work on real hardware."
+  details: |
+    **You'll need:** curiosity for building and experimenting with hardware; a basic background in signal processing, computer vision or machine learning; interest in multimodal data. PyTorch or TensorFlow experience is a plus, not a requirement.
+
+    **You'll get:** real sensing hardware and multimodal datasets, prototyping in real-world environments, deep-learning models for multimodal fusion, and a path to publications.
+  link: "mailto:anirband@goa.bits-pilani.ac.in?subject=Interest:%20Multimodal%20Sensing%20%26%20mmWave%20Project"
+  link_text: "Email your CV"
+- kind: Opening
+  title: "Students wanted: image processing with transformers"
+  summary: "A core research project on modern visual understanding using transformers and related deep-learning models."
+  details: |
+    **You'll need:** strong computer vision and machine learning fundamentals and familiarity with PyTorch or TensorFlow; experience with transformer architectures is highly desirable.
+
+    **You'll get:** research experience on real-world datasets and advanced models, with potential for publications and collaborations.
+  link: "mailto:anirband@goa.bits-pilani.ac.in?subject=Interest:%20Image%20Processing%20Project"
+  link_text: "Email your CV"
+- kind: Event
+  date: "8–12 Mar 2027"
+  title: "IEEE PerCom 2027 comes to Goa"
+  summary: "The 25th IEEE International Conference on Pervasive Computing and Communications will be held in Goa, India. I'm serving as Web Chair."
+  link: "https://percom.org/"
+  link_text: "Visit percom.org"

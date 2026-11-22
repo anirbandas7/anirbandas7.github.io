@@ -1,22 +1,25 @@
-# main links links
+# Top navigation
 main:
-  - title: "Unconventional"
-    url: /markdown/
+  - title: "About"
+    url: /
 
   - title: "Publications"
     url: /publications/
 
+  - title: "Projects"
+    url: /year-archive/
+
   - title: "Teaching"
-    url: /teaching/ 
+    url: /teaching/
 
   - title: "Activities"
     url: /portfolio/
-        
-  - title: "Research Projects"
-    url: /year-archive/
 
-  - title: "Talks and Demos"
-    url: /talks/    
+  - title: "Talks"
+    url: /talks/
+
+  - title: "Unconventional"
+    url: /markdown/
 
   - title: "CV"
     url: /cv/
