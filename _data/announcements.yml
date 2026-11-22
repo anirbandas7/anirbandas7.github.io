@@ -26,3 +26,13 @@
   summary: "The 25th IEEE International Conference on Pervasive Computing and Communications will be held in Goa, India. I'm serving as Web Chair."
   link: "https://percom.org/"
   link_text: "Visit percom.org"
+
+# ---- Earlier announcements (archived: true hides them from the home page;
+#      they stay listed under "Earlier" on /announcements/) ----
+- kind: Notice
+  archived: true
+  date: "Aug 2025"
+  title: "Joined BITS Pilani, K K Birla Goa Campus"
+  summary: "I have joined the Department of Computer Science & Information Systems at BITS Pilani, K K Birla Goa Campus, as an Assistant Professor, and look forward to contributing to its academic environment and growing alongside colleagues and students."
+  link: "https://www.bits-pilani.ac.in/goa/anirban-das/"
+  link_text: "Faculty profile"
