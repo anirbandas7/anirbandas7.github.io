@@ -2,12 +2,13 @@
 <li class="tl__item">
   <p class="tl__when">{{ t.period }}</p>
   <div class="tl__what">
-    <h3 class="tl__title">{{ t.title }}<span class="tl__org">{{ t.venue }}, {{ t.location }}</span></h3>
+    <h3 class="tl__title"><a href="{{ t.url | relative_url }}">{{ t.title }}</a><span class="tl__org">{{ t.venue }}, {{ t.location }}</span></h3>
     {% if t.role %}<p class="tl__role">{{ t.role }}</p>{% endif %}
     {% if t.terms %}
     <dl class="terms">
       {% for term in t.terms %}<dt>{{ term.term }}</dt><dd>{{ term.courses | join: "; " }}</dd>{% endfor %}
     </dl>
     {% endif %}
+    {% unless include.compact %}<p class="tl__more"><a href="{{ t.url | relative_url }}">Slides and materials{% if t.slides.size > 0 %} ({{ t.slides.size }}){% endif %}</a></p>{% endunless %}
   </div>
 </li>

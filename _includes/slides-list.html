@@ -1,0 +1,25 @@
+{% assign d = include.doc %}
+<section class="slides" aria-labelledby="slides-h">
+  <h2 id="slides-h">Slides and materials</h2>
+  {% if d.slides and d.slides.size > 0 %}
+  <ul class="slides__list">
+    {% for s in d.slides %}
+    {% assign found = false %}
+    {% for f in site.static_files %}{% if f.path == s.file %}{% assign found = true %}{% endif %}{% endfor %}
+    <li class="slides__item">
+      <div>
+        <p class="slides__title">{{ s.title }}</p>
+        <p class="slides__meta">{{ s.course }}{% if s.term %}, {{ s.term }}{% endif %}</p>
+      </div>
+      {% if found %}
+      <a class="slides__dl" href="{{ s.file | relative_url }}" download>Download {{ s.file | split: "." | last | upcase }}</a>
+      {% else %}
+      <span class="slides__soon">Coming soon</span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="slides__empty">No slides have been posted for this position yet.</p>
+  {% endif %}
+</section>
