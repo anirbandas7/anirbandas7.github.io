@@ -9,7 +9,7 @@
     <li class="slides__item">
       <div>
         <p class="slides__title">{{ s.title }}</p>
-        <p class="slides__meta">{{ s.course }}{% if s.term %}, {{ s.term }}{% endif %}</p>
+        {% if s.note %}<p class="slides__meta">{{ s.note }}</p>{% endif %}
       </div>
       {% if found %}
       <a class="slides__dl" href="{{ s.file | relative_url }}" download>Download {{ s.file | split: "." | last | upcase }}</a>
@@ -20,6 +20,6 @@
     {% endfor %}
   </ul>
   {% else %}
-  <p class="slides__empty">No slides have been posted for this position yet.</p>
+  <p class="slides__empty">No slides have been posted for this course yet.</p>
   {% endif %}
 </section>
