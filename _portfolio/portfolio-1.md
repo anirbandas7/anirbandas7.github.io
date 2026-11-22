@@ -1,11 +1,17 @@
 ---
-title: "Low-cost testbed setup"
-excerpt: "During 2018-2020 we have developed and deployed a building-scale testbed at IIIT Guwahati<br/><br/>Deployment map<br/><img src='/images/mapp.jpg' width='500' height='600'><br/>Deployment at various locations<br/><img src='/images/figure223.jpg' width='500' height='600'><br/>A node<br/><img src='/images/2021-09-28.jpg' width='250' height='150'><br/>"
+title: "Building-scale low-cost sensing testbed"
 collection: portfolio
+period: "2018–2020"
+place: "IIIT Guwahati"
+thumb: /images/testbed-deployment.jpg
+excerpt: "A building-scale ambient-sensing testbed for edge-based data processing, designed and deployed at IIIT Guwahati between 2018 and 2020."
 ---
+With the widespread adoption of IoT infrastructure, multiple smart applications and their services increasingly share one sensing platform. Shared infrastructure cuts installation and maintenance cost, and it also enables fast cross-domain inference: the same room-temperature and CO₂ readings can feed occupancy estimation for HVAC, surveillance and smart resource management at once.
 
-With the widespread adoption of IoT infrastructure, contemporary smart applications transcend the confines of a singular domain. Whether within a home environment's boundaries or spanning a city-scale infrastructure, multiple smart applications, and their associated services collaborate on a shared sensing platform to cater to users' needs. The primary motivation behind this shared infrastructure is to minimize installation and maintenance costs, but it also facilitates rapid cross-domain inference. This means that a common data set, such as room temperature and CO2 density, can simultaneously inform occupancy estimation services, feeding into HVAC systems, surveillance systems, and smart resource management systems concurrently.
+Faster decisions need sensory data to be pre-processed at the network edge, but simulation platforms do not capture the real-world dynamics that affect edge-based sensing on shared infrastructure. We therefore built a testbed to evaluate such solutions for ambient living. It supports adaptive sensing and edge processing, aiming to reduce computation, communication and storage overhead in continuous automated monitoring while keeping stakeholder applications performing well. Diverse sensing nodes are deployed across the academic building, and the design accommodates multiple applications with different QoS requirements on one shared sensing infrastructure.
 
-To achieve faster decision-making and automation, it is crucial to preprocess sensory data at the network edge. However, current simulation platforms fail to accurately capture the real-world dynamics that impact the performance of edge-based sensing and data processing solutions within a shared IoT infrastructure. We therefore develop a testbed to assess the performance of such edge-based solutions, specifically in supporting ambient living. The main objective of this testbed is to support the adaptive sensing and edge-based processing of gathered data. The aim is to reduce computation, communication, and storage overhead in the continuous automated monitoring of infrastructure while maintaining the quality performance of stakeholder applications. The testbed includes diverse sensing nodes deployed within the Academic Building. Emphasis has been placed on accommodating multiple applications with varied Quality of Service (QoS) requirements, all utilizing a shared sensing infrastructure. This approach aligns with the futuristic design goals of next-generation IoT systems.
+<figure><img src="/images/testbed-map.jpg" alt="Deployment map of sensing nodes across the academic building"><figcaption>Deployment map</figcaption></figure>
+<figure><img src="/images/testbed-deployment.jpg" alt="Sensing nodes installed at various locations"><figcaption>Nodes deployed at various locations</figcaption></figure>
+<figure class="figure--narrow"><img src="/images/testbed-node.jpg" alt="A single sensing node"><figcaption>A sensing node</figcaption></figure>
 
-Further details can be found here: ["Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing"](a href=https://ieeexplore.ieee.org/abstract/document/9668593)
+Details: [*Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing*](https://doi.org/10.1109/COMSNETS53615.2022.9668593), COMSNETS 2022.
