@@ -1,6 +1,7 @@
 ---
 title: "Guest Faculty"
 collection: teaching
+key: "bvec"
 permalink: /teaching/2014-spring-teaching-1
 venue: "Barak Valley Engineering College"
 location: "Karimganj, Assam"
