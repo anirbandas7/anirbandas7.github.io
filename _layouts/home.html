@@ -8,11 +8,12 @@ layout: default
       <h1 class="hero__name">{{ a.name }}</h1>
       <div class="hero__rule" aria-hidden="true"><span></span><span></span></div>
       <p class="hero__role">{{ a.role }}, {{ a.department }}<br>BITS Pilani, K K Birla Goa Campus</p>
+      {% if a.bio %}<p class="hero__bio">{{ a.bio }}</p>{% endif %}
       <p class="hero__intro">{{ page.intro }}</p>
       {% include contact-links.html class="links--hero" %}
     </div>
     <figure class="hero__photo">
-      <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="800" alt="Portrait of {{ a.name }}">
+      <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
     </figure>
   </div>
 </section>
@@ -20,17 +21,11 @@ layout: default
 {% if site.data.announcements.size > 0 %}
 <section class="announce" aria-labelledby="ann-h">
   <div class="wrap">
-    <div class="announce__head"><h2 id="ann-h">Announcements</h2></div>
+    <div class="announce__head"><h2 id="ann-h">Announcements</h2><a class="more" href="{{ '/announcements/' | relative_url }}">View all announcements</a></div>
     <ul class="announce__list">
-      {% for n in site.data.announcements %}
-      <li class="notice notice--{{ n.kind | downcase }}">
-        <p class="notice__meta"><span class="notice__kind">{{ n.kind }}</span>{% if n.date %}<span>{{ n.date }}</span>{% endif %}{% if n.new %}<span class="notice__new">New</span>{% endif %}</p>
-        <h3 class="notice__title">{{ n.title }}</h3>
-        <p>{{ n.summary | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-        {% if n.details %}<details><summary>Details</summary>{{ n.details | markdownify }}</details>{% endif %}
-        {% if n.link %}<a class="notice__cta" href="{{ n.link }}">{{ n.link_text | default: "Learn more" }}</a>{% endif %}
-      </li>
-      {% endfor %}
+      {% for n in site.data.announcements %}{% unless n.archived %}
+      {% include notice.html n=n %}
+      {% endunless %}{% endfor %}
     </ul>
   </div>
 </section>
