@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 intro: "I build sensing systems that make sense of people and their surroundings from mmWave radar, Wi-Fi, ambient sound, cameras and low-cost IoT sensors, with inference that runs on small hardware you can deploy in a car, a home or a campus building."
+teaching_years: "6+"
 interests:
   - mmWave radar sensing
   - Wi-Fi (CSI) sensing
