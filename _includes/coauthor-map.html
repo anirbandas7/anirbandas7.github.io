@@ -1,9 +1,9 @@
-<div class="netmap" data-me="{{ site.author.name }}">
+<div class="netmap{% if include.side %} netmap--side{% endif %}" data-me="{{ site.author.name }}">
   <div class="netmap__canvas">
-    <svg class="netmap__svg" viewBox="0 0 900 560" role="img" aria-label="Co-author network graph"></svg>
+    <svg class="netmap__svg" viewBox="{% if include.side %}0 0 440 540{% else %}0 0 900 560{% endif %}" role="img" aria-label="Co-author network graph"></svg>
   </div>
   <div class="netmap__panel" aria-live="polite">
-    <p class="netmap__hint">Select a co-author in the graph or the list to see the papers you wrote together.</p>
+    <p class="netmap__hint">Circle size shows the number of shared papers. Select a co-author to see them.</p>
   </div>
   <details class="netmap__listwrap">
     <summary>Co-authors as a list</summary>
