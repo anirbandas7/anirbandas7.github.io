@@ -17,7 +17,7 @@
     </p>
     {% if p.abstract %}
     <details class="pub__abstract">
-      <summary>Abstract</summary>
+      <summary>{% if p.type == "patent" %}Summary{% else %}Abstract{% endif %}</summary>
       <p>{{ p.abstract }}</p>
     </details>
     {% endif %}
