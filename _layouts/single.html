@@ -6,7 +6,7 @@ layout: default
     {% if page.collection == "posts" %}<p class="page__kicker"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></p>{% endif %}
     <h1 class="page__title">{{ page.title }}</h1>
     {% if page.lede %}<p class="page__lede">{{ page.lede }}</p>{% endif %}
-    {% if page.collection == "teaching" %}<p class="page__lede">{{ page.venue }}{% if page.location %}, {{ page.location }}{% endif %}</p>{% endif %}
+    {% if page.collection == "teaching" %}<p class="page__lede">{{ page.venue }}{% if page.location %}, {{ page.location }}{% endif %}. {{ page.period }}</p>{% endif %}
     {% if page.collection == "talks" %}<p class="page__lede">{{ page.venue }}{% if page.location %}, {{ page.location }}{% endif %}, {{ page.date | date: "%B %Y" }}</p>{% endif %}
   </header>
   {% if page.header.overlay_image %}
@@ -18,6 +18,18 @@ layout: default
   <div class="prose page__body">
     {{ content }}
   </div>
+  {% if page.collection == "teaching" %}
+  {% if page.terms %}
+  <section class="slides" aria-label="Courses taught">
+    <h2>Courses taught</h2>
+    <dl class="terms">
+      {% for term in page.terms %}<dt>{{ term.term }}</dt><dd>{{ term.courses | join: "; " }}</dd>{% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+  {% include slides-list.html doc=page %}
+  <p class="page__back"><a href="{{ '/teaching/' | relative_url }}">All teaching</a></p>
+  {% endif %}
   {% if page.tags.size > 0 %}
   <ul class="tags page__tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>
   {% endif %}
