@@ -6,25 +6,21 @@ tags:
   - funded project
   - computer vision
   - NFSG
-  - India
 funded: true
 layout: single
-author_profile: true
-grant_amount: 2000000
+sponsor: "BITS Pilani New Faculty Seed Grant (NFSG)"
+grant_amount: "₹20,00,000"
+role: "Principal Investigator"
 header:
-  overlay_image: /images/context.png
+  overlay_image: /images/context.jpg
   caption: "Representational illustration related to the project."
-excerpt: "An NFSG-supported project at BITS Pilani (₹20,00,000) focusing on computer vision-based assessment of on-road contexts in Indian conditions."
+excerpt: "Computer-vision assessment of on-road contexts in Indian traffic and weather conditions, supported by the BITS Pilani New Faculty Seed Grant."
 ---
 
-Project Overview
+The project *AI-based On-road Context Assessment* is supported under the New Faculty Seed Grant (NFSG) programme of BITS Pilani, with a sanctioned amount of ₹20,00,000. The grant provides resources to start independent research in computer vision focused on practical, real-world challenges.
 
-{: .align-center}
+The study observes and characterises diverse on-road environments, particularly Indian traffic and weather conditions, which often present unique and dynamic scenarios. It combines laboratory experiments with field data collection, using high-resolution cameras, portable computing units and environmental sensors.
 
-The project titled “AI-based On-road Context Assessment” has been supported under the New Faculty Seed Grant (NFSG) program of BITS Pilani, with a sanctioned amount of ₹20,00,000. The grant provides resources to initiate independent research in computer vision with a focus on practical, real-world challenges.
+The objective is to find systematic ways to interpret visual and contextual cues from these settings, contributing to safer and better-informed on-road assessment. Specific technical details are withheld to protect the originality of the research approach.
 
-This study aims to observe and understand diverse on-road environments, particularly within Indian traffic and weather conditions, which often present unique and dynamic scenarios. The project involves both laboratory-based experiments and field data collection, supported by equipment such as high-resolution cameras, portable computing units, and environmental sensors.
-
-The objective is to explore systematic ways to interpret visual and contextual cues from these real-world settings, contributing toward safer and more informed on-road assessment practices. Specific technical details are intentionally withheld to protect the originality of the research approach.
-
-I gratefully acknowledge the support of BITS Pilani through the NFSG initiative, which has made this initiative possible.
+I gratefully acknowledge BITS Pilani for its support through the NFSG initiative.
