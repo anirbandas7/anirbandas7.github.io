@@ -2,12 +2,16 @@
 layout: default
 ---
 {% assign a = site.author %}
+{% assign pubs = site.data.publications %}
+{% assign n_journal = 0 %}{% assign n_conf = 0 %}{% assign n_patent = 0 %}
+{% for p in pubs %}{% if p.type == "journal" %}{% assign n_journal = n_journal | plus: 1 %}{% elsif p.type == "conference" %}{% assign n_conf = n_conf | plus: 1 %}{% elsif p.type == "patent" %}{% assign n_patent = n_patent | plus: 1 %}{% endif %}{% endfor %}
+
 <section class="hero">
   <div class="wrap hero__inner">
     <div class="hero__text">
+      <p class="hero__hello">Hello, I'm</p>
       <h1 class="hero__name">{{ a.name }}</h1>
-      <div class="hero__rule" aria-hidden="true"><span></span><span></span></div>
-      <p class="hero__role">{{ a.role }}, {{ a.department }}<br>BITS Pilani, K K Birla Goa Campus</p>
+      <p class="hero__role"><span class="hero__title">{{ a.role }}</span> in the {{ a.department }}, BITS Pilani, K K Birla Goa Campus</p>
       {% if a.bio %}<p class="hero__bio">{{ a.bio }}</p>{% endif %}
       <p class="hero__intro">{{ page.intro }}</p>
       {% include contact-links.html class="links--hero" %}
@@ -18,59 +22,72 @@ layout: default
   </div>
 </section>
 
+<section class="stats" aria-label="At a glance">
+  <ul class="wrap stats__list">
+    <li><span class="stats__num">{{ pubs.size | minus: n_patent }}</span><span class="stats__label">Publications</span></li>
+    <li><span class="stats__num">{{ n_journal }}</span><span class="stats__label">Journal articles</span></li>
+    <li><span class="stats__num" id="coauthor-count">{{ page.coauthors_fallback | default: "–" }}</span><span class="stats__label">Co-authors</span></li>
+    <li><span class="stats__num">{{ page.teaching_years }}</span><span class="stats__label">Years teaching</span></li>
+    <li><span class="stats__num">{{ n_patent }}</span><span class="stats__label">Patent granted</span></li>
+  </ul>
+</section>
+
 {% if site.data.announcements.size > 0 %}
-<section class="announce" aria-labelledby="ann-h">
+<section class="section section--tint" aria-labelledby="ann-h">
   <div class="wrap">
-    <div class="announce__head"><h2 id="ann-h">Announcements</h2><a class="more" href="{{ '/announcements/' | relative_url }}">View all announcements</a></div>
+    {% include section-head.html id="ann-h" label="Latest" title="Announcements" %}
     <ul class="announce__list">
       {% for n in site.data.announcements %}{% unless n.archived %}
       {% include notice.html n=n %}
       {% endunless %}{% endfor %}
     </ul>
+    <p class="section__more"><a href="{{ '/announcements/' | relative_url }}">View all announcements</a></p>
   </div>
 </section>
 {% endif %}
 
-<div class="wrap home-grid">
-  <div class="home-main">
-    <section class="block prose" aria-labelledby="about-h">
-      <h2 id="about-h">About</h2>
-      {{ content }}
-    </section>
-
-    <section class="block" aria-labelledby="news-h">
-      <h2 id="news-h">News</h2>
-      <ol class="news">
-        {% for item in site.data.news %}
-        <li><span class="news__date">{{ item.date }}</span><span class="news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
-        {% endfor %}
-      </ol>
-    </section>
-
-    <section class="block" aria-labelledby="sel-h">
-      <div class="block__head">
-        <h2 id="sel-h">Selected publications</h2>
-        <a class="more" href="{{ '/publications/' | relative_url }}">All publications</a>
-      </div>
-      <ol class="pubs pubs--compact">
-        {% for p in site.data.publications %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
-      </ol>
-    </section>
+<section class="section" aria-labelledby="about-h">
+  <div class="wrap about">
+    {% include section-head.html id="about-h" label="Who I am" title="About me" %}
+    <div class="about__grid">
+      <div class="prose about__text">{{ content }}</div>
+      <aside class="about__side">
+        <h3>Research interests</h3>
+        <ul class="tags">{% for t in page.interests %}<li>{{ t }}</li>{% endfor %}</ul>
+        <h3>Contact</h3>
+        <p class="contact-line">{% include icon.html name="pin" %}<span>{{ a.office }}</span></p>
+        <p class="contact-line">{% include icon.html name="phone" %}<span>{{ a.phone }}</span></p>
+        <p class="contact-line">{% include icon.html name="mail" %}<span><a href="mailto:{{ a.email }}">{{ a.email }}</a></span></p>
+      </aside>
+    </div>
   </div>
+</section>
 
-  <aside class="home-side">
-    <section class="card">
-      <h2>Research interests</h2>
-      <ul class="tags">
-        {% for t in page.interests %}<li>{{ t }}</li>{% endfor %}
-      </ul>
-    </section>
+<section class="section section--tint" aria-labelledby="news-h">
+  <div class="wrap">
+    {% include section-head.html id="news-h" label="What's new" title="News" %}
+    <ol class="news">
+      {% for item in site.data.news %}
+      <li><span class="news__date">{{ item.date }}</span><span class="news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
 
-    <section class="card">
-      <h2>Contact</h2>
-      <p class="contact-line">{% include icon.html name="pin" %}<span>{{ a.office }}</span></p>
-      <p class="contact-line">{% include icon.html name="phone" %}<span>{{ a.phone }}</span></p>
-      <p class="contact-line">{% include icon.html name="mail" %}<span><a href="mailto:{{ a.email }}">{{ a.email }}</a></span></p>
-    </section>
-  </aside>
-</div>
+<section class="section" aria-labelledby="sel-h">
+  <div class="wrap">
+    {% include section-head.html id="sel-h" label="Research" title="Selected publications" %}
+    <ol class="pubs pubs--compact pubs--narrow">
+      {% for p in pubs %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
+    </ol>
+    <p class="section__more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+  </div>
+</section>
+
+<section class="section section--tint" aria-labelledby="net-h">
+  <div class="wrap">
+    {% include section-head.html id="net-h" label="Collaborations" title="Co-author network" %}
+    <p class="section__lede">Built automatically from the publication list. Circle size shows how many papers we share; select a name to see them.</p>
+    {% include coauthor-map.html %}
+  </div>
+</section>
