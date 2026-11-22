@@ -25,7 +25,7 @@ Assistant Professor, Department of Computer Science & Information Systems, [BITS
 
 {% assign entries = site.teaching | sort: "date" | reverse %}
 <ol class="tl tl--compact">
-  {% for t in entries %}{% include teaching-entry.html entry=t %}{% endfor %}
+  {% for t in entries %}{% include teaching-entry.html entry=t compact=true %}{% endfor %}
 </ol>
 
 ## Grants
