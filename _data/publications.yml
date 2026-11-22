@@ -20,6 +20,13 @@
   pages: "201–209"
   doi: "10.1109/COMSNETS67989.2026.11418193"
   selected: true
+  abstract: >-
+    BeatWave lets a person play drums in mid-air, without touching a surface, wearing a sensor or
+    being filmed by a camera. Hand and body motion disturbs the ambient wireless signals already
+    present in a room; BeatWave extracts temporal features from these disturbances and uses a deep-
+    learning model to map them to rhythmic drum events. A technical evaluation and user studies
+    indicate that the approach is feasible, robust and creatively engaging, pointing to more
+    accessible, device-free musical interfaces.
 
 - id: unipre
   type: journal
@@ -79,6 +86,13 @@
   doi: "10.1109/IPSN61024.2024.00018"
   arxiv: "2309.11957"
   selected: true
+  abstract: >-
+    MARS continuously tracks what several people in a room are doing using a single commercial off-
+    the-shelf mmWave radar, with no cameras, wearables or prior knowledge of the room. Its model
+    recognises both macro-scale activities such as walking or squats and micro-scale activities such
+    as typing or sitting, and a dynamic spatial time-sharing scheme lets the radar attend to
+    multiple subjects at once. With five subjects performing 19 activities, MARS achieves a weighted
+    F1-score above 94% with an average response time of about two seconds.
 
 - id: acoudl
   type: conference
@@ -90,6 +104,15 @@
   pages: "332–337"
   doi: "10.1109/SMARTCOMP61445.2024.00077"
   selected: true
+  abstract: >-
+    AcouDL recognises daily household activities from natural audio captured by smart or wearable
+    devices, targeting two practical hurdles: the cost of labelled data and activities that sound
+    alike, such as chopping, hammering and knife sharpening. Because reverberation, surface
+    materials and background noise leave a room-specific fingerprint in audio, AcouDL first learns
+    room-context features with self-supervised contrastive learning on unlabelled recordings, then
+    fuses them into the activity classifier through an attention mechanism. Across three datasets it
+    improves macro F1 by 0.7 to 3.5 percentage points over baselines, with the largest gains in the
+    hardest cases.
 
 - id: mars-demo
   type: demo
@@ -100,6 +123,12 @@
   venue_short: "IPSN 2024 Demo"
   pages: "269–270"
   doi: "10.1109/IPSN61024.2024.00035"
+  abstract: >-
+    This demo presents MARS, a room-scale system that uses one commercial mmWave radar to locate
+    several people and recognise their activities continuously, covering both large movements such
+    as walking and subtle ones such as typing. A dynamic spatial time-sharing approach spreads the
+    radar's attention across subjects. In evaluation with five people and 19 activities, MARS
+    identifies activities with over 93% accuracy and responds in about two seconds on average.
 
 - id: mmhar-dataset
   type: preprint
@@ -109,6 +138,13 @@
   venue: "arXiv preprint"
   venue_short: "arXiv"
   arxiv: "2407.21125"
+  abstract: >-
+    This paper releases mmDoppler, a dataset for passive human activity recognition with a
+    commercial off-the-shelf mmWave radar. Seven subjects perform 19 activities that range from
+    macro-scale exercise to micro-scale actions such as typing, recorded as range-Doppler heatmaps
+    (with point clouds) in both single- and multi-subject settings. Doppler resolution is adapted to
+    the activity so that subtle motions are captured, giving researchers a resource for building
+    more robust and accurate mmWave activity recognition.
 
 - id: mmdrive
   type: conference
@@ -228,6 +264,13 @@
   venue_short: "COMSNETS 2019"
   pages: "684–689"
   doi: "10.1109/COMSNETS.2019.8711469"
+  abstract: >-
+    Smart buildings generate large, heterogeneous and noisy sensor streams, and shipping all of it
+    to a remote server for offline analysis is slow and costly for applications with differing
+    quality-of-service needs. This work motivates context-adaptive sensing combined with in-network
+    fusion of sensory data, so that inference happens faster and closer to the sensors. The idea is
+    demonstrated on a campus-scale sensor network deployment that performs Kalman-filter-based in-
+    network fusion and adapts sensing to context.
 
 - id: fusion19
   type: conference
@@ -238,6 +281,13 @@
   venue_short: "COMSNETS 2019"
   pages: "513–516"
   doi: "10.1109/COMSNETS.2019.8711204"
+  abstract: >-
+    IoT deployments in smart buildings produce large volumes of heterogeneous data, and forwarding
+    everything to a distant server wastes the resources of constrained sensor networks and degrades
+    quality of service. This short paper studies context-adaptive sensing together with in-network
+    data fusion, where nodes combine readings with a Kalman filter before forwarding. A planned
+    smart-building testbed that incorporates contextual parameters is used to argue for the
+    effectiveness of the approach.
 
 - id: sdcf
   type: conference
@@ -248,6 +298,13 @@
   venue_short: "IEEE SENSORS 2018"
   pages: "1–4"
   doi: "10.1109/ICSENS.2018.8589950"
+  abstract: >-
+    SDCF is a sensory data collection framework for smart building applications, where many
+    heterogeneous sensors report continuously and the collection strategy directly affects
+    application quality of service. It uses context-aware forwarding to improve delivery reliability
+    and reduce delay, and combines adaptive forwarding with in-network data fusion to cut packet
+    loss. Simulation results show more reliable delivery, lower delay and substantially lower packet
+    loss than the AODV routing protocol.
 
 - id: s3-18
   type: conference
@@ -258,6 +315,13 @@
   venue_short: "S3 2018"
   pages: "11–13"
   doi: "10.1145/3264877.3264881"
+  abstract: >-
+    Critical infrastructure monitoring relies on many connected sensors whose heterogeneous data
+    must be collected efficiently, since the collection method strongly affects application
+    performance. This work proposes a context-aware data collection framework that improves delivery
+    reliability through context-aware forwarding and reduces collection cost by aggregating and
+    fusing data inside the network only when needed. Simulations demonstrate the effectiveness of
+    the approach.
 
 - id: retis15
   type: conference
@@ -268,6 +332,9 @@
   venue_short: "ReTIS 2015"
   pages: "27–32"
   doi: "10.1109/ReTIS.2015.7232847"
+  abstract: >-
+    This paper studies sentiment analysis of text using the cosine similarity measure, applying a
+    vector-space similarity approach to determine the sentiment polarity of written content.
 
 - id: icetacs13
   type: conference
@@ -278,6 +345,12 @@
   venue_short: "ICETACS 2013"
   pages: "74–77"
   doi: "10.1109/ICETACS.2013.6691399"
+  abstract: >-
+    Community structure is a key property of social networks and is growing more complex on online
+    platforms such as Facebook, Google+ and Twitter. This empirical study applies the Newman-Girvan
+    algorithm, which repeatedly removes the highest-betweenness edges to split a network into
+    groups, to real-world networks, and introduces an approach for detecting sub-communities within
+    the communities it finds.
 
 - id: patent-driver
   type: patent
@@ -287,3 +360,9 @@
   venue: "Indian Patent (granted), Application No. 202431015618, filed"
   venue_short: "Patent"
   selected: true
+  abstract: >-
+    A system that passively monitors driver behaviour inside a vehicle using a small mmWave radar
+    instead of a camera. It detects risky activities such as using a phone, drinking, yawning,
+    nodding off, turning back and abnormal steering, addressing the privacy concerns that camera-
+    based driver monitoring raises, especially in public and shared vehicles.
+
