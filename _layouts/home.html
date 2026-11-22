@@ -1,0 +1,81 @@
+---
+layout: default
+---
+{% assign a = site.author %}
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div class="hero__text">
+      <h1 class="hero__name">{{ a.name }}</h1>
+      <div class="hero__rule" aria-hidden="true"><span></span><span></span></div>
+      <p class="hero__role">{{ a.role }}, {{ a.department }}<br>BITS Pilani, K K Birla Goa Campus</p>
+      <p class="hero__intro">{{ page.intro }}</p>
+      {% include contact-links.html class="links--hero" %}
+    </div>
+    <figure class="hero__photo">
+      <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="800" alt="Portrait of {{ a.name }}">
+    </figure>
+  </div>
+</section>
+
+{% if site.data.announcements.size > 0 %}
+<section class="announce" aria-labelledby="ann-h">
+  <div class="wrap">
+    <div class="announce__head"><h2 id="ann-h">Announcements</h2></div>
+    <ul class="announce__list">
+      {% for n in site.data.announcements %}
+      <li class="notice notice--{{ n.kind | downcase }}">
+        <p class="notice__meta"><span class="notice__kind">{{ n.kind }}</span>{% if n.date %}<span>{{ n.date }}</span>{% endif %}{% if n.new %}<span class="notice__new">New</span>{% endif %}</p>
+        <h3 class="notice__title">{{ n.title }}</h3>
+        <p>{{ n.summary | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% if n.details %}<details><summary>Details</summary>{{ n.details | markdownify }}</details>{% endif %}
+        {% if n.link %}<a class="notice__cta" href="{{ n.link }}">{{ n.link_text | default: "Learn more" }}</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
+<div class="wrap home-grid">
+  <div class="home-main">
+    <section class="block prose" aria-labelledby="about-h">
+      <h2 id="about-h">About</h2>
+      {{ content }}
+    </section>
+
+    <section class="block" aria-labelledby="news-h">
+      <h2 id="news-h">News</h2>
+      <ol class="news">
+        {% for item in site.data.news %}
+        <li><span class="news__date">{{ item.date }}</span><span class="news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+        {% endfor %}
+      </ol>
+    </section>
+
+    <section class="block" aria-labelledby="sel-h">
+      <div class="block__head">
+        <h2 id="sel-h">Selected publications</h2>
+        <a class="more" href="{{ '/publications/' | relative_url }}">All publications</a>
+      </div>
+      <ol class="pubs pubs--compact">
+        {% for p in site.data.publications %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
+      </ol>
+    </section>
+  </div>
+
+  <aside class="home-side">
+    <section class="card">
+      <h2>Research interests</h2>
+      <ul class="tags">
+        {% for t in page.interests %}<li>{{ t }}</li>{% endfor %}
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p class="contact-line">{% include icon.html name="pin" %}<span>{{ a.office }}</span></p>
+      <p class="contact-line">{% include icon.html name="phone" %}<span>{{ a.phone }}</span></p>
+      <p class="contact-line">{% include icon.html name="mail" %}<span><a href="mailto:{{ a.email }}">{{ a.email }}</a></span></p>
+    </section>
+  </aside>
+</div>
