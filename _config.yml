@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Anirban"
+title                    : "Anirban Das"
 title_separator          : "-"
-name                     : &name "Anirban"
-description              : &description "nome"
+name                     : &name "Anirban Das"
+description              : &description "Anirban Das — Assistant Professor, CSIS, BITS Pilani K K Birla Goa Campus. Research in sensing, IoT, cyber-physical systems and human-computer interaction."
 url                      : "https://anirbandas7.github.io" # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "anirbandas7/anirbandas7.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -73,21 +73,26 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               : false # Plausible is loaded in _layouts/default.html
   google:
     tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Assistant Professor"
-  avatar           : "My project.png"
-  bio              : "Researcher, Academician, Traveller, Music lover, Photography enthusiast, Health and fitness enthusiast <br><br> <b>Address:</b> #CC-103, K K Birla Goa Campus, NH-17B Zuarinagar, Goa -403726<br><b>Contact:</b> +91-832-2580424<br>"
+  name             : "Anirban Das"
+  role             : "Assistant Professor"
+  department       : "Department of Computer Science & Information Systems"
+  avatar           : "profile-anirban.jpg"
+  bio              : "Researcher, academician, traveller, music lover, photography and fitness enthusiast."
+  office           : "CC-103, BITS Pilani K K Birla Goa Campus, NH-17B Zuarinagar, Goa 403726"
+  phone            : "+91-832-2580424"
   location         : "Goa, India"
-  employer         : "BITS Pilani, Goa"
+  employer         : "BITS Pilani, K K Birla Goa Campus"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=KEbxZesAAAAJ&h"
-  email            :  "anirbanfuture@gmail.com; anirband@goa.bits-pilani.ac.in "
+  googlescholar    : "https://scholar.google.com/citations?user=KEbxZesAAAAJ"
+  email            : "anirband@goa.bits-pilani.ac.in"
+  email_alt        : "anirbanfuture@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : "anirbandas7.github.io"
   bitbucket        :
@@ -146,6 +151,13 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - preview
+  - markdown_generator
+  - talkmap.py
+  - talkmap.ipynb
+  - CHANGELOG.md
+  - CONTRIBUTING.md
+  - README.md
 keep_files:
   - .git
   - .svn
@@ -255,7 +267,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Kolkata # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
