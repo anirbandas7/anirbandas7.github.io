@@ -1,0 +1,14 @@
+<div class="netmap" data-me="{{ site.author.name }}">
+  <div class="netmap__canvas">
+    <svg class="netmap__svg" viewBox="0 0 900 560" role="img" aria-label="Co-author network graph"></svg>
+  </div>
+  <div class="netmap__panel" aria-live="polite">
+    <p class="netmap__hint">Select a co-author in the graph or the list to see the papers you wrote together.</p>
+  </div>
+  <details class="netmap__listwrap">
+    <summary>Co-authors as a list</summary>
+    <ul class="netmap__list"></ul>
+  </details>
+  <script type="application/json" class="netmap__data">{{ site.data.publications | jsonify }}</script>
+</div>
+<script src="{{ '/assets/js/coauthor-map.js' | relative_url }}" defer></script>
