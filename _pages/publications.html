@@ -2,6 +2,7 @@
 layout: single
 title: "Publications"
 permalink: /publications/
+body_class: wide
 lede: "Journal articles, conference papers, demos, preprints and patents. The full list is also on Google Scholar and ORCID."
 ---
 {% assign pubs = site.data.publications %}
@@ -19,6 +20,8 @@ lede: "Journal articles, conference papers, demos, preprints and patents. The fu
   <button type="button" data-filter="patent" aria-pressed="false">Patents</button>
 </div>
 
+<div class="pubs-layout">
+<div class="pubs-layout__main">
 {% assign years = pubs | map: "year" | uniq | sort | reverse %}
 {% for y in years %}
 <section class="year-group">
@@ -28,3 +31,9 @@ lede: "Journal articles, conference papers, demos, preprints and patents. The fu
   </ol>
 </section>
 {% endfor %}
+</div>
+<aside class="pubs-layout__side" aria-labelledby="net-h">
+  <h2 id="net-h" class="pubs-layout__title">Co-author network</h2>
+  {% include coauthor-map.html side=true %}
+</aside>
+</div>
