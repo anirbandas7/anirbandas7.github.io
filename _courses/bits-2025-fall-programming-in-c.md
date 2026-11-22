@@ -1,6 +1,7 @@
 ---
 title: "Programming in C"
 collection: courses
+program: "B.Tech"
 position: "bits"
 term: "Fall 2025"
 date: 2025-08-01

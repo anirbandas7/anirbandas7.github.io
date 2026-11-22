@@ -1,6 +1,7 @@
 ---
 title: "CS F213 Object Oriented Programming"
 collection: courses
+program: "B.Tech"
 position: "bits"
 term: "Fall 2026"
 date: 2026-08-01
