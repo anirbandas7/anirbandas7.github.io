@@ -363,3 +363,7 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
 .slides__soon { flex: none; color: var(--muted); font-size: 0.9rem; }
 .slides__empty { color: var(--muted); padding: 1rem 1.25rem; border: 1px dashed var(--rule); border-radius: 6px; margin: 0; }
 .page__back { margin-top: 2rem; }
+.terms dd a { color: var(--ink); text-decoration-color: var(--rule); }
+.terms dd a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.terms__count { margin-left: 0.4rem; font-size: 0.8rem; color: var(--accent-strong); background: var(--tint); border-radius: 2rem; padding: 0 0.45rem; }
+.page__kicker a { color: var(--muted); }
