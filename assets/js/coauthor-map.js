@@ -37,7 +37,8 @@
   if (count) count.textContent = String(list.length - 1);
 
   // ---- seeded force layout (computed synchronously) -----------------------
-  var W = 900, H = 560, cx = W / 2, cy = H / 2;
+  var vb = (root.querySelector('.netmap__svg').getAttribute('viewBox') || '0 0 900 560').split(/[\s,]+/);
+  var W = +vb[2] || 900, H = +vb[3] || 560, cx = W / 2, cy = H / 2;
   var seed = 7;
   function rand() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
   list.sort(function (x, y) { return y.withMe - x.withMe || x.id.localeCompare(y.id); });
@@ -87,7 +88,8 @@
   // fit the layout to the drawing area (keep "me" at the centre)
   var mdx = 1, mdy = 1;
   list.forEach(function (n) { mdx = Math.max(mdx, Math.abs(n.x - cx)); mdy = Math.max(mdy, Math.abs(n.y - cy)); });
-  var sx = (W / 2 - 85) / mdx, sy = (H / 2 - 40) / mdy;
+  var padX = W < 600 ? 52 : 85;
+  var sx = (W / 2 - padX) / mdx, sy = (H / 2 - 32) / mdy;
   list.forEach(function (n) { n.x = cx + (n.x - cx) * sx; n.y = cy + (n.y - cy) * sy; });
 
   // ---- render ---------------------------------------------------------------
