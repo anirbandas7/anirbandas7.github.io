@@ -2,6 +2,6 @@
 {% if cs.size > 0 %}
 {% assign groups = cs | group_by: "term" %}
 <dl class="terms">
-  {% for g in groups %}<dt>{{ g.name }}</dt><dd>{% for c in g.items %}<a href="{{ c.url | relative_url }}">{{ c.title }}</a>{% if c.slides.size > 0 %}<span class="terms__count">{{ c.slides.size }} {% if c.slides.size == 1 %}deck{% else %}decks{% endif %}</span>{% endif %}{% unless forloop.last %}<span class="terms__sep">; </span>{% endunless %}{% endfor %}</dd>{% endfor %}
+  {% for g in groups %}<dt>{{ g.name }}</dt><dd>{% for c in g.items %}<a href="{{ c.url | relative_url }}">{{ c.title }}</a>{% if c.program %}<span class="terms__prog">{{ c.program }}</span>{% endif %}{% if c.slides.size > 0 %}<span class="terms__count">{{ c.slides.size }} {% if c.slides.size == 1 %}deck{% else %}decks{% endif %}</span>{% endif %}{% unless forloop.last %}<span class="terms__sep">; </span>{% endunless %}{% endfor %}</dd>{% endfor %}
 </dl>
 {% endif %}
