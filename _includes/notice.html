@@ -1,0 +1,7 @@
+<li class="notice notice--{{ include.n.kind | downcase }}">
+        <p class="notice__meta"><span class="notice__kind">{{ include.n.kind }}</span>{% if include.n.date %}<span>{{ include.n.date }}</span>{% endif %}{% if include.n.new %}<span class="notice__new">New</span>{% endif %}</p>
+        <h3 class="notice__title">{{ include.n.title }}</h3>
+        <p>{{ include.n.summary | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+        {% if include.n.details %}<details><summary>Details</summary>{{ include.n.details | markdownify }}</details>{% endif %}
+        {% if include.n.link %}<a class="notice__cta" href="{{ include.n.link }}">{{ include.n.link_text | default: "Learn more" }}</a>{% endif %}
+      </li>
