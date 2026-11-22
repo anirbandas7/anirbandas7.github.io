@@ -545,3 +545,4 @@ h2 { font-weight: 600; }
 .netmap--side .netmap__node--me text { font-size: 13px; }
 .netmap--side .netmap__listwrap { font-size: 0.9rem; }
 @media (max-width: 60rem) { .pubs-layout { grid-template-columns: 1fr; } .pubs-layout__side { max-width: 34rem; } }
+.terms__prog { display: inline-block; margin-left: 0.4rem; padding: 0 0.45rem; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.75rem; line-height: 1.5; color: var(--muted); vertical-align: 0.1em; }
