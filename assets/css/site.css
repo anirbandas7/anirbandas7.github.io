@@ -346,3 +346,20 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
 .prose .announce__list { padding-left: 0; }
 .prose .announce__list li { margin-bottom: 0; }
 .prose .notice p, .prose .notice h3 { margin: 0; }
+
+/* Teaching pages: slides */
+.tl__title a { color: var(--ink); text-decoration: none; }
+.tl__title a:hover { color: var(--accent); text-decoration: underline; }
+.tl__more { margin: 0.6rem 0 0; font-size: 0.95rem; }
+.slides { max-width: 52rem; margin-top: 2rem; }
+.slides h2 { margin-bottom: 0.9rem; }
+.slides__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.slides__item { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 0; border-bottom: 1px solid var(--rule); }
+.slides__item p { margin: 0; }
+.slides__title { font-weight: 650; }
+.slides__meta { color: var(--muted); font-size: 0.925rem; }
+.slides__dl { flex: none; font-weight: 600; font-size: 0.925rem; padding: 0.35rem 0.85rem; border: 1px solid var(--accent); border-radius: 2rem; text-decoration: none; }
+.slides__dl:hover { background: var(--accent); color: var(--surface); }
+.slides__soon { flex: none; color: var(--muted); font-size: 0.9rem; }
+.slides__empty { color: var(--muted); padding: 1rem 1.25rem; border: 1px dashed var(--rule); border-radius: 6px; margin: 0; }
+.page__back { margin-top: 2rem; }
