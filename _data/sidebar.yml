@@ -1,0 +1,19 @@
+# Left sidebar, shown on every page.
+# facts: short label / value rows under the name. Keep values short.
+facts:
+  - label: "Department"
+    value: "CSIS"
+  - label: "Campus"
+    value: "Goa, India"
+  - label: "Office"
+    value: "CC-103"
+# interests: the checklist under "Research interests".
+interests:
+  - "mmWave radar sensing"
+  - "Wi-Fi (CSI) sensing"
+  - "Acoustic sensing"
+  - "Human-computer interaction"
+  - "Internet of Things"
+  - "Cyber-physical systems"
+  - "On-device inference at the edge"
+  - "Computer vision for Indian roads"

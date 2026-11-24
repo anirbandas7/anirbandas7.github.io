@@ -1,0 +1,12 @@
+# Optional captions for the photo strip on the home page.
+# Photos come from images/strip/ in file-name order (01-, 02-, ...).
+# Keep to technical photos: hardware, deployments, demos. JPG, PNG, WebP or SVG.
+01-mars-demo-ipsn-2024.jpg: "The MARS mmWave demo at IPSN 2024, Hong Kong"
+02-low-cost-sensing-node.jpg: "A low-cost ambient sensing node from the building testbed"
+03-beatwave-air-drumming.svg: "BeatWave: drumming in mid-air, sensed through ambient Wi-Fi (illustration)"
+04-testbed-cafeteria.jpg: "Sensing nodes in the cafeteria (testbed, IIIT Guwahati)"
+05-testbed-classroom.jpg: "Sensing nodes in a classroom (testbed, IIIT Guwahati)"
+06-testbed-cse-lab.jpg: "Sensing nodes in the CSE lab (testbed, IIIT Guwahati)"
+07-testbed-entrance-lobby.jpg: "Sensing nodes in the entrance lobby (testbed, IIIT Guwahati)"
+08-testbed-classroom-corridor.jpg: "A sensing node in the classroom corridor (testbed, IIIT Guwahati)"
+09-testbed-library.jpg: "Sensing nodes in the library (testbed, IIIT Guwahati)"

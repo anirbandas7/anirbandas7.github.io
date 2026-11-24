@@ -7,11 +7,17 @@
 #   venue:       full venue name;  venue_short: badge text, e.g. "IPSN 2024"
 #   doi / url / pdf / arxiv / code: optional links (doi without https://doi.org/)
 #   selected:    true to show on the home page
+#   blurb:       one-line summary used on the home page "Recent work" cards
+#   teaser:      figure for the "Recent work" card, e.g. /images/teasers/beatwave.svg
+#                (16:9, an SVG or an image about 1200 px wide); teaser_alt describes it
+#   topics:      research themes from _data/themes.yml (e.g. [mmwave, driving]);
+#                they drive the theme cards on the home page and the topic filter
 #   abstract:    optional, shown behind an "Abstract" toggle
 # Entries are shown in the order they appear here within each section (newest first).
 
 - id: beatwave
   type: conference
+  topics: [ambient]
   year: 2026
   title: "BeatWave: Contactless Drum Generation from Ambient Wireless Sensing"
   authors: ["Srachet Rai", "Anirban Das"]
@@ -20,6 +26,9 @@
   pages: "201–209"
   doi: "10.1109/COMSNETS67989.2026.11418193"
   selected: true
+  blurb: "Play drums in mid-air: hand motion disturbs the ambient wireless signals in a room, and a deep model turns those disturbances into drum beats."
+  teaser: "/images/teasers/beatwave.svg"
+  teaser_alt: "Illustration: a person drums in mid-air between a Wi-Fi router and a laptop; the signal disturbances become drum beats"
   abstract: >-
     BeatWave lets a person play drums in mid-air, without touching a surface, wearing a sensor or
     being filmed by a camera. Hand and body motion disturbs the ambient wireless signals already
@@ -30,6 +39,7 @@
 
 - id: unipre
   type: journal
+  topics: [iot]
   year: 2024
   title: "UniPreCIS: A data preprocessing solution for collocated services on shared IoT"
   authors: ["Anirban Das", "Navlika Singh", "Suchetana Chakraborty"]
@@ -55,6 +65,7 @@
 
 - id: pmc24
   type: journal
+  topics: [mmwave, driving]
   year: 2024
   title: "Passive Monitoring of Dangerous Driving Behaviors Using mmWave Radar"
   authors: ["Argha Sen", "Avijit Mandal", "Prasenjit Karmakar", "Anirban Das", "Sandip Chakraborty"]
@@ -65,6 +76,9 @@
   doi: "10.1016/j.pmcj.2024.101949"
   url: "https://www.sciencedirect.com/science/article/abs/pii/S1574119224000750"
   selected: true
+  blurb: "Nine kinds of dangerous driving recognised from in-cabin mmWave radar, at about 97% precision in real-world drives."
+  teaser: "/images/teasers/driving.svg"
+  teaser_alt: "Illustration: a dashboard mmWave radar watches the driver; range-Doppler patterns are classified into nine dangerous actions"
   abstract: >-
     Detecting risky driving has been a significant area of focus in recent years, yet a practical,
     effective and unobtrusive solution remains a complex challenge. We explore utilizing mmWave
@@ -77,6 +91,7 @@
 
 - id: ipsn24
   type: conference
+  topics: [mmwave]
   year: 2024
   title: "Continuous Multi-user Activity Tracking via Room-Scale mmWave Sensing"
   authors: ["Argha Sen", "Anirban Das", "Swadhin Pradhan", "Sandip Chakraborty"]
@@ -86,6 +101,9 @@
   doi: "10.1109/IPSN61024.2024.00018"
   arxiv: "2309.11957"
   selected: true
+  blurb: "One off-the-shelf mmWave radar tracks what several people in a room are doing, from walking to typing, with no cameras or wearables."
+  teaser: "/images/teasers/mars.svg"
+  teaser_alt: "Illustration: one mmWave radar in a room tracks five people and their activities over time"
   abstract: >-
     MARS continuously tracks what several people in a room are doing using a single commercial off-
     the-shelf mmWave radar, with no cameras, wearables or prior knowledge of the room. Its model
@@ -96,6 +114,7 @@
 
 - id: acoudl
   type: conference
+  topics: [ambient]
   year: 2024
   title: "AcouDL: Context-Aware Daily Activity Recognition from Natural Acoustic Signals"
   authors: ["Avijoy Chakma", "Anirban Das", "Abu Zaher Md Faridee", "Suchetana Chakraborty", "Sandip Chakraborty", "Nirmalya Roy"]
@@ -104,6 +123,9 @@
   pages: "332–337"
   doi: "10.1109/SMARTCOMP61445.2024.00077"
   selected: true
+  blurb: "Household activities recognised from everyday sounds, using room-context features learned without labels to tell apart activities that sound alike."
+  teaser: "/images/teasers/acoudl.svg"
+  teaser_alt: "Illustration: kitchen sounds in a room become a mel spectrogram, combined with room context to recognise chopping, hammering and sharpening"
   abstract: >-
     AcouDL recognises daily household activities from natural audio captured by smart or wearable
     devices, targeting two practical hurdles: the cost of labelled data and activities that sound
@@ -116,6 +138,7 @@
 
 - id: mars-demo
   type: demo
+  topics: [mmwave]
   year: 2024
   title: "Demo Abstract: MARS — An mmWave-based Multi-user Activity Tracking Solution"
   authors: ["Argha Sen", "Anirban Das", "Swadhin Pradhan", "Sandip Chakraborty"]
@@ -132,6 +155,7 @@
 
 - id: mmhar-dataset
   type: preprint
+  topics: [mmwave]
   year: 2024
   title: "A Dataset for Multi-intensity Continuous Human Activity Recognition through Passive Sensing"
   authors: ["Argha Sen", "Anirban Das", "Swadhin Pradhan", "Sandip Chakraborty"]
@@ -148,6 +172,7 @@
 
 - id: mmdrive
   type: conference
+  topics: [mmwave, driving]
   year: 2023
   title: "mmDrive: mmWave Sensing for Live Monitoring and On-Device Inference of Dangerous Driving"
   authors: ["Argha Sen", "Avijit Mandal", "Prasenjit Karmakar", "Anirban Das", "Sandip Chakraborty"]
@@ -169,6 +194,7 @@
 
 - id: mmassist
   type: conference
+  topics: [mmwave, driving]
   year: 2023
   title: "mmAssist: Passive Monitoring of Driver's Attentiveness Using mmWave Sensors"
   authors: ["Argha Sen", "Anirban Das", "Prasenjit Karmakar", "Sandip Chakraborty"]
@@ -186,6 +212,7 @@
 
 - id: cadgen
   type: journal
+  topics: [iot]
   year: 2022
   title: "Where do all my smart home data go? Context-aware data generation and forwarding for edge-based microservices over shared IoT infrastructure"
   authors: ["Anirban Das", "Sandip Chakraborty", "Suchetana Chakraborty"]
@@ -209,6 +236,7 @@
 
 - id: experience
   type: conference
+  topics: [iot, ambient]
   year: 2022
   title: "Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing"
   authors: ["Anirban Das", "Suchetana Chakraborty"]
@@ -227,6 +255,7 @@
 
 - id: syscon22
   type: conference
+  topics: [ambient]
   year: 2022
   title: "Leveraging ambient sensing for the estimation of curiosity-driven human crowd"
   authors: ["Anirban Das", "Kartik Narayan", "Suchetana Chakraborty"]
@@ -242,6 +271,7 @@
 
 - id: occupancy
   type: conference
+  topics: [iot]
   year: 2020
   title: "A Study on Real-Time Edge Computed Occupancy Estimation in an Indoor Environment"
   authors: ["Anirban Das", "Rohan Gupta", "Suchetana Chakraborty"]
@@ -257,6 +287,7 @@
 
 - id: adaptive19
   type: conference
+  topics: [iot]
   year: 2019
   title: "Significance of Adaptive Sensing for Smart Building Monitoring: A Practical Study"
   authors: ["Anirban Das", "Rohan Gupta", "Suchetana Chakraborty"]
@@ -274,6 +305,7 @@
 
 - id: fusion19
   type: conference
+  topics: [iot]
   year: 2019
   title: "Motivating In-network Fusion for Smart Infrastructure Monitoring"
   authors: ["Anirban Das", "Rohan Gupta", "Suchetana Chakraborty"]
@@ -291,6 +323,7 @@
 
 - id: sdcf
   type: conference
+  topics: [iot]
   year: 2018
   title: "SDCF: Sensory Data Collection Framework for Smart Building Application"
   authors: ["Anirban Das", "Suchetana Chakraborty"]
@@ -308,6 +341,7 @@
 
 - id: s3-18
   type: conference
+  topics: [iot]
   year: 2018
   title: "Context Aware Data Collection Framework for Critical Infrastructure Monitoring System"
   authors: ["Anirban Das", "Suchetana Chakraborty"]
@@ -354,6 +388,7 @@
 
 - id: patent-driver
   type: patent
+  topics: [mmwave, driving]
   year: 2024
   title: "A System for In-Vehicle Passive Monitoring of Driver Behaviors"
   authors: ["Argha Sen", "Anirban Das", "Sandip Chakraborty"]
