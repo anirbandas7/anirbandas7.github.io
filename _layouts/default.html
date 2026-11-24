@@ -15,8 +15,8 @@
   <meta property="og:image" content="{{ '/images/' | append: site.author.avatar | absolute_url }}">
   <meta name="twitter:card" content="summary">
   {% if site.twitter.username %}<meta name="twitter:site" content="@{{ site.twitter.username }}">{% endif %}
-  <meta name="theme-color" content="#f3f4f8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#262a3d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#eef0f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#23273a" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="preload" href="{{ '/assets/fonts/sourcesans3-var.woff' | relative_url }}" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/poppins-medium.woff' | relative_url }}" as="font" type="font/woff" crossorigin>
@@ -38,44 +38,83 @@
 </head>
 <body class="layout-{{ page.layout | default: 'single' }}">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="site-head">
-    <div class="wrap site-head__inner">
-      <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand__name">{{ site.author.name }}</span>
-        <span class="brand__role">{{ site.author.employer }}</span>
-      </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__label">Menu</span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <ul>
-          {% for link in site.data.navigation.main %}
-          {% assign is_current = false %}
-          {% if link.url == "/" %}{% if page.url == "/" %}{% assign is_current = true %}{% endif %}{% else %}{% if page.url contains link.url %}{% assign is_current = true %}{% endif %}{% endif %}
-          <li><a href="{{ link.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Switch theme">
-          {% include icon.html name="contrast" %}
+  <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+  {% if page.landing %}{% include landing.html %}{% endif %}
+
+  <div class="shell" id="page">
+    <aside class="rail" id="rail" aria-label="Profile">
+      {% include rail.html %}
+    </aside>
+    <div class="rail-backdrop" data-close-rail></div>
+
+    <div class="shell__main">
+      <header class="topbar">
+        <div class="topbar__inner">
+        <button class="rail-toggle" type="button" aria-controls="rail" aria-expanded="false" title="Profile">
+          <img src="{{ '/images/' | append: site.author.avatar | relative_url }}" width="640" height="783" alt=""><span class="sr-only">Show profile</span>
         </button>
-      </nav>
+        <a class="topbar__brand" href="{{ '/' | relative_url }}">{{ site.author.name }}</a>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul>
+            {% for link in site.data.navigation.main %}
+            {% assign is_current = false %}
+            {% if link.url == "/" %}{% if page.url == "/" %}{% assign is_current = true %}{% endif %}{% else %}{% if page.url contains link.url %}{% assign is_current = true %}{% endif %}{% endif %}
+            <li><a href="{{ link.url | relative_url }}{% if link.url == '/' %}#page{% endif %}"{% if is_current %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <div class="topbar__tools">
+          <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Switch theme">
+            {% include icon.html name="contrast" %}
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__label">Menu</span>
+          </button>
+        </div>
+        </div>
+      </header>
+
+      <main id="main" class="site-main">
+        {{ content }}
+      </main>
+
+      <footer class="site-foot">
+        <div class="site-foot__inner">
+        <p class="site-foot__who">© {{ site.time | date: "%Y" }} {{ site.author.name }}, {{ site.author.employer }}</p>
+        <p class="site-foot__small"><span>Last updated {{ site.time | date: "%B %Y" }}</span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
+        </div>
+      </footer>
     </div>
-  </header>
+  </div>
 
-  <main id="main" class="site-main">
-    {{ content }}
-  </main>
-
-  <footer class="site-foot">
-    <div class="wrap site-foot__inner">
-      <div class="site-foot__who">
-        <p class="site-foot__name">{{ site.author.name }}</p>
-        <p>{{ site.author.role }}, {{ site.author.department }}<br>{{ site.author.office }}</p>
+  <dialog class="netdialog" id="netdialog" aria-labelledby="netdialog-h">
+    <div class="netdialog__inner">
+    <div class="netdialog__head">
+      <div>
+        <h2 id="netdialog-h">Co-author network</h2>
+        <p class="netdialog__sub">Circle size shows the number of shared papers. Select a co-author to see them.</p>
       </div>
-      {% include contact-links.html %}
-      <p class="site-foot__small"><span>Last updated {{ site.time | date: "%B %Y" }}</span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
+      <button class="netdialog__close" type="button" data-close-network aria-label="Close" autofocus>{% include icon.html name="close" %}</button>
     </div>
-  </footer>
+    <div class="netmap netmap--full" data-me="{{ site.author.name }}" data-lazy>
+      <div class="netmap__canvas">
+        <svg class="netmap__svg" viewBox="0 0 900 560" role="img" aria-label="Co-author network graph"></svg>
+      </div>
+      <div class="netmap__panel" aria-live="polite">
+        <p class="netmap__hint">Select a co-author in the graph or in the list below to see the papers you wrote together.</p>
+      </div>
+      <details class="netmap__listwrap">
+        <summary>Co-authors as a list</summary>
+        <ul class="netmap__list"></ul>
+      </details>
+    </div>
+    </div>
+  </dialog>
+
+  <button class="totop" type="button" aria-label="Back to top">{% include icon.html name="arrow-up" %}</button>
+
+  <script type="application/json" id="pub-data">[{% for p in site.data.publications %}{"title":{{ p.title | jsonify }},"authors":{{ p.authors | jsonify }},"venue_short":{{ p.venue_short | jsonify }},"year":{{ p.year | jsonify }},"type":{{ p.type | jsonify }},"doi":{{ p.doi | jsonify }},"url":{{ p.url | jsonify }},"arxiv":{{ p.arxiv | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
   <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/coauthor-map.js' | relative_url }}" defer></script>
 </body>
 </html>

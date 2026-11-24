@@ -3,91 +3,120 @@ layout: default
 ---
 {% assign a = site.author %}
 {% assign pubs = site.data.publications %}
-{% assign n_journal = 0 %}{% assign n_conf = 0 %}{% assign n_patent = 0 %}
-{% for p in pubs %}{% if p.type == "journal" %}{% assign n_journal = n_journal | plus: 1 %}{% elsif p.type == "conference" %}{% assign n_conf = n_conf | plus: 1 %}{% elsif p.type == "patent" %}{% assign n_patent = n_patent | plus: 1 %}{% endif %}{% endfor %}
+{% assign n_journal = 0 %}{% assign n_patent = 0 %}
+{% for p in pubs %}{% if p.type == "journal" %}{% assign n_journal = n_journal | plus: 1 %}{% elsif p.type == "patent" %}{% assign n_patent = n_patent | plus: 1 %}{% endif %}{% endfor %}
+{% assign all_authors = "" %}
+{% for p in pubs %}{% for au in p.authors %}{% assign all_authors = all_authors | append: au | append: "||" %}{% endfor %}{% endfor %}
+{% assign uniq_authors = all_authors | split: "||" | uniq %}
+{% assign n_coauthors = 0 %}
+{% for au in uniq_authors %}{% if au != "" and au != a.name %}{% assign n_coauthors = n_coauthors | plus: 1 %}{% endif %}{% endfor %}
+{% assign teach_num = page.teaching_years | remove: "+" %}
 
-<section class="hero">
-  <div class="wrap hero__inner">
-    <div class="hero__text">
-      <p class="hero__hello">Hello, I'm</p>
-      <h1 class="hero__name">{{ a.name }}</h1>
-      <p class="hero__role"><span class="hero__title">{{ a.role }}</span> in the {{ a.department }}, BITS Pilani, K K Birla Goa Campus</p>
-      {% if a.bio %}<p class="hero__bio">{{ a.bio }}</p>{% endif %}
-      <p class="hero__intro">{{ page.intro }}</p>
-      {% include contact-links.html class="links--hero" %}
-    </div>
-    <figure class="hero__photo">
-      <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
-    </figure>
-  </div>
+<section class="intro reveal" aria-labelledby="intro-h">
+  <figure class="intro__photo">
+    <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
+  </figure>
+  <p class="intro__hello">Hello, I'm</p>
+  <h2 class="intro__name" id="intro-h">{{ a.name }}</h2>
+  <p class="intro__role"><strong>{{ a.role }}</strong>, {{ a.department | remove: "Department of " }}, {{ a.employer }}</p>
+  {% if page.intro %}<p class="intro__text">{{ page.intro }}</p>{% endif %}
+  {% if page.rotating %}
+  <p class="intro__focus">Currently working on <span class="sr-only">{{ page.rotating | join: ', ' }}</span><span class="rotator" aria-hidden="true" data-words="{{ page.rotating | join: '|' }}"><span class="rotator__word">{{ page.rotating | first }}</span></span></p>
+  {% endif %}
+  <p class="intro__actions">
+    <a class="btn btn--solid" href="{{ '/publications/' | relative_url }}">View publications</a>
+    <a class="btn btn--line" href="{{ '/cv/' | relative_url }}">Curriculum vitae</a>
+    <a class="btn btn--line" href="mailto:{{ a.email }}">Get in touch</a>
+  </p>
 </section>
 
 <section class="stats" aria-label="At a glance">
-  <ul class="wrap stats__list">
-    <li><span class="stats__num">{{ pubs.size | minus: n_patent }}</span><span class="stats__label">Publications</span></li>
-    <li><span class="stats__num">{{ n_journal }}</span><span class="stats__label">Journal articles</span></li>
-    <li><span class="stats__num" id="coauthor-count">{{ page.coauthors_fallback | default: "–" }}</span><span class="stats__label">Co-authors</span></li>
-    <li><span class="stats__num">{{ page.teaching_years }}</span><span class="stats__label">Years teaching</span></li>
-    <li><span class="stats__num">{{ n_patent }}</span><span class="stats__label">Patent granted</span></li>
+  <ul class="stats__list">
+    <li><span class="stats__num" data-count="{{ pubs.size | minus: n_patent }}">{{ pubs.size | minus: n_patent }}</span><span class="stats__label">Publications</span></li>
+    <li><span class="stats__num" data-count="{{ n_journal }}">{{ n_journal }}</span><span class="stats__label">Journal articles</span></li>
+    <li><span class="stats__num" data-count="{{ n_coauthors }}">{{ n_coauthors }}</span><span class="stats__label">Co-authors</span></li>
+    <li><span class="stats__num" data-count="{{ teach_num }}" data-suffix="{% if page.teaching_years contains '+' %}+{% endif %}">{{ page.teaching_years }}</span><span class="stats__label">Years teaching</span></li>
+    <li><span class="stats__num" data-count="{{ n_patent }}">{{ n_patent }}</span><span class="stats__label">Patent granted</span></li>
   </ul>
 </section>
 
-{% if site.data.announcements.size > 0 %}
-<section class="section section--tint" aria-labelledby="ann-h">
-  <div class="wrap">
-    {% include section-head.html id="ann-h" label="Latest" title="Announcements" %}
-    <ul class="announce__list">
-      {% for n in site.data.announcements %}{% unless n.archived %}
-      {% include notice.html n=n %}
-      {% endunless %}{% endfor %}
-    </ul>
-    <p class="section__more"><a href="{{ '/announcements/' | relative_url }}">View all announcements</a></p>
-  </div>
+{% if page.recent %}
+<section class="section" aria-labelledby="recent-h">
+  {% include section-head.html id="recent-h" title="Recent work" more_url="/publications/" more_text="All publications" %}
+  <ul class="works reveal-group">
+    {% for rid in page.recent %}
+    {% assign p = pubs | where: "id", rid | first %}
+    {% if p %}
+    {% if p.doi %}{% assign wlink = "https://doi.org/" | append: p.doi %}{% elsif p.url %}{% assign wlink = p.url %}{% elsif p.arxiv %}{% assign wlink = "https://arxiv.org/abs/" | append: p.arxiv %}{% else %}{% assign wlink = "/publications/" | relative_url %}{% endif %}
+    {% assign wtheme = p.topics | first %}
+    {% assign wicon = "nodes" %}
+    {% for t in site.data.themes %}{% if t.key == wtheme %}{% assign wicon = t.icon %}{% endif %}{% endfor %}
+    <li class="work reveal">
+      <figure class="work__fig{% unless p.teaser %} work__fig--empty{% endunless %}">
+        {% if p.teaser %}<img src="{{ p.teaser | relative_url }}" alt="{{ p.teaser_alt | default: p.title | escape }}" loading="lazy" width="800" height="450">{% else %}<span class="work__ph" aria-hidden="true">{% include icon.html name=wicon %}</span>{% endif %}
+      </figure>
+      <div class="work__body">
+        <p class="work__venue"><span class="pub__badge pub__badge--{{ p.type }}">{{ p.venue_short }}</span></p>
+        <h3 class="work__title"><a href="{{ wlink }}">{{ p.title }}</a></h3>
+        {% if p.blurb %}<p class="work__blurb">{{ p.blurb }}</p>{% endif %}
+      </div>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
 </section>
 {% endif %}
 
-<section class="section" aria-labelledby="about-h">
-  <div class="wrap about">
-    {% include section-head.html id="about-h" label="Who I am" title="About me" %}
-    <div class="about__grid">
-      <div class="prose about__text">{{ content }}</div>
-      <aside class="about__side">
-        <h3>Research interests</h3>
-        <ul class="tags">{% for t in page.interests %}<li>{{ t }}</li>{% endfor %}</ul>
-        <h3>Contact</h3>
-        <p class="contact-line">{% include icon.html name="pin" %}<span>{{ a.office }}</span></p>
-        <p class="contact-line">{% include icon.html name="phone" %}<span>{{ a.phone }}</span></p>
-        <p class="contact-line">{% include icon.html name="mail" %}<span><a href="mailto:{{ a.email }}">{{ a.email }}</a></span></p>
-      </aside>
-    </div>
+{% if site.data.themes.size > 0 %}
+<section class="section" aria-labelledby="themes-h">
+  {% include section-head.html id="themes-h" title="Research themes" %}
+  <ul class="themes reveal-group">
+    {% for t in site.data.themes %}
+    {% assign tc = 0 %}{% for p in pubs %}{% if p.topics contains t.key %}{% assign tc = tc | plus: 1 %}{% endif %}{% endfor %}
+    <li class="theme reveal">
+      <span class="theme__icon">{% include icon.html name=t.icon %}</span>
+      <h3 class="theme__title"><a href="{{ '/publications/' | relative_url }}?topic={{ t.key }}">{{ t.title }}</a></h3>
+      <p class="theme__blurb">{{ t.blurb }}</p>
+      <p class="theme__count">{{ tc }} {% if tc == 1 %}paper{% else %}papers{% endif %}{% include icon.html name="chevron" %}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+{% if site.data.announcements.size > 0 %}
+<section class="section" aria-labelledby="ann-h">
+  {% include section-head.html id="ann-h" title="Announcements" more_url="/announcements/" more_text="View all" %}
+  <ul class="announce__list reveal-group">
+    {% for n in site.data.announcements %}{% unless n.archived %}
+    {% include notice.html n=n %}
+    {% endunless %}{% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="section" aria-labelledby="about-h" id="about">
+  {% include section-head.html id="about-h" title="About me" %}
+  <div class="about reveal">
+    {% if a.bio %}<p class="about__bio">{{ a.bio }}</p>{% endif %}
+    <div class="prose">{{ content }}</div>
   </div>
 </section>
 
-<section class="section section--tint" aria-labelledby="news-h">
-  <div class="wrap">
-    {% include section-head.html id="news-h" label="What's new" title="News" %}
-    <ol class="news">
-      {% for item in site.data.news %}
-      <li><span class="news__date">{{ item.date }}</span><span class="news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
-      {% endfor %}
-    </ol>
-  </div>
+{% include photo-strip.html %}
+
+<section class="section" aria-labelledby="news-h">
+  {% include section-head.html id="news-h" title="News" %}
+  <ol class="news reveal">
+    {% for item in site.data.news %}
+    <li><span class="news__date">{{ item.date }}</span><span class="news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+    {% endfor %}
+  </ol>
 </section>
 
 <section class="section" aria-labelledby="sel-h">
-  <div class="wrap">
-    {% include section-head.html id="sel-h" label="Research" title="Selected publications" %}
-    <div class="pubs-layout">
-      <div class="pubs-layout__main">
-        <ol class="pubs pubs--compact">
-          {% for p in pubs %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
-        </ol>
-        <p class="section__more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
-      </div>
-      <aside class="pubs-layout__side" aria-labelledby="net-h">
-        <h3 id="net-h" class="pubs-layout__title">Co-author network</h3>
-        {% include coauthor-map.html side=true %}
-      </aside>
-    </div>
-  </div>
+  {% include section-head.html id="sel-h" title="Selected publications" more_url="/publications/" more_text="All publications" %}
+  <ol class="pubs pubs--compact reveal">
+    {% for p in pubs %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
+  </ol>
 </section>
