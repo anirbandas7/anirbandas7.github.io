@@ -1,0 +1,38 @@
+{% comment %}
+  Photo strip on the home page. It shows every image in images/strip/
+  (in file-name order, so start names with 01-, 02-, ... to set the order).
+  Keep it to technical photos: hardware, deployments, demos.
+  Captions are optional: add "file-name.jpg: Caption" to _data/strip.yml.
+{% endcomment %}
+{% assign strip_files = site.static_files | sort: "path" %}
+{% assign n_strip = 0 %}
+{% for f in strip_files %}{% if f.path contains "/images/strip/" %}{% assign ext = f.extname | downcase %}{% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".svg" %}{% assign n_strip = n_strip | plus: 1 %}{% endif %}{% endif %}{% endfor %}
+{% if n_strip > 0 %}
+{% assign passes = "1,2,3,4" | split: "," %}
+<section class="section" aria-labelledby="strip-h">
+  {% include section-head.html id="strip-h" title="Snapshots" %}
+  <div class="strip" style="--n: {{ n_strip }};">
+    <ul class="strip__track">
+      {% for pass in passes %}
+      {% for f in strip_files %}{% if f.path contains "/images/strip/" %}{% assign ext = f.extname | downcase %}{% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".svg" %}
+      {% assign cap = site.data.strip[f.name] %}{% if cap == nil or cap == "" %}{% assign cap = f.basename | replace: "-", " " %}{% endif %}
+      <li class="strip__item"{% if pass != "1" %} aria-hidden="true"{% endif %}>
+        <button type="button" class="strip__btn" data-full="{{ f.path | relative_url }}" data-caption="{{ cap | escape }}"{% if pass != "1" %} tabindex="-1"{% endif %}>
+          <img src="{{ f.path | relative_url }}" alt="{% if pass == '1' %}{{ cap | escape }}{% endif %}" loading="lazy" decoding="async">
+        </button>
+      </li>
+      {% endif %}{% endif %}{% endfor %}
+      {% endfor %}
+    </ul>
+  </div>
+  <dialog class="photodialog" id="photodialog" aria-label="Photo">
+    <figure class="photodialog__fig">
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button type="button" class="photodialog__nav photodialog__nav--prev" aria-label="Previous photo">{% include icon.html name="chevron" %}</button>
+    <button type="button" class="photodialog__nav photodialog__nav--next" aria-label="Next photo">{% include icon.html name="chevron" %}</button>
+    <button type="button" class="photodialog__close" aria-label="Close" autofocus>{% include icon.html name="close" %}</button>
+  </dialog>
+</section>
+{% endif %}

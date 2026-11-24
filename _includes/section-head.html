@@ -1,5 +1,4 @@
-<header class="section-head">
-  {% if include.label %}<p class="section-head__label">{{ include.label }}</p>{% endif %}
+<header class="sec-head">
   <h2 id="{{ include.id }}">{{ include.title }}</h2>
-  <span class="section-head__bar" aria-hidden="true"></span>
+  {% if include.more_url %}<a class="sec-head__more" href="{{ include.more_url | relative_url }}">{{ include.more_text | default: "View all" }}{% include icon.html name="chevron" %}</a>{% endif %}
 </header>

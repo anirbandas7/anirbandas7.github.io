@@ -1,0 +1,68 @@
+{% comment %}
+  Left sidebar shown on every page. Facts and interests live in _data/sidebar.yml;
+  publication counts and the co-author network come from _data/publications.yml.
+{% endcomment %}
+{% assign a = site.author %}
+{% assign sb = site.data.sidebar %}
+{% assign pubs = site.data.publications %}
+{% assign n_open = 0 %}
+{% for n in site.data.announcements %}{% if n.kind == "Opening" %}{% unless n.archived %}{% assign n_open = n_open | plus: 1 %}{% endunless %}{% endif %}{% endfor %}
+{% assign type_pairs = "journal:Journal articles,conference:Conference papers,demo:Demos,preprint:Preprints,patent:Patents" | split: "," %}
+{% assign type_max = 1 %}
+{% for t in type_pairs %}{% assign kv = t | split: ":" %}{% assign c = 0 %}{% for p in pubs %}{% if p.type == kv[0] %}{% assign c = c | plus: 1 %}{% endif %}{% endfor %}{% if c > type_max %}{% assign type_max = c %}{% endif %}{% endfor %}
+<div class="rail__head">
+  <button class="rail__close" type="button" aria-label="Close profile panel">{% include icon.html name="close" %}</button>
+  <a class="rail__photo" href="{{ '/' | relative_url }}">
+    <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
+  </a>
+  <p class="rail__name">{{ a.name }}</p>
+  <p class="rail__role">{{ a.role }}<br>{{ a.employer }}</p>
+  {% if n_open > 0 %}
+  <a class="rail__open" href="{{ '/announcements/' | relative_url }}"><span class="rail__pulse" aria-hidden="true"></span>{{ n_open }} student {% if n_open == 1 %}opening{% else %}openings{% endif %}</a>
+  {% endif %}
+</div>
+
+<div class="rail__body">
+  <dl class="facts">
+    {% for f in sb.facts %}<div class="facts__row"><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% endfor %}
+  </dl>
+  <div class="mailrow">
+    <a class="mailrow__link" href="mailto:{{ a.email }}">{% include icon.html name="mail" %}<span>{{ a.email }}</span></a>
+    <button class="mailrow__copy" type="button" data-copy="{{ a.email }}" aria-label="Copy email address" title="Copy email address">{% include icon.html name="copy" %}</button>
+    <span class="mailrow__status" role="status" aria-live="polite"></span>
+  </div>
+
+  <section class="rail__sec" aria-labelledby="rail-pubs">
+    <h2 class="rail__h" id="rail-pubs">Publications</h2>
+    <ul class="bars">
+      {% for t in type_pairs %}{% assign kv = t | split: ":" %}{% assign c = 0 %}{% for p in pubs %}{% if p.type == kv[0] %}{% assign c = c | plus: 1 %}{% endif %}{% endfor %}
+      {% if c > 0 %}<li><a class="bars__row" href="{{ '/publications/' | relative_url }}?type={{ kv[0] }}" style="--n: {{ c }}; --max: {{ type_max }};"><span class="bars__label">{{ kv[1] }}</span><span class="bars__num">{{ c }}</span><span class="bars__track" aria-hidden="true"><span class="bars__fill"></span></span></a></li>{% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="rail__sec" aria-labelledby="rail-int">
+    <h2 class="rail__h" id="rail-int">Research interests</h2>
+    <ul class="checks">
+      {% for i in sb.interests %}<li>{% include icon.html name="check" %}<span>{{ i }}</span></li>{% endfor %}
+    </ul>
+  </section>
+
+  <section class="rail__sec" aria-labelledby="rail-net">
+    <div class="rail__hrow">
+      <h2 class="rail__h" id="rail-net">Co-author network</h2>
+      <button class="rail__expand" type="button" data-open-network aria-haspopup="dialog" aria-controls="netdialog" title="Open the full network">{% include icon.html name="expand" %}<span class="sr-only">Open the full co-author network</span></button>
+    </div>
+    <div class="netmap netmap--mini" data-me="{{ a.name }}">
+      <div class="netmap__canvas">
+        <svg class="netmap__svg" viewBox="0 0 300 250" role="img" aria-label="Co-author network. Use the expand button for names and shared papers."></svg>
+        <div class="netmap__tip" hidden></div>
+      </div>
+    </div>
+    <p class="rail__note">Point at a circle for a name; select it to see shared papers.</p>
+  </section>
+</div>
+
+<div class="rail__foot">
+  {% include contact-links.html class="social" icons_only=true %}
+</div>

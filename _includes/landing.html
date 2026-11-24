@@ -1,0 +1,31 @@
+{% comment %}
+  Full-screen welcome shown at the top of the home page (front matter "landing: true").
+  Photo: "banner" in _pages/about.md. Research areas: "landing_areas".
+{% endcomment %}
+<section class="landing" aria-label="Welcome">
+  {% if page.banner %}<img class="landing__img" src="{{ page.banner | relative_url }}" width="1080" height="270" alt="" fetchpriority="high">{% endif %}
+  <div class="landing__shade" aria-hidden="true"></div>
+
+  <button class="landing__menu" type="button" aria-expanded="false" aria-controls="landing-nav">
+    <span>Menu</span><span class="landing__bars" aria-hidden="true"></span>
+  </button>
+  <nav class="landing__nav" id="landing-nav" aria-label="Site sections" hidden>
+    <ul>
+      {% for link in site.data.navigation.main %}
+      <li><a href="{{ link.url | relative_url }}{% if link.url == '/' %}#page{% endif %}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <div class="landing__center">
+    <h1 class="landing__name">{{ site.author.name }}</h1>
+    {% if page.landing_areas %}
+    <p class="landing__areas">{% for t in page.landing_areas %}<span>{{ t }}</span>{% endfor %}</p>
+    {% endif %}
+  </div>
+
+  <a class="landing__cue" href="#page">
+    <span>Learn more</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v15M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
