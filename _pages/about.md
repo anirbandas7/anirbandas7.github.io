@@ -7,15 +7,11 @@ redirect_from:
   - /about.html
 intro: "I build sensing systems that make sense of people and their surroundings from mmWave radar, Wi-Fi, ambient sound, cameras and low-cost IoT sensors, with inference that runs on small hardware you can deploy in a car, a home or a campus building."
 teaching_years: "6+"
-interests:
-  - mmWave radar sensing
-  - Wi-Fi (CSI) sensing
-  - Acoustic sensing
-  - Human-computer interaction
-  - Internet of Things
-  - Cyber-physical systems
-  - On-device inference at the edge
-  - Computer vision for Indian roads
+landing: true
+banner: /images/banner-road.jpg
+landing_areas: ["Wireless and acoustic sensing", "Internet of Things", "Human–computer interaction"]
+rotating: ["mmWave radar sensing", "Wi-Fi sensing", "acoustic sensing", "IoT systems at the edge", "computer vision for Indian roads"]
+recent: [beatwave, ipsn24, acoudl, pmc24]
 ---
 
 I am an Assistant Professor in the Department of Computer Science & Information Systems at [BITS Pilani, K K Birla Goa Campus](https://www.bits-pilani.ac.in/goa/anirban-das/). I received my Ph.D. in Computer Science and Engineering from the [Indian Institute of Information Technology Guwahati](https://www.iiitg.ac.in), and was then a Post-Doctoral Fellow in the [Ubiquitous Networked Systems Lab (UbiNet)](https://cse.iitkgp.ac.in/resgrp/ubinet/) at [IIT Kharagpur](http://www.iitkgp.ac.in).
