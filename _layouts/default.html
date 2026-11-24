@@ -20,7 +20,8 @@
   <link rel="icon" href="{{ '/images/favicon.svg' | relative_url }}" type="image/svg+xml">
   <link rel="preload" href="{{ '/assets/fonts/sourcesans3-var.woff' | relative_url }}" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/poppins-medium.woff' | relative_url }}" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {% assign v = site.time | date: '%s' %}
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ v }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   <script>
     (function () {
@@ -114,7 +115,7 @@
   <button class="totop" type="button" aria-label="Back to top">{% include icon.html name="arrow-up" %}</button>
 
   <script type="application/json" id="pub-data">[{% for p in site.data.publications %}{"title":{{ p.title | jsonify }},"authors":{{ p.authors | jsonify }},"venue_short":{{ p.venue_short | jsonify }},"year":{{ p.year | jsonify }},"type":{{ p.type | jsonify }},"doi":{{ p.doi | jsonify }},"url":{{ p.url | jsonify }},"arxiv":{{ p.arxiv | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
-  <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/coauthor-map.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/site.js' | relative_url }}?v={{ v }}" defer></script>
+  <script src="{{ '/assets/js/coauthor-map.js' | relative_url }}?v={{ v }}" defer></script>
 </body>
 </html>
