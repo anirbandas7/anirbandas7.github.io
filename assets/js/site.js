@@ -77,6 +77,20 @@
     });
   }
 
+  // ---- landing: show the photo briefly, then glide down to the page ----------
+  var landing = $('.landing'), pageTop = $('#page');
+  if (landing && pageTop && !window.location.hash && !reduce) {
+    var cancelled = false, cancel = function () { cancelled = true; };
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+      window.addEventListener(ev, cancel, { once: true, passive: true });
+    });
+    setTimeout(function () {
+      if (cancelled || window.pageYOffset > 10) return;
+      if (lBtn && lBtn.getAttribute('aria-expanded') === 'true') return;
+      window.scrollTo({ top: pageTop.getBoundingClientRect().top + window.pageYOffset, behavior: 'smooth' });
+    }, 2600);
+  }
+
   // ---- reveal on scroll (only for content below the fold) -------------------
   function groupIndex(el) {
     var g = el.parentElement && el.parentElement.closest('.reveal-group');
