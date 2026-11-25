@@ -22,6 +22,7 @@ layout: default
 {% assign teach_rem = teach_months | modulo: 12 %}
 
 <section class="intro reveal" aria-labelledby="intro-h">
+  <div class="intro__main">
   <figure class="intro__photo">
     <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
   </figure>
@@ -46,6 +47,8 @@ layout: default
       </div>
     </details>
   </div>
+  </div>
+  {% include photo-strip.html %}
 </section>
 
 {% if site.data.announcements.size > 0 %}
@@ -59,7 +62,6 @@ layout: default
 </section>
 {% endif %}
 
-{% include photo-strip.html %}
 
 <section class="stats" aria-label="At a glance">
   <ul class="stats__list">
