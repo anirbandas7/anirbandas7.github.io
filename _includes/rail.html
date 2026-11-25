@@ -16,7 +16,7 @@
     <svg class="rail__ring" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle class="rail__ring-track" cx="50" cy="50" r="49.5"/><circle class="rail__ring-bar" cx="50" cy="50" r="49.5" pathLength="1"/></svg>
     <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
   </a>
-  <p class="rail__name">{{ a.name }}</p>
+  <p class="rail__name">{{ a.name }}<span class="presence" data-presence tabindex="0" role="img" hidden></span></p>
   <p class="rail__role">{{ a.role }}<br>{{ a.employer }}</p>
   {% if n_open > 0 %}
   <a class="rail__open" href="{{ '/announcements/' | relative_url }}"><span class="rail__pulse" aria-hidden="true"></span>{{ n_open }} student {% if n_open == 1 %}opening{% else %}openings{% endif %}</a>
