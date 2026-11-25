@@ -83,6 +83,7 @@
   var landing = $('.landing'), pageTop = $('#page'), coverBtn = $('.cover-btn');
   if (landing && pageTop) {
     var armed = true;
+    if (document.documentElement.classList.contains('is-reload')) { armed = false; window.scrollTo(0, 0); }
     var jump = function (y) { window.scrollTo({ top: y, behavior: 'instant' }); };
     var hideCover = function () {
       if (landing.classList.contains('is-gone')) return;
