@@ -1,7 +1,8 @@
 {% assign p = include.pub %}
 {% assign author_line = p.authors | join: ", " | replace: "Anirban Das", '<strong class="me">Anirban Das</strong>'  %}
 {% if p.doi %}{% assign main_link = "https://doi.org/" | append: p.doi %}{% elsif p.url %}{% assign main_link = p.url %}{% elsif p.arxiv %}{% assign main_link = "https://arxiv.org/abs/" | append: p.arxiv %}{% else %}{% assign main_link = nil %}{% endif %}
-<li class="pub" data-type="{{ p.type }}" data-topics="{{ p.topics | join: ' ' }}" id="{{ p.id }}">
+{% include pub-topics.html pub=p %}
+<li class="pub" data-type="{{ p.type }}" data-topics="{{ pub_topics }}" id="{{ p.id }}">
   <span class="pub__badge pub__badge--{{ p.type }}">{{ p.venue_short }}</span>
   <div class="pub__body">
     <p class="pub__title">{% if main_link %}<a href="{{ main_link }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>

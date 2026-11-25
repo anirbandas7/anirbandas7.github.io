@@ -2,6 +2,8 @@
         <p class="notice__meta"><span class="notice__kind">{{ include.n.kind }}</span>{% if include.n.date %}<span>{{ include.n.date }}</span>{% endif %}{% if include.n.new %}<span class="notice__new">New</span>{% endif %}</p>
         <h3 class="notice__title">{{ include.n.title }}</h3>
         <p>{{ include.n.summary | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-        {% if include.n.details %}<details><summary>Details</summary>{{ include.n.details | markdownify }}</details>{% endif %}
+        {% assign n_subject = "" %}{% if include.n.link contains "mailto:" and include.n.link contains "subject=" %}{% assign n_subject = include.n.link | split: "subject=" | last | split: "&" | first | url_decode %}{% endif %}
+        {% capture n_subj_html %}{% if n_subject != "" %}<p class="notice__subject"><strong>Email subject:</strong> <span>{{ n_subject | escape }}</span><button type="button" class="notice__copy" data-copy="{{ n_subject | escape }}" data-copied="Subject copied" aria-label="Copy email subject" title="Copy email subject">{% include icon.html name="copy" %}</button></p>{% endif %}{% endcapture %}
+        {% if include.n.details %}<details><summary>Details</summary>{{ include.n.details | markdownify }}{{ n_subj_html }}</details>{% else %}{{ n_subj_html }}{% endif %}
         {% if include.n.link %}<a class="notice__cta" href="{{ include.n.link }}">{{ include.n.link_text | default: "Learn more" }}</a>{% if include.n.link contains "mailto:" %}{% assign n_mail = include.n.link | remove: "mailto:" | split: "?" | first %}<span class="notice__mail">{{ n_mail }}<button type="button" class="notice__copy" data-copy="{{ n_mail }}" aria-label="Copy email address" title="Copy email address">{% include icon.html name="copy" %}</button></span>{% endif %}{% endif %}
       </li>

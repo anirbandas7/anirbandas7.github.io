@@ -1,0 +1,12 @@
+{% comment %}
+  Sets pub_topics: the research themes of one paper, as a space-separated list of keys.
+  Uses the paper's own "topics" list when it has one; otherwise matches the
+  "keywords" of each theme in _data/themes.yml against the paper's title, so a
+  newly added paper is filed under the right themes without any extra work.
+{% endcomment %}
+{% assign pub_topics = include.pub.topics | join: " " %}
+{% if pub_topics == "" %}
+  {% assign pt_hay = include.pub.title | append: " " | append: include.pub.venue | downcase %}
+  {% for pt_t in site.data.themes %}{% for pt_k in pt_t.keywords %}{% if pt_hay contains pt_k %}{% assign pub_topics = pub_topics | append: " " | append: pt_t.key %}{% endif %}{% endfor %}{% endfor %}
+  {% assign pub_topics = pub_topics | split: " " | uniq | join: " " %}
+{% endif %}
