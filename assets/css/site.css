@@ -177,10 +177,10 @@ p { margin: 0 0 1em; }
   box-shadow: 0 0 0 6px var(--rail), 0 0 0 7px var(--rule);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
-/* Gold ring doubles as the reading-progress indicator: --p (0 to 1) is set from site.js */
+/* Gold ring doubles as the reading-progress indicator: left half is always gold, the right half fills clockwise from the top with --p (0 to 1) from site.js */
 .rail__photo::before {
   content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 50%; pointer-events: none;
-  background: conic-gradient(from 180deg, var(--gold) calc(var(--p, 0) * 360deg), var(--ring-track) 0);
+  background: conic-gradient(from 180deg, var(--gold) calc(180deg + var(--p, 0) * 180deg), var(--ring-track) 0);
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
           mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
 }
