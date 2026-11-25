@@ -25,12 +25,15 @@
 <div class="rail__body">
   <ul class="contact">
     {% for c in sb.contact %}
-    <li><a class="contact__row" href="{{ c.url }}"><span class="contact__icon">{% include icon.html name=c.icon %}</span><span class="contact__text"><span class="contact__label">{{ c.label }}</span>{{ c.text }}</span></a></li>
+    <li class="contact__item">
+      <a class="contact__row" href="{{ c.url }}"><span class="contact__icon">{% include icon.html name=c.icon %}</span><span class="contact__text"><span class="contact__label">{{ c.label }}</span>{{ c.text }}</span></a>
+      {% if c.copy != false %}<button class="contact__copy" type="button" data-copy="{{ c.copy | default: c.text }}" data-copied="{{ c.label }} copied" aria-label="Copy {{ c.label | downcase }}" title="Copy {{ c.label | downcase }}">{% include icon.html name="copy" %}</button><span class="mailrow__status" role="status" aria-live="polite"></span>{% endif %}
+    </li>
     {% endfor %}
   </ul>
   <div class="mailrow">
     <a class="mailrow__link" href="mailto:{{ a.email }}">{% include icon.html name="mail" %}<span>{{ a.email }}</span></a>
-    <button class="mailrow__copy" type="button" data-copy="{{ a.email }}" aria-label="Copy email address" title="Copy email address">{% include icon.html name="copy" %}</button>
+    <button class="mailrow__copy" type="button" data-copy="{{ a.email }}" data-copied="Email address copied" aria-label="Copy email address" title="Copy email address">{% include icon.html name="copy" %}</button>
     <span class="mailrow__status" role="status" aria-live="polite"></span>
   </div>
 
