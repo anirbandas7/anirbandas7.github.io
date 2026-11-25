@@ -1,0 +1,11 @@
+# Where I am right now — used only for the small clock in the footer.
+# The place itself is never shown on the site; only the local time and a
+# "likely available / probably asleep" icon worked out from it.
+#
+# timezone:   an IANA time-zone name, e.g. Asia/Kolkata, Europe/London,
+#             America/New_York, Asia/Tokyo (change it when you travel)
+# awake_from: hour (0-23, 24-hour clock) from which you are usually reachable
+# asleep_from: hour from which you are usually asleep
+timezone: Asia/Kolkata
+awake_from: 7
+asleep_from: 23
