@@ -98,11 +98,14 @@
       if (t <= 1) hideCover();
     };
     window.addEventListener('scroll', watchCover, { passive: true });
+    var skip = document.documentElement.classList.contains('cover-off');
+    if (skip) { landing.classList.add('is-gone'); if (coverBtn) coverBtn.hidden = false; }
     if (window.location.hash) { requestAnimationFrame(function () { requestAnimationFrame(hideCover); }); }
     if (coverBtn) {
       coverBtn.addEventListener('click', function () {
         var y = window.pageYOffset;
         armed = false;
+        document.documentElement.classList.remove('cover-off');
         landing.classList.remove('is-gone');
         coverBtn.hidden = true;
         jump(y + landing.offsetHeight);
@@ -110,7 +113,7 @@
         if (lBtn) lBtn.focus({ preventScroll: true });
       });
     }
-    if (!window.location.hash && !reduce) {
+    if (!skip && !window.location.hash && !reduce) {
       var cancelled = false, cancel = function () { cancelled = true; };
       ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
         window.addEventListener(ev, cancel, { once: true, passive: true });
