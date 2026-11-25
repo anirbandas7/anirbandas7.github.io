@@ -171,9 +171,9 @@ p { margin: 0 0 1em; }
   scrollbar-width: thin; scrollbar-color: var(--rule) transparent;
 }
 :root { --ring-track: rgba(173, 138, 76, 0.22); }
-.rail__head { position: relative; text-align: center; padding: 1.6rem 1.5rem 1rem; }
+.rail__head { position: relative; text-align: center; padding: 1.1rem 1.5rem 0.85rem; }
 .rail__photo {
-  position: relative; display: block; width: 9rem; aspect-ratio: 1; margin: 0.5rem auto 1.1rem; border-radius: 50%;
+  position: relative; display: block; width: 9rem; aspect-ratio: 1; margin: 0.4rem auto 0.85rem; border-radius: 50%;
   background: var(--surface); border: 3px solid var(--gold);
   transition: transform 0.35s var(--ease);
 }
@@ -207,7 +207,7 @@ p { margin: 0 0 1em; }
   border: 1px solid var(--rule); border-radius: 50%; background: var(--surface); color: var(--ink); cursor: pointer;
 }
 .rail__body { flex: 1; padding: 0 1.5rem 1.25rem; }
-.contact { list-style: none; margin: 0 0 0.6rem; padding: 0.8rem 0 0; border-top: 1px solid var(--rule); display: grid; gap: 0; }
+.contact { list-style: none; margin: 0 0 0.6rem; padding: 0.6rem 0 0; border-top: 1px solid var(--rule); display: grid; gap: 0; }
 .contact__item { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; margin: 0 -0.45rem; border-radius: 8px; transition: background 0.2s; }
 .contact__item:hover { background: var(--tint); }
 .contact__row {
