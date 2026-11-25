@@ -36,6 +36,7 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   {% endif %}
   <script defer data-domain="anirbandas7.github.io" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+  <script data-goatcounter="https://anirban.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body class="layout-{{ page.layout | default: 'single' }}">
   <a class="skip" href="#main">Skip to content</a>
@@ -83,7 +84,7 @@
       <footer class="site-foot">
         <div class="site-foot__inner">
         <p class="site-foot__who">© {{ site.time | date: "%Y" }} {{ site.author.name }}, {{ site.author.employer }}</p>
-        <p class="site-foot__small"><span>Last updated {{ site.time | date: "%B %Y" }}</span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
+        <p class="site-foot__small"><span>Last updated {{ site.time | date: "%B %Y" }}</span><span class="site-foot__visits" data-goat="https://anirban.goatcounter.com" hidden></span><span class="site-foot__clock" hidden></span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
         </div>
       </footer>
     </div>
