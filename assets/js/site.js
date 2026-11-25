@@ -292,6 +292,26 @@
     });
   }
 
+  // ---- footer: total visits (GoatCounter) and the local time in Goa -------------
+  var visits = $('.site-foot__visits');
+  if (visits && window.fetch) {
+    fetch(visits.getAttribute('data-goat') + '/counter/TOTAL.json')
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || d.count == null) return;
+        visits.textContent = d.count + ' visits';
+        visits.hidden = false;
+      })
+      .catch(function () {});
+  }
+  var clock = $('.site-foot__clock');
+  if (clock && window.Intl) {
+    var fmt = new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true });
+    var tick = function () { clock.textContent = fmt.format(new Date()).replace(/\s?(am|pm)$/i, function (m) { return ' ' + m.trim().toLowerCase(); }) + ' in Goa'; };
+    tick(); clock.hidden = false;
+    setInterval(tick, 30000);
+  }
+
   // ---- publication filters: type, theme and free-text search ------------------
   var tools = $('.pubtools');
   if (tools) {
