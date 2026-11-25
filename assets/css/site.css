@@ -81,6 +81,7 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------------------------------------------------------------- landing (home only) */
+.landing.is-gone { display: none; }
 .landing {
   position: relative; isolation: isolate; overflow: hidden;
   height: 100vh; height: 100svh; min-height: 30rem;
@@ -314,6 +315,15 @@ p { margin: 0 0 1em; }
   transition: transform 0.5s var(--ease), border-color 0.2s, color 0.2s;
 }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); transform: rotate(180deg); }
+/* Return to the full-screen cover; shown only once the cover has been put away */
+.cover-btn {
+  width: 2.25rem; height: 2.25rem; display: grid; place-items: center; cursor: pointer;
+  border: 1px solid var(--rule); border-radius: 50%; background: var(--surface); color: var(--ink);
+  transition: border-color 0.2s, color 0.2s, transform 0.3s var(--ease);
+}
+.cover-btn[hidden] { display: none; }
+.cover-btn .icon { width: 1rem; height: 1rem; }
+.cover-btn:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
 /* ---------------------------------------------------------------- footer */
 .site-foot { border-top: 1px solid var(--rule); margin-top: 3rem; }
