@@ -84,7 +84,7 @@
       <footer class="site-foot">
         <div class="site-foot__inner">
         <p class="site-foot__who">© {{ site.time | date: "%Y" }} {{ site.author.name }}, {{ site.author.employer }}</p>
-        <p class="site-foot__small"><span>Last updated {{ site.time | date: "%B %Y" }}</span><span class="site-foot__visits" data-goat="https://anirban.goatcounter.com" hidden></span><span class="site-foot__clock" hidden></span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
+        <p class="site-foot__small"><span>Last updated {{ site.time | date: "%B %Y" }}</span><span class="site-foot__visits" data-goat="https://anirban.goatcounter.com" hidden></span><span class="site-foot__clock" data-tz="{{ site.data.now.timezone | default: 'Asia/Kolkata' }}" data-wake="{{ site.data.now.awake_from | default: 7 }}" data-sleep="{{ site.data.now.asleep_from | default: 23 }}" hidden></span><a href="{{ '/sitemap/' | relative_url }}">Sitemap</a><a href="{{ '/feed.xml' | relative_url }}">Feed</a></p>
         </div>
       </footer>
     </div>
