@@ -331,6 +331,13 @@
         clock.innerHTML = (asleep ? svg(MOON, true) : '<span class="site-foot__dot" aria-hidden="true"></span>') + '<span>' + t + '</span>';
         var label = 'My local time: ' + t + (asleep ? ' (probably asleep, I\u2019ll reply later)' : ' (likely available)');
         clock.title = label; clock.setAttribute('aria-label', label);
+        // the same status as a small light beside my name in the sidebar
+        $$('[data-presence]').forEach(function (p) {
+          var tip = asleep ? 'Probably asleep \u00b7 ' + t + ' my time' : 'Likely available \u00b7 ' + t + ' my time';
+          p.classList.toggle('is-asleep', asleep);
+          p.title = tip; p.setAttribute('aria-label', tip);
+          p.hidden = false;
+        });
       };
       tick(); clock.hidden = false;
       setInterval(tick, 30000);
