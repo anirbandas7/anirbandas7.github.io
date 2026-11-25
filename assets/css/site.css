@@ -333,6 +333,11 @@ p { margin: 0 0 1em; }
 }
 .site-foot p { margin: 0; }
 .site-foot__small { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.site-foot__visits, .site-foot__clock { display: inline-flex; align-items: center; gap: 0.35rem; cursor: default; font-variant-numeric: tabular-nums; }
+.site-foot__visits[hidden], .site-foot__clock[hidden] { display: none; }
+.site-foot__ico { width: 0.85rem; height: 0.85rem; opacity: 0.75; }
+.site-foot__dot { width: 0.45rem; height: 0.45rem; border-radius: 50%; background: #6a9c78; box-shadow: 0 0 0 3px rgba(106, 156, 120, 0.18); }
+.site-foot__clock.is-asleep .site-foot__ico { color: var(--accent); opacity: 0.7; }
 
 /* Back to top */
 .totop {
