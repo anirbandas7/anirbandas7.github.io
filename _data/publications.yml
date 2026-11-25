@@ -10,7 +10,8 @@
 #   blurb:       one-line summary used on the home page "Recent work" cards
 #   teaser:      figure for the "Recent work" card, e.g. /images/teasers/beatwave.svg
 #                (16:9, an SVG or an image about 1200 px wide); teaser_alt describes it
-#   topics:      research themes from _data/themes.yml (e.g. [mmwave, driving]);
+#   topics:      optional research themes from _data/themes.yml (e.g. [mmwave, driving]);
+#                leave out to file the paper by the keywords in _data/themes.yml;
 #                they drive the theme cards on the home page and the topic filter
 #   abstract:    optional, shown behind an "Abstract" toggle
 # Entries are shown in the order they appear here within each section (newest first).

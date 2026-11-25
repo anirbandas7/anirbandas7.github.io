@@ -1,21 +1,26 @@
 # Research themes shown as cards on the home page.
 # A paper belongs to a theme when its "topics" list in _data/publications.yml
-# contains the theme's key. Cards show the number of papers and link to them
+# contains the theme's key. A paper with no "topics" list is filed automatically:
+# it joins every theme whose keywords appear in its title or venue (lower case). Cards show the number of papers and link to them
 # on the Publications page (/publications/?topic=<key>).
 # icon: radar | car | wave | nodes
 - key: mmwave
   title: "mmWave radar sensing"
   icon: radar
   blurb: "Tracking people and their activities with millimetre-wave radar, from multi-user rooms to vehicle cabins."
+  keywords: ["mmwave", "mm-wave", "millimeter", "millimetre", "radar"]
 - key: driving
   title: "Driver monitoring and road safety"
   icon: car
   blurb: "Passive, on-device monitoring of dangerous driving and driver attentiveness, now extending to on-road context on Indian roads."
+  keywords: ["driver", "driving", "vehicle", "road", "traffic", "dashcam", "car "]
 - key: ambient
   title: "Ambient and acoustic sensing"
   icon: wave
   blurb: "Recognising daily activities, crowds and even drum beats from natural sounds and ambient wireless signals."
+  keywords: ["acoustic", "sound", "audio", "noise", "wi-fi", "wifi", "csi", "ambient", "crowd", "drum"]
 - key: iot
   title: "IoT data systems at the edge"
   icon: nodes
   blurb: "Context-aware data collection, in-network fusion and preprocessing for smart buildings and shared IoT infrastructure."
+  keywords: ["iot", "internet of things", "edge", "in-network", "testbed", "smart building", "smart campus", "data collection", "microservice"]
