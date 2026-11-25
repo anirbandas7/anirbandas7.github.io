@@ -185,7 +185,7 @@
       var status = b.parentNode.querySelector('.mailrow__status');
       function done(ok) {
         b.classList.toggle('is-done', ok);
-        var msg = ok ? 'Email address copied' : 'Select the address to copy it';
+        var msg = ok ? (b.getAttribute('data-copied') || 'Copied') : 'Select the text to copy it';
         if (status) status.textContent = msg;
         if (label) label.textContent = ok ? 'Copied ' + text : text;
         setTimeout(function () {
