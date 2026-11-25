@@ -114,10 +114,3 @@ layout: default
     {% endfor %}
   </ol>
 </section>
-
-<section class="section" aria-labelledby="sel-h">
-  {% include section-head.html id="sel-h" title="Selected publications" more_url="/publications/" more_text="All publications" %}
-  <ol class="pubs pubs--compact reveal">
-    {% for p in pubs %}{% if p.selected %}{% include pub.html pub=p compact=true %}{% endif %}{% endfor %}
-  </ol>
-</section>
