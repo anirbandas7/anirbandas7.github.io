@@ -29,10 +29,15 @@
         var t = localStorage.getItem('theme');
         if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
-      // the cover photo is shown once per visit: skip it when arriving from another page of this site
+      // the cover photo shows on arrival and on reload; links back to Home from inside the site skip it
       try {
         var r = document.referrer, same = r && r.indexOf(location.origin) === 0;
-        if (same || sessionStorage.getItem('coverSeen')) document.documentElement.classList.add('cover-off');
+        var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        var reload = nav ? nav.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+        if (reload && 'scrollRestoration' in history) history.scrollRestoration = 'manual';
+        if (reload) document.documentElement.classList.add('is-reload');
+        if (reload && location.hash === '#page') history.replaceState(null, '', location.pathname + location.search);
+        if (!reload && (same || sessionStorage.getItem('coverSeen'))) document.documentElement.classList.add('cover-off');
         sessionStorage.setItem('coverSeen', '1');
       } catch (e) {}
     })();
