@@ -77,18 +77,50 @@
     });
   }
 
-  // ---- landing: show the photo briefly, then glide down to the page ----------
-  var landing = $('.landing'), pageTop = $('#page');
-  if (landing && pageTop && !window.location.hash && !reduce) {
-    var cancelled = false, cancel = function () { cancelled = true; };
-    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
-      window.addEventListener(ev, cancel, { once: true, passive: true });
-    });
-    setTimeout(function () {
-      if (cancelled || window.pageYOffset > 10) return;
-      if (lBtn && lBtn.getAttribute('aria-expanded') === 'true') return;
-      window.scrollTo({ top: pageTop.getBoundingClientRect().top + window.pageYOffset, behavior: 'smooth' });
-    }, 2600);
+  // ---- landing: show the photo briefly, glide down, then put it away -----------
+  // Once the visitor reaches the page, the cover is removed so scrolling up stops
+  // at the top bar. The arrow button in the top bar is the only way back to it.
+  var landing = $('.landing'), pageTop = $('#page'), coverBtn = $('.cover-btn');
+  if (landing && pageTop) {
+    var armed = true;
+    var jump = function (y) { window.scrollTo({ top: y, behavior: 'instant' }); };
+    var hideCover = function () {
+      if (landing.classList.contains('is-gone')) return;
+      var y = window.pageYOffset, h = pageTop.getBoundingClientRect().top + y;
+      landing.classList.add('is-gone');
+      jump(Math.max(0, y - h));
+      if (coverBtn) coverBtn.hidden = false;
+    };
+    var watchCover = function () {
+      if (landing.classList.contains('is-gone')) return;
+      var t = pageTop.getBoundingClientRect().top;
+      if (!armed) { if (t > 40) armed = true; return; }
+      if (t <= 1) hideCover();
+    };
+    window.addEventListener('scroll', watchCover, { passive: true });
+    if (window.location.hash) { requestAnimationFrame(function () { requestAnimationFrame(hideCover); }); }
+    if (coverBtn) {
+      coverBtn.addEventListener('click', function () {
+        var y = window.pageYOffset;
+        armed = false;
+        landing.classList.remove('is-gone');
+        coverBtn.hidden = true;
+        jump(y + landing.offsetHeight);
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        if (lBtn) lBtn.focus({ preventScroll: true });
+      });
+    }
+    if (!window.location.hash && !reduce) {
+      var cancelled = false, cancel = function () { cancelled = true; };
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+        window.addEventListener(ev, cancel, { once: true, passive: true });
+      });
+      setTimeout(function () {
+        if (cancelled || window.pageYOffset > 10 || landing.classList.contains('is-gone')) return;
+        if (lBtn && lBtn.getAttribute('aria-expanded') === 'true') return;
+        window.scrollTo({ top: pageTop.getBoundingClientRect().top + window.pageYOffset, behavior: 'smooth' });
+      }, 2600);
+    }
   }
 
   // ---- reveal on scroll (only for content below the fold) -------------------
