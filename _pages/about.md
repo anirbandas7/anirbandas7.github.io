@@ -5,7 +5,12 @@ layout: home
 redirect_from:
   - /about/
   - /about.html
-teaching_years: "6+"
+# Teaching periods (year-month). "Years teaching" on the home page is worked out from these
+# at every build; leave "to" off the current position so it keeps counting.
+teaching:
+  - from: "2013-10"   # Jimma University
+    to: "2017-06"
+  - from: "2023-08"   # NIIT University, UPES, BITS Pilani
 landing: true
 banner: /images/banner-road.jpg
 landing_areas: ["Wireless and acoustic sensing", "Internet of Things", "Human–computer interaction"]
