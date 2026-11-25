@@ -23,9 +23,11 @@
 </div>
 
 <div class="rail__body">
-  <dl class="facts">
-    {% for f in sb.facts %}<div class="facts__row"><dt>{{ f.label }}</dt><dd>{{ f.value }}</dd></div>{% endfor %}
-  </dl>
+  <ul class="contact">
+    {% for c in sb.contact %}
+    <li><a class="contact__row" href="{{ c.url }}"><span class="contact__icon">{% include icon.html name=c.icon %}</span><span class="contact__text"><span class="contact__label">{{ c.label }}</span>{{ c.text }}</span></a></li>
+    {% endfor %}
+  </ul>
   <div class="mailrow">
     <a class="mailrow__link" href="mailto:{{ a.email }}">{% include icon.html name="mail" %}<span>{{ a.email }}</span></a>
     <button class="mailrow__copy" type="button" data-copy="{{ a.email }}" aria-label="Copy email address" title="Copy email address">{% include icon.html name="copy" %}</button>
