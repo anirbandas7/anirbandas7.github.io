@@ -239,12 +239,14 @@
   }
 
   // ---- reading progress and back-to-top ---------------------------------------
-  var bar = $('.progress__bar'), totop = $('.totop'), page = $('#page'), ticking = false;
+  var bar = $('.progress__bar'), ring = $('.rail__photo'), totop = $('.totop'), page = $('#page'), ticking = false;
   function onScroll() {
     ticking = false;
     var y = window.pageYOffset;
     var h = root.scrollHeight - window.innerHeight;
-    if (bar) bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0).toFixed(4) + ')';
+    var f = (h > 0 ? Math.min(1, y / h) : 0).toFixed(4);
+    if (bar) bar.style.transform = 'scaleX(' + f + ')';
+    if (ring) ring.style.setProperty('--p', f);
     if (totop) totop.classList.toggle('is-visible', y > 700);
   }
   window.addEventListener('scroll', function () {
