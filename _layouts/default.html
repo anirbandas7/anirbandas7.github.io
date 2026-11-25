@@ -68,6 +68,7 @@
           <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" title="Switch theme">
             {% include icon.html name="contrast" %}
           </button>
+          {% if page.landing %}<button class="cover-btn" type="button" aria-label="Back to the cover page" title="Back to cover" hidden>{% include icon.html name="arrow-up" %}</button>{% endif %}
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
             <span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__label">Menu</span>
           </button>

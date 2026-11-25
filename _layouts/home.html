@@ -3,14 +3,23 @@ layout: default
 ---
 {% assign a = site.author %}
 {% assign pubs = site.data.publications %}
-{% assign n_journal = 0 %}{% assign n_patent = 0 %}
-{% for p in pubs %}{% if p.type == "journal" %}{% assign n_journal = n_journal | plus: 1 %}{% elsif p.type == "patent" %}{% assign n_patent = n_patent | plus: 1 %}{% endif %}{% endfor %}
+{% assign n_journal = 0 %}{% assign n_patent = 0 %}{% assign n_granted = 0 %}
+{% for p in pubs %}{% if p.type == "journal" %}{% assign n_journal = n_journal | plus: 1 %}{% elsif p.type == "patent" %}{% assign n_patent = n_patent | plus: 1 %}{% assign p_v = p.venue | downcase %}{% if p.status == "granted" or p_v contains "granted" %}{% assign n_granted = n_granted | plus: 1 %}{% endif %}{% endif %}{% endfor %}
 {% assign all_authors = "" %}
 {% for p in pubs %}{% for au in p.authors %}{% assign all_authors = all_authors | append: au | append: "||" %}{% endfor %}{% endfor %}
 {% assign uniq_authors = all_authors | split: "||" | uniq %}
 {% assign n_coauthors = 0 %}
 {% for au in uniq_authors %}{% if au != "" and au != a.name %}{% assign n_coauthors = n_coauthors | plus: 1 %}{% endif %}{% endfor %}
-{% assign teach_num = page.teaching_years | remove: "+" %}
+{% comment %} Years teaching: sum of the periods in page.teaching, counted in whole months up to the build date {% endcomment %}
+{% assign now_y = site.time | date: "%Y" | times: 12 %}{% assign now_mm = site.time | date: "%m" | plus: 0 %}{% assign now_m = now_y | plus: now_mm %}
+{% assign teach_months = 0 %}
+{% for t in page.teaching %}
+  {% assign f = t.from | split: "-" %}{% assign f_m = f[0] | times: 12 | plus: f[1] %}
+  {% if t.to %}{% assign e = t.to | split: "-" %}{% assign e_m = e[0] | times: 12 | plus: e[1] %}{% else %}{% assign e_m = now_m %}{% endif %}
+  {% assign teach_months = teach_months | plus: e_m | minus: f_m %}
+{% endfor %}
+{% assign teach_num = teach_months | divided_by: 12 %}
+{% assign teach_rem = teach_months | modulo: 12 %}
 
 <section class="intro reveal" aria-labelledby="intro-h">
   <figure class="intro__photo">
@@ -56,8 +65,8 @@ layout: default
   <ul class="stats__list">
     <li><span class="stats__num" data-count="{{ pubs.size | minus: n_patent }}">{{ pubs.size | minus: n_patent }}</span><span class="stats__label">Publications</span></li>
     <li><span class="stats__num" data-count="{{ n_journal }}">{{ n_journal }}</span><span class="stats__label">Journal articles</span></li>
-    <li><span class="stats__num" data-count="{{ teach_num }}" data-suffix="{% if page.teaching_years contains '+' %}+{% endif %}">{{ page.teaching_years }}</span><span class="stats__label">Years teaching</span></li>
-    <li><span class="stats__num" data-count="{{ n_patent }}">{{ n_patent }}</span><span class="stats__label">Patent granted</span></li>
+    <li><span class="stats__num" data-count="{{ teach_num }}" data-suffix="{% if teach_rem > 0 %}+{% endif %}">{{ teach_num }}{% if teach_rem > 0 %}+{% endif %}</span><span class="stats__label">Years teaching</span></li>
+    {% if n_patent > 0 %}{% if n_granted > 0 %}{% assign pat_n = n_granted %}{% assign pat_l = "granted" %}{% else %}{% assign pat_n = n_patent %}{% assign pat_l = "filed" %}{% endif %}<li><span class="stats__num" data-count="{{ pat_n }}">{{ pat_n }}</span><span class="stats__label">{% if pat_n == 1 %}Patent{% else %}Patents{% endif %} {{ pat_l }}</span></li>{% endif %}
     <li><span class="stats__num" data-count="{{ n_coauthors }}">{{ n_coauthors }}</span><span class="stats__label">Co-authors</span></li>
   </ul>
 </section>
@@ -70,7 +79,7 @@ layout: default
     {% assign p = pubs | where: "id", rid | first %}
     {% if p %}
     {% if p.doi %}{% assign wlink = "https://doi.org/" | append: p.doi %}{% elsif p.url %}{% assign wlink = p.url %}{% elsif p.arxiv %}{% assign wlink = "https://arxiv.org/abs/" | append: p.arxiv %}{% else %}{% assign wlink = "/publications/" | relative_url %}{% endif %}
-    {% assign wtheme = p.topics | first %}
+    {% include pub-topics.html pub=p %}{% assign wtheme = pub_topics | split: " " | first %}
     {% assign wicon = "nodes" %}
     {% for t in site.data.themes %}{% if t.key == wtheme %}{% assign wicon = t.icon %}{% endif %}{% endfor %}
     <li class="work reveal">
@@ -94,7 +103,7 @@ layout: default
   {% include section-head.html id="themes-h" title="Research themes" %}
   <ul class="themes reveal-group">
     {% for t in site.data.themes %}
-    {% assign tc = 0 %}{% for p in pubs %}{% if p.topics contains t.key %}{% assign tc = tc | plus: 1 %}{% endif %}{% endfor %}
+    {% assign tc = 0 %}{% for p in pubs %}{% include pub-topics.html pub=p %}{% assign pt_list = pub_topics | split: " " %}{% if pt_list contains t.key %}{% assign tc = tc | plus: 1 %}{% endif %}{% endfor %}
     <li class="theme reveal">
       <span class="theme__icon">{% include icon.html name=t.icon %}</span>
       <h3 class="theme__title"><a href="{{ '/publications/' | relative_url }}?topic={{ t.key }}">{{ t.title }}</a></h3>
