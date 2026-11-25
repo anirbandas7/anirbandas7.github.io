@@ -5,6 +5,8 @@ permalink: /publications/
 lede: "Journal articles, conference papers, demos, preprints and patents. The full list is also on Google Scholar and ORCID."
 ---
 {% assign pubs = site.data.publications %}
+<div class="pubs-layout">
+<div class="pubs-layout__main">
 <p class="page-links">
   <a href="{{ site.author.googlescholar }}">Google Scholar</a>
   <a href="{{ site.author.orcid }}">ORCID</a>
@@ -42,3 +44,6 @@ lede: "Journal articles, conference papers, demos, preprints and patents. The fu
 </section>
 {% endfor %}
 <p class="pubs__none" hidden>No publications match these filters.</p>
+</div>
+<aside class="pubs-layout__side" data-net-slot aria-label="Co-author network"></aside>
+</div>
