@@ -3,15 +3,16 @@
   (in file-name order, so start names with 01-, 02-, ... to set the order).
   Keep it to technical photos: hardware, deployments, demos.
   Captions are optional: add "file-name.jpg: Caption" to _data/strip.yml.
+  Shown as a slim vertical column beside the About text on wide screens
+  (it turns into a horizontal strip below the text on narrow screens).
 {% endcomment %}
 {% assign strip_files = site.static_files | sort: "path" %}
 {% assign n_strip = 0 %}
 {% for f in strip_files %}{% if f.path contains "/images/strip/" %}{% assign ext = f.extname | downcase %}{% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".svg" %}{% assign n_strip = n_strip | plus: 1 %}{% endif %}{% endif %}{% endfor %}
 {% if n_strip > 0 %}
 {% assign passes = "1,2,3,4" | split: "," %}
-<section class="section" aria-labelledby="strip-h">
-  {% include section-head.html id="strip-h" title="Snapshots" %}
-  <div class="strip" style="--n: {{ n_strip }};">
+<aside class="intro__strip" aria-label="Snapshots from the lab and deployments">
+  <div class="strip strip--v" style="--n: {{ n_strip }};">
     <ul class="strip__track">
       {% for pass in passes %}
       {% for f in strip_files %}{% if f.path contains "/images/strip/" %}{% assign ext = f.extname | downcase %}{% if ext == ".jpg" or ext == ".jpeg" or ext == ".png" or ext == ".webp" or ext == ".svg" %}
@@ -34,5 +35,5 @@
     <button type="button" class="photodialog__nav photodialog__nav--next" aria-label="Next photo">{% include icon.html name="chevron" %}</button>
     <button type="button" class="photodialog__close" aria-label="Close" autofocus>{% include icon.html name="close" %}</button>
   </dialog>
-</section>
+</aside>
 {% endif %}
