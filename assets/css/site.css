@@ -400,7 +400,9 @@ p { margin: 0 0 1em; }
 .section { padding-top: clamp(2.5rem, 5vw, 3.25rem); }
 .sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1.4rem; }
 .sec-head h2 { position: relative; padding-bottom: 0.6rem; font-size: 1.35rem; color: var(--ink); }
-.sec-head h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 2.25rem; height: 3px; border-radius: 2px; background: var(--gold); }
+.sec-head h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 2.25rem; height: 3px; border-radius: 2px; background: var(--gold); transition: width 0.45s var(--ease); }
+/* Underline runs the full width of the heading while the pointer is over (or focus is inside) its section */
+.section:hover > .sec-head h2::after, .section:focus-within > .sec-head h2::after { width: 100%; }
 .sec-head__more { display: inline-flex; align-items: center; gap: 0.15rem; padding-bottom: 0.55rem; font-size: 0.9rem; font-weight: 600; text-decoration: none; }
 .sec-head__more .icon { width: 0.95em; height: 0.95em; transition: transform 0.25s var(--ease); }
 .sec-head__more:hover .icon { transform: translateX(3px); }
