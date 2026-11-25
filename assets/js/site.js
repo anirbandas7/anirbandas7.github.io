@@ -292,24 +292,49 @@
     });
   }
 
-  // ---- footer: total visits (GoatCounter) and the local time in Goa -------------
+  // ---- footer: total visits (GoatCounter) and my local time with an awake/asleep icon ----
+  var svg = function (d, filled) {
+    return '<svg class="site-foot__ico" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="' + d + '"' +
+      (filled ? ' fill="currentColor" stroke="none"' : ' fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"') + '/></svg>';
+  };
+  var EYE = 'M1.5 8s2.4-4.5 6.5-4.5S14.5 8 14.5 8 12.1 12.5 8 12.5 1.5 8 1.5 8zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z';
+  var MOON = 'M13 9.6A5.5 5.5 0 0 1 6.4 3a5.5 5.5 0 1 0 6.6 6.6z';
   var visits = $('.site-foot__visits');
   if (visits && window.fetch) {
     fetch(visits.getAttribute('data-goat') + '/counter/TOTAL.json')
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         if (!d || d.count == null) return;
-        visits.textContent = d.count + ' visits';
+        visits.innerHTML = svg(EYE) + '<span>' + String(d.count).replace(/\s/g, ',') + '</span>';
+        visits.title = 'Visits to this site';
+        visits.setAttribute('aria-label', d.count + ' visits');
         visits.hidden = false;
       })
       .catch(function () {});
   }
   var clock = $('.site-foot__clock');
   if (clock && window.Intl) {
-    var fmt = new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: '2-digit', hour12: true });
-    var tick = function () { clock.textContent = fmt.format(new Date()).replace(/\s?(am|pm)$/i, function (m) { return ' ' + m.trim().toLowerCase(); }) + ' in Goa'; };
-    tick(); clock.hidden = false;
-    setInterval(tick, 30000);
+    var tz = clock.getAttribute('data-tz') || 'Asia/Kolkata';
+    var wake = parseInt(clock.getAttribute('data-wake'), 10), sleep = parseInt(clock.getAttribute('data-sleep'), 10);
+    if (isNaN(wake)) wake = 7; if (isNaN(sleep)) sleep = 23;
+    var fmt, hfmt;
+    try {
+      fmt = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: 'numeric', minute: '2-digit', hour12: true });
+      hfmt = new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: 'numeric', hourCycle: 'h23' });
+    } catch (e) { fmt = null; }
+    if (fmt) {
+      var tick = function () {
+        var now = new Date(), h = parseInt(hfmt.format(now), 10) % 24;
+        var asleep = sleep > wake ? (h >= sleep || h < wake) : (h >= sleep && h < wake);
+        var t = fmt.format(now).replace(/\s?([ap])\.?m\.?$/i, function (m, x) { return ' ' + x.toLowerCase() + 'm'; });
+        clock.classList.toggle('is-asleep', asleep);
+        clock.innerHTML = (asleep ? svg(MOON, true) : '<span class="site-foot__dot" aria-hidden="true"></span>') + '<span>' + t + '</span>';
+        var label = 'My local time: ' + t + (asleep ? ' (probably asleep, I\u2019ll reply later)' : ' (likely available)');
+        clock.title = label; clock.setAttribute('aria-label', label);
+      };
+      tick(); clock.hidden = false;
+      setInterval(tick, 30000);
+    }
   }
 
   // ---- publication filters: type, theme and free-text search ------------------
