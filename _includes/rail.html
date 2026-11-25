@@ -13,6 +13,7 @@
 <div class="rail__head">
   <button class="rail__close" type="button" aria-label="Close profile panel">{% include icon.html name="close" %}</button>
   <a class="rail__photo" href="{{ '/' | relative_url }}">
+    <svg class="rail__ring" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle class="rail__ring-track" cx="50" cy="50" r="49.5"/><circle class="rail__ring-bar" cx="50" cy="50" r="49.5" pathLength="1"/></svg>
     <img src="{{ '/images/' | append: a.avatar | relative_url }}" width="640" height="783" alt="Portrait of {{ a.name }}">
   </a>
   <p class="rail__name">{{ a.name }}</p>
