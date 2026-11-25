@@ -19,7 +19,8 @@ layout: default
   <p class="intro__hello">Hello, I'm</p>
   <h2 class="intro__name" id="intro-h">{{ a.name }}</h2>
   <p class="intro__role"><strong>{{ a.role }}</strong>, {{ a.department | remove: "Department of " }}, {{ a.employer }}</p>
-  {% if page.intro %}<p class="intro__text">{{ page.intro }}</p>{% endif %}
+  {% if a.bio %}<p class="intro__bio">{{ a.bio }}</p>{% endif %}
+  <div class="intro__about prose">{{ content }}</div>
   {% if page.rotating %}
   <p class="intro__focus">Currently working on <span class="sr-only">{{ page.rotating | join: ', ' }}</span><span class="rotator" aria-hidden="true" data-words="{{ page.rotating | join: '|' }}"><span class="rotator__word">{{ page.rotating | first }}</span></span></p>
   {% endif %}
@@ -104,14 +105,6 @@ layout: default
   </ul>
 </section>
 {% endif %}
-
-<section class="section" aria-labelledby="about-h" id="about">
-  {% include section-head.html id="about-h" title="About me" %}
-  <div class="about reveal">
-    {% if a.bio %}<p class="about__bio">{{ a.bio }}</p>{% endif %}
-    <div class="prose">{{ content }}</div>
-  </div>
-</section>
 
 <section class="section" aria-labelledby="news-h">
   {% include section-head.html id="news-h" title="News" %}
