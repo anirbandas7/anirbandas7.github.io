@@ -18,7 +18,7 @@ Assistant Professor, Department of Computer Science & Information Systems, [BITS
 
 ## Research experience
 
-- **Post-Doctoral Fellow**, [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur, Feb 2022 – Apr 2023. Supervisor: [Dr. Sandip Chakraborty](http://cse.iitkgp.ac.in/~sandipc/)
+- **Post-Doctoral Work**, [Ubiquitous Networked Systems Lab](https://cse.iitkgp.ac.in/resgrp/ubinet/), IIT Kharagpur, Feb 2022 – Apr 2023. Supervisor: [Dr. Sandip Chakraborty](http://cse.iitkgp.ac.in/~sandipc/)
 - **Project Trainee**, Indian Statistical Institute, Kolkata, Jun 2012 – Jul 2013. Supervisor: [Dr. Ujjwal Bhattacharya](https://www.isical.ac.in/~ujjwal/)
 
 ## Teaching experience
