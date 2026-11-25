@@ -177,19 +177,34 @@
     }, 3200);
   });
 
-  // ---- copy email ------------------------------------------------------------
+  // ---- copy email --------------------------------------------------------------
   $$('[data-copy]').forEach(function (b) {
+    var label = b.querySelector('.reach__copy'), original = label ? label.textContent : '';
     b.addEventListener('click', function () {
       var text = b.getAttribute('data-copy');
       var status = b.parentNode.querySelector('.mailrow__status');
       function done(ok) {
         b.classList.toggle('is-done', ok);
-        if (status) status.textContent = ok ? 'Email address copied' : 'Select the address to copy it';
-        setTimeout(function () { b.classList.remove('is-done'); if (status) status.textContent = ''; }, 1800);
+        var msg = ok ? 'Email address copied' : 'Select the address to copy it';
+        if (status) status.textContent = msg;
+        if (label) label.textContent = ok ? 'Copied ' + text : text;
+        setTimeout(function () {
+          b.classList.remove('is-done');
+          if (status) status.textContent = '';
+          if (label) label.textContent = original;
+        }, 1800);
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
       } else { done(false); }
+    });
+  });
+
+  // ---- "Get in touch" menu: close on outside click or Escape -------------------
+  $$('.reach').forEach(function (d) {
+    doc.addEventListener('click', function (e) { if (d.open && !d.contains(e.target)) d.open = false; });
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && d.open) { d.open = false; $('summary', d).focus(); }
     });
   });
 
