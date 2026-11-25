@@ -271,4 +271,45 @@
       api.play();
     }
   });
+  // ---- Publications page: carry the network from the sidebar to the right column ----
+  // The section glides from where it sits in the sidebar to its slot beside the list
+  // (FLIP: measure, move in the DOM, then animate from the old spot to the new one).
+  var slot = document.querySelector('[data-net-slot]');
+  var sec = document.querySelector('.rail__sec--net');
+  if (slot && sec) {
+    var home = document.createComment('network home');
+    sec.parentNode.insertBefore(home, sec);
+    var wide = window.matchMedia('(min-width: 75rem)');
+    var place = function (animate) {
+      var target = wide.matches ? slot : home.parentNode;
+      if (sec.parentNode === target) return;
+      var a = sec.getBoundingClientRect();
+      if (target === slot) slot.appendChild(sec); else home.parentNode.insertBefore(sec, home.nextSibling);
+      if (!animate || reduce || !a.width) return;
+      var b = sec.getBoundingClientRect();
+      // if the sidebar copy was scrolled out of view, start from just inside the bottom of the screen
+      var top = Math.min(Math.max(a.top, 0), window.innerHeight - a.height * 0.5);
+      var s = a.width / b.width;
+      sec.classList.add('is-moving');
+      sec.style.transformOrigin = '0 0';
+      sec.style.transition = 'none';
+      sec.style.opacity = '0.35';
+      sec.style.transform = 'translate(' + (a.left - b.left) + 'px,' + (top - b.top) + 'px) scale(' + s + ')';
+      sec.getBoundingClientRect();
+      sec.style.transition = 'transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease';
+      sec.style.transform = '';
+      sec.style.opacity = '';
+      var done = function (e) {
+        if (e && e.propertyName !== 'transform') return;
+        sec.classList.remove('is-moving');
+        sec.style.transition = ''; sec.style.transformOrigin = '';
+        sec.removeEventListener('transitionend', done);
+      };
+      sec.addEventListener('transitionend', done);
+    };
+    var start = function () { requestAnimationFrame(function () { setTimeout(function () { place(true); }, 350); }); };
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
+    var onChange = function () { place(false); };
+    if (wide.addEventListener) wide.addEventListener('change', onChange); else if (wide.addListener) wide.addListener(onChange);
+  }
 })();
