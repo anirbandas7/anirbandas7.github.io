@@ -29,6 +29,12 @@
         var t = localStorage.getItem('theme');
         if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
+      // the cover photo is shown once per visit: skip it when arriving from another page of this site
+      try {
+        var r = document.referrer, same = r && r.indexOf(location.origin) === 0;
+        if (same || sessionStorage.getItem('coverSeen')) document.documentElement.classList.add('cover-off');
+        sessionStorage.setItem('coverSeen', '1');
+      } catch (e) {}
     })();
   </script>
   {% if page.math %}
