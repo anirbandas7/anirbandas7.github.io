@@ -1,12 +1,19 @@
 # Left sidebar, shown on every page.
-# facts: short label / value rows under the name. Keep values short.
-facts:
-  - label: "Department"
-    value: "CSIS"
-  - label: "Campus"
-    value: "Goa, India"
-  - label: "Office"
-    value: "CC-103"
+# contact: rows under the name, each with an icon and a link.
+#   icon: pin | building | phone      url: any link (maps, web page, tel:)
+contact:
+  - icon: "pin"
+    label: "Location"
+    text: "CC-103, BITS Pilani K K Birla Goa Campus, Zuarinagar, Goa"
+    url: "https://www.google.com/maps/search/?api=1&query=BITS+Pilani+K+K+Birla+Goa+Campus%2C+Zuarinagar%2C+Goa+403726"
+  - icon: "building"
+    label: "Department"
+    text: "Computer Science & Information Systems"
+    url: "https://www.bits-pilani.ac.in/goa/computer-science-information-systems/"
+  - icon: "phone"
+    label: "Phone"
+    text: "+91 832 2580424"
+    url: "tel:+918322580424"
 # interests: the checklist under "Research interests".
 interests:
   - "mmWave radar sensing"
