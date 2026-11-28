@@ -1,19 +1,11 @@
 # Photos in the home-page strip. Only files listed here are shown, in file-name order.
 # Files live in images/strip/. Keep to technical photos: hardware, deployments, demos.
 # A photo that also appears in a published paper should cite it ("... From <authors>, <title>, <venue> (© publisher).").
-# To hide a photo, delete its line or put # in front of it.
+# To hide a photo, put # in front of its line; to remove it for good, also delete the file.
 01-mars-demo-ipsn-2024.jpg: "The MARS mmWave demo at IPSN 2024, Hong Kong. From Sen, Das, Pradhan & Chakraborty, “Demo Abstract: MARS”, IPSN 2024 (© IEEE)."
+02-low-cost-sensing-node.jpg: "A low-cost ambient sensing node from the building testbed. From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
 03-beatwave-setup.jpg: "BeatWave: an ESP32 captures Wi-Fi CSI while a drummer plays, and the laptop records the signal. From Rai & Das, “BeatWave”, COMSNETS 2026 (© IEEE)."
 04-crowd-sensing-setup.jpg: "Room setup for sensing curiosity-driven crowds: PIR, CO2, temperature and humidity nodes with a Wi-Fi sniffer. From Das, Narayan & Chakraborty, “Leveraging ambient sensing for the estimation of curiosity-driven human crowd”, IEEE SysCon 2022 (© IEEE)."
 05-testbed-classroom.jpg: "Sensing nodes in a classroom (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
 10-gas-sensor-array.jpg: "A low-cost gas-sensing prototype: ESP32 with MQ-series gas sensors and an LM35 temperature sensor"
 11-csi-derived-audio.png: "Drum audio reconstructed from Wi-Fi CSI (work in progress)"
-
-# Not shown at the moment:
-# 02-low-cost-sensing-node.jpg: "A low-cost ambient sensing node from the building testbed. From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
-# 03-beatwave-air-drumming.svg: "BeatWave: drumming in mid-air, sensed through ambient Wi-Fi (illustration). From Rai & Das, “BeatWave”, COMSNETS 2026 (© IEEE)."
-# 04-testbed-cafeteria.jpg: "Sensing nodes in the cafeteria (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
-# 06-testbed-cse-lab.jpg: "Sensing nodes in the CSE lab (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
-# 07-testbed-entrance-lobby.jpg: "Sensing nodes in the entrance lobby (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
-# 08-testbed-classroom-corridor.jpg: "A sensing node in the classroom corridor (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
-# 09-testbed-library.jpg: "Sensing nodes in the library (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
