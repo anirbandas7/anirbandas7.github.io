@@ -65,11 +65,11 @@ layout: default
 
 <section class="stats" aria-label="At a glance">
   <ul class="stats__list">
-    <li><span class="stats__num" data-count="{{ teach_num }}" data-suffix="{% if teach_rem > 0 %}+{% endif %}">{{ teach_num }}{% if teach_rem > 0 %}+{% endif %}</span><span class="stats__label">Years teaching</span></li>
-    {% assign n_courses = site.courses | map: "title" | uniq | size %}<li><span class="stats__num" data-count="{{ n_courses }}">{{ n_courses }}</span><span class="stats__label">Courses taught</span></li>
-    <li><span class="stats__num" data-count="{{ pubs.size | minus: n_patent }}">{{ pubs.size | minus: n_patent }}</span><span class="stats__label">Publications</span></li>
-    <li><span class="stats__num" data-count="{{ n_journal }}">{{ n_journal }}</span><span class="stats__label">Journal articles</span></li>
-    {% if n_patent > 0 %}{% if n_granted > 0 %}{% assign pat_n = n_granted %}{% assign pat_l = "granted" %}{% else %}{% assign pat_n = n_patent %}{% assign pat_l = "filed" %}{% endif %}<li><span class="stats__num" data-count="{{ pat_n }}">{{ pat_n }}</span><span class="stats__label">{% if pat_n == 1 %}Patent{% else %}Patents{% endif %} {{ pat_l }}</span></li>{% endif %}
+    <li><a class="stats__link" href="{{ '/teaching/' | relative_url }}"><span class="stats__num" data-count="{{ teach_num }}" data-suffix="{% if teach_rem > 0 %}+{% endif %}">{{ teach_num }}{% if teach_rem > 0 %}+{% endif %}</span><span class="stats__label">Years teaching</span></a></li>
+    {% comment %} A course counts once however often it was taught; give related courses the same "subject:" in their front matter to count them together. {% endcomment %}{% assign subj = "" %}{% for c in site.courses %}{% assign k = c.subject | default: c.title %}{% assign subj = subj | append: k | append: "|" %}{% endfor %}{% assign n_courses = subj | split: "|" | uniq | size %}<li><a class="stats__link" href="{{ '/teaching/' | relative_url }}"><span class="stats__num" data-count="{{ n_courses }}">{{ n_courses }}</span><span class="stats__label">Courses taught</span></a></li>
+    <li><a class="stats__link" href="{{ '/publications/' | relative_url }}"><span class="stats__num" data-count="{{ pubs.size | minus: n_patent }}">{{ pubs.size | minus: n_patent }}</span><span class="stats__label">Publications</span></a></li>
+    <li><a class="stats__link" href="{{ '/publications/?type=journal' | relative_url }}"><span class="stats__num" data-count="{{ n_journal }}">{{ n_journal }}</span><span class="stats__label">Journal articles</span></a></li>
+    {% if n_patent > 0 %}{% if n_granted > 0 %}{% assign pat_n = n_granted %}{% assign pat_l = "granted" %}{% else %}{% assign pat_n = n_patent %}{% assign pat_l = "filed" %}{% endif %}<li><a class="stats__link" href="{{ '/publications/?type=patent' | relative_url }}"><span class="stats__num" data-count="{{ pat_n }}">{{ pat_n }}</span><span class="stats__label">{% if pat_n == 1 %}Patent{% else %}Patents{% endif %} {{ pat_l }}</span></a></li>{% endif %}
   </ul>
 </section>
 
