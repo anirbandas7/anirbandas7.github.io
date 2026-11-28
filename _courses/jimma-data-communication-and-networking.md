@@ -1,4 +1,5 @@
 ---
+subject: "Computer Networks"
 title: "Data Communication and Networking"
 collection: courses
 position: "jimma"

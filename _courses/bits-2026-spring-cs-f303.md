@@ -1,4 +1,5 @@
 ---
+subject: "Computer Networks"
 title: "CS F303 Computer Networks"
 collection: courses
 program: "B.Tech"

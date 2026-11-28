@@ -1,4 +1,5 @@
 ---
+subject: "Network Security"
 title: "CS G513 Network Security"
 collection: courses
 program: "M.Tech"

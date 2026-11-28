@@ -1,4 +1,5 @@
 ---
+subject: "Network Security"
 title: "Network Security Principles and Practices"
 collection: courses
 position: "jimma"
