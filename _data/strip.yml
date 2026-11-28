@@ -11,3 +11,5 @@
 07-testbed-entrance-lobby.jpg: "Sensing nodes in the entrance lobby (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
 08-testbed-classroom-corridor.jpg: "A sensing node in the classroom corridor (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
 09-testbed-library.jpg: "Sensing nodes in the library (testbed, IIIT Guwahati). From Das & Chakraborty, “Experience: Developing a Testbed for Ambient Sensing and in-Network Data Processing”, COMSNETS 2022 (© IEEE)."
+10-gas-sensor-array.jpg: "A low-cost gas-sensing prototype: ESP32 with MQ-series gas sensors and an LM35 temperature sensor"
+11-csi-derived-audio.png: "Drum audio reconstructed from Wi-Fi CSI (work in progress)"
